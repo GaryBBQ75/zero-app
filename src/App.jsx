@@ -23,6 +23,7 @@ const Icon = {
   close: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" /></svg>,
   info: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M12 8v5M12 16h.01" /></svg>,
   badge: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6" /><path d="M8.5 14L7 22l5-3 5 3-1.5-8" /></svg>,
+  starSmall: <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" aria-hidden="true"><path d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z" /></svg>,
   star: <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z" /></svg>,
 }
 
@@ -44,7 +45,7 @@ function Visual({ p, big }) {
 }
 
 function AbvPill({ abv }) {
-  if (abv == null) return <span className="pill pill-unknown">Taux inconnu</span>
+  if (abv == null) return null
   const zero = abv === 0
   return <span className={zero ? 'pill pill-zero' : 'pill pill-low'}>{fmt1(abv)} %</span>
 }
@@ -198,12 +199,14 @@ export default function App() {
                   <span className="card-body">
                     <span className="card-name">{p.name}</span>
                     <span className="card-sub">{p.brand} · {CAT_LABEL[p.cat]}</span>
-                    <span className="card-meta"><AbvPill abv={p.abv} /><span>{p.count} avis</span></span>
+                    <span className="card-meta"><AbvPill abv={p.abv} /><span>{p.count ? `${p.count} avis` : 'Nouveau'}</span></span>
                   </span>
-                  <span className="score-col">
-                    <span className="score" style={{ background: p.lvl.color }}>{p.score == null ? '?' : fmt1(p.score)}</span>
-                    <span className="score-label">{p.score == null ? 'À noter' : p.lvl.label}</span>
-                  </span>
+                  {p.score != null && (
+                    <span className="score-col">
+                      <span className="score" style={{ background: p.lvl.color }}>{fmt1(p.score)}</span>
+                      <span className="score-label">{p.lvl.label}</span>
+                    </span>
+                  )}
                 </button>
               ))}
               {list.length > shown && (
@@ -283,12 +286,16 @@ export default function App() {
           </div>
           <div className="product-body">
             <div className="score-card">
-              <span className="score-big" style={{ background: current.lvl.color }}>
-                <strong>{current.score == null ? '?' : fmt1(current.score)}</strong><small>/10</small>
-              </span>
+              {current.score != null ? (
+                <span className="score-big" style={{ background: current.lvl.color }}>
+                  <strong>{fmt1(current.score)}</strong><small>/10</small>
+                </span>
+              ) : (
+                <span className="score-big empty" aria-hidden="true">{Icon.starSmall}</span>
+              )}
               <div>
-                <strong style={{ color: current.lvl.color }}>{current.score == null ? 'Pas encore noté' : current.lvl.label}</strong>
-                <span>{current.count ? `Note de la communauté · ${current.count} avis` : 'Sois le premier à le noter !'}</span>
+                <strong style={{ color: current.score == null ? 'var(--ink)' : current.lvl.color }}>{current.score == null ? 'Nouveau sur zéro' : current.lvl.label}</strong>
+                <span>{current.count ? `Note de la communauté · ${current.count} avis` : 'Donne ton avis en premier'}</span>
               </div>
             </div>
             <div className={current.abv === 0 ? 'abv-note zero' : 'abv-note low'}>
@@ -302,10 +309,10 @@ export default function App() {
               </span>
             </div>
             <div className="facts">
-              <div><small>Alcool</small><strong>{current.abv == null ? '?' : `${fmt1(current.abv)} %`}</strong></div>
-              <div><small>Sucres / 100 ml</small><strong>{current.sugar == null ? '?' : `${fmt1(current.sugar)} g`}</strong></div>
-              <div><small>Calories / 100 ml</small><strong>{current.kcal == null ? '?' : `${Math.round(current.kcal)} kcal`}</strong></div>
-              <div><small>Prix indicatif</small><strong>{current.price ?? '?'}</strong></div>
+              <div><small>Alcool</small><strong className={current.abv == null ? 'na' : ''}>{current.abv == null ? 'Non communiqué' : `${fmt1(current.abv)} %`}</strong></div>
+              <div><small>Sucres / 100 ml</small><strong className={current.sugar == null ? 'na' : ''}>{current.sugar == null ? 'Non communiqué' : `${fmt1(current.sugar)} g`}</strong></div>
+              <div><small>Calories / 100 ml</small><strong className={current.kcal == null ? 'na' : ''}>{current.kcal == null ? 'Non communiqué' : `${Math.round(current.kcal)} kcal`}</strong></div>
+              <div><small>Prix indicatif</small><strong className={current.price ? '' : 'na'}>{current.price ?? 'Non communiqué'}</strong></div>
             </div>
             {(current.style || current.region || current.note) && (
               <div className="origin">

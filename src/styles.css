@@ -164,3 +164,5 @@ button:disabled { cursor: not-allowed; }
 .origin span { display: flex; flex-direction: column; gap: 1px; }
 .origin small { font-size: 12px; font-weight: 400; color: var(--muted); }
 .credit a { color: var(--accent-dark); }
+.score-big.empty { background: #f3f4f6; color: #9ca3af; border: 2px dashed #d1d5db; }
+.facts strong.na { font-family: inherit; font-size: 14px; font-weight: 500; color: #6b7280; padding-top: 5px; }
