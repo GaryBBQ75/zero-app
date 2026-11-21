@@ -12,6 +12,7 @@ import { fileURLToPath } from 'node:url'
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 const OFF = resolve(ROOT, 'data/off-products.json')
 const CURATED = resolve(ROOT, 'data/curated-products.json')
+const RETAILERS = resolve(ROOT, 'data/retailer-products.json')
 const OUT = resolve(ROOT, 'public/data/products.json')
 const MAX_ABV = 1.2
 
@@ -47,12 +48,14 @@ export function merge(offProducts, curatedProducts) {
   let enriched = 0
   for (const c of curatedProducts) {
     if (c.abv != null && c.abv > MAX_ABV) continue
-    const match = products.find((p) => p.source === 'off' && sameProduct(p, c))
+    const match = products.find((p) => sameProduct(p, c))
     if (match) {
       match.region = match.region ?? c.region ?? null
       match.style = match.style ?? c.style ?? null
       match.abv = match.abv ?? c.abv ?? null
       match.price = match.price ?? c.price ?? null
+      match.quantity = match.quantity ?? c.quantity ?? null
+      if (c.retailers) match.retailers = [...new Set([...(match.retailers || []), ...c.retailers])]
       enriched++
       continue
     }
@@ -73,6 +76,7 @@ export function merge(offProducts, curatedProducts) {
       region: c.region ?? null,
       note: c.note ?? null,
       sourceUrl: c.source ?? null,
+      retailers: c.retailers ?? [],
       source: 'curated',
     })
     added++
@@ -83,7 +87,8 @@ export function merge(offProducts, curatedProducts) {
 async function main() {
   const off = await readJson(OFF, { products: [] })
   const curated = await readJson(CURATED, { products: [] })
-  const { products, added, enriched } = merge(off.products || [], curated.products || [])
+  const retailers = await readJson(RETAILERS, { products: [] })
+  const { products, added, enriched } = merge(off.products || [], [...(curated.products || []), ...(retailers.products || [])])
   const out = {
     generatedAt: new Date().toISOString(),
     sources: {
