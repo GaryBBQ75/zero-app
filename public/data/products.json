@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-21T22:55:18.116Z",
+ "generatedAt": "2026-11-21T23:01:18.055Z",
  "sources": {
   "openFoodFacts": {
    "count": 1024,
@@ -10,7 +10,11 @@
    "added": 860,
    "enriched": 116
   },
-  "excluded": 129
+  "excluded": 129,
+  "barcodes": {
+   "assigned": 0,
+   "fused": 0
+  }
  },
  "count": 1550,
  "products": [

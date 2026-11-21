@@ -189,6 +189,7 @@ def main():
                 'quantity': find_quantity(title),
                 'source': url,
                 'retailers': [label],
+                'rawTitle': title,
             }
             seen[k] = item
             out.append(item)

@@ -79,6 +79,7 @@ export function merge(offProducts, curatedProducts) {
       region: c.region ?? null,
       note: c.note ?? null,
       sourceUrl: c.source ?? null,
+      rawTitle: c.rawTitle ?? null,
       retailers: c.retailers ?? [],
       source: 'curated',
     })
@@ -183,26 +184,82 @@ export function finalize(products) {
   return { products: kept, excluded }
 }
 
+const tokenSet = (s) => new Set(norm(s).split(' ').filter((w) => w.length > 1))
+function similarity(a, b) {
+  const ta = tokenSet(a)
+  const tb = tokenSet(b)
+  if (!ta.size || !tb.size) return 0
+  let common = 0
+  for (const w of ta) if (tb.has(w)) common++
+  return common / Math.min(ta.size, tb.size)
+}
+
+// Applique data/barcodes.json : codes des boutiques Shopify puis d'Open Food Facts.
+// Si le code existe déjà sur une autre fiche, les deux fiches sont fusionnées.
+export function applyBarcodes(products, barcodes) {
+  if (!barcodes) return { products, assigned: 0, fused: 0 }
+  const byId = new Map(products.map((p) => [p.id, p]))
+  const byCode = new Map(products.filter((p) => p.barcode).map((p) => [p.barcode, p]))
+  const drop = new Set()
+  let assigned = 0
+  let fused = 0
+  const assign = (p, code) => {
+    if (!p || p.barcode || drop.has(p.id)) return
+    const owner = byCode.get(code)
+    if (owner && owner !== p) {
+      for (const f of ['region', 'style', 'note', 'price', 'quantity', 'sourceUrl', 'abv', 'sugar', 'kcal']) owner[f] = owner[f] ?? p[f] ?? null
+      owner.retailers = [...new Set([...(owner.retailers || []), ...(p.retailers || [])])]
+      drop.add(p.id)
+      fused++
+      return
+    }
+    p.barcode = code
+    byCode.set(code, p)
+    assigned++
+  }
+  const candidates = products.filter((p) => !p.barcode)
+  for (const s of barcodes.shops || []) {
+    const t = norm(s.title)
+    let match = candidates.find((p) => !p.barcode && p.rawTitle && norm(p.rawTitle) === t)
+    if (!match) {
+      const vb = norm(s.vendor)
+      match = candidates.find((p) => {
+        if (p.barcode) return false
+        const pb = norm(p.brand)
+        const brandOk = pb && (t.includes(pb) || (vb && (vb.includes(pb) || pb.includes(vb))))
+        return brandOk && similarity(p.name, s.title) >= 0.75
+      })
+    }
+    assign(match, s.barcode)
+  }
+  for (const o of barcodes.off || []) assign(byId.get(o.id), o.barcode)
+  return { products: products.filter((p) => !drop.has(p.id)), assigned, fused }
+}
+
 async function main() {
   const off = await readJson(OFF, { products: [] })
   const curated = await readJson(CURATED, { products: [] })
   const retailers = await readJson(RETAILERS, { products: [] })
   const merged = merge(off.products || [], [...(curated.products || []), ...(retailers.products || [])])
   const { added, enriched } = merged
-  const { products, excluded } = finalize(merged.products)
+  const fin = finalize(merged.products)
+  const { excluded } = fin
+  const bc = applyBarcodes(fin.products, await readJson(resolve(ROOT, 'data/barcodes.json'), null))
+  const products = bc.products.map(({ rawTitle, ...p }) => p)
   const out = {
     generatedAt: new Date().toISOString(),
     sources: {
       openFoodFacts: { count: (off.products || []).length, importedAt: off.generatedAt ?? null, license: 'ODbL 1.0' },
       curated: { added, enriched },
       excluded,
+      barcodes: { assigned: bc.assigned, fused: bc.fused },
     },
     count: products.length,
     products,
   }
   await mkdir(dirname(OUT), { recursive: true })
   await writeFile(OUT, JSON.stringify(out, null, 1) + '\n')
-  console.log(`Catalogue : ${products.length} produits (${(off.products || []).length} OFF, ${added} ajoutés à la main, ${enriched} fiches enrichies, ${excluded} sodas/mixers écartés)`)
+  console.log(`Catalogue : ${products.length} produits (${(off.products || []).length} OFF, ${added} ajoutés à la main, ${enriched} fiches enrichies, ${excluded} sodas/mixers écartés, ${bc.assigned} codes-barres ajoutés, ${bc.fused} doublons fusionnés)`)
 }
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
