@@ -72,12 +72,24 @@ export default function App() {
     return () => clearTimeout(t)
   }, [toast])
 
+  const [catalogue, setCatalogue] = useState([])
+  const [shown, setShown] = useState(40)
+
+  useEffect(() => {
+    fetch(`${import.meta.env.BASE_URL}data/products.json`)
+      .then((r) => (r.ok ? r.json() : null))
+      .then((d) => { if (d && Array.isArray(d.products)) setCatalogue(d.products) })
+      .catch(() => { /* pas de catalogue : on garde la démo */ })
+  }, [])
+
   const all = useMemo(() => {
     const byId = {}
-    SEED.forEach((p) => { byId[p.id] = p })
-    Object.values(scanned).forEach((p) => { byId[p.id] = p })
+    const base = catalogue.length ? catalogue : SEED
+    base.forEach((p) => { byId[p.id] = { tags: [], ...p } })
+    Object.values(scanned).forEach((p) => { byId[p.id] = { tags: [], ...p } })
     return byId
-  }, [scanned])
+  }, [scanned, catalogue])
+  const isDemo = catalogue.length === 0
 
   const withScore = useCallback((p) => {
     const { score, count } = communityScore(p, ratings[p.id])
@@ -91,7 +103,7 @@ export default function App() {
       .filter((p) => !only00 || p.abv === 0)
       .filter((p) => !needle || `${p.name} ${p.brand}`.toLowerCase().includes(needle))
       .map(withScore)
-      .sort((a, b) => (b.score ?? -1) - (a.score ?? -1))
+      .sort((a, b) => (b.score ?? -1) - (a.score ?? -1) || (b.popularity ?? 0) - (a.popularity ?? 0))
   }, [all, cat, only00, q, withScore])
 
   const current = currentId && all[currentId] ? withScore(all[currentId]) : null
@@ -161,14 +173,14 @@ export default function App() {
             <div className="search">
               {Icon.search}
               <label htmlFor="q" className="sr">Rechercher une boisson</label>
-              <input id="q" type="search" placeholder="Une bière, un vin, une marque…" value={q} onChange={(e) => setQ(e.target.value)} />
+              <input id="q" type="search" placeholder="Une bière, un vin, une marque…" value={q} onChange={(e) => { setQ(e.target.value); setShown(40) }} />
             </div>
             <div className="chips">
               {CATEGORIES.map((c) => (
-                <button key={c.id} type="button" className={cat === c.id ? 'chip on' : 'chip'} aria-pressed={cat === c.id} onClick={() => setCat(c.id)}>{c.label}</button>
+                <button key={c.id} type="button" className={cat === c.id ? 'chip on' : 'chip'} aria-pressed={cat === c.id} onClick={() => { setCat(c.id); setShown(40) }}>{c.label}</button>
               ))}
             </div>
-            <button type="button" className="toggle" aria-pressed={only00} onClick={() => setOnly00((v) => !v)}>
+            <button type="button" className="toggle" aria-pressed={only00} onClick={() => { setOnly00((v) => !v); setShown(40) }}>
               <span>
                 <strong>Uniquement « vrai 0,0 % »</strong>
                 <small>Sans alcool peut aller jusqu&rsquo;à 1,2 % en France</small>
@@ -176,11 +188,11 @@ export default function App() {
               <span className={only00 ? 'switch on' : 'switch'}><span /></span>
             </button>
             <div className="section-head">
-              <h2>Le top de la communauté</h2>
+              <h2>{isDemo ? 'Le top de la communauté' : 'Les boissons sans alcool'}</h2>
               <span>{list.length} boisson{list.length > 1 ? 's' : ''}</span>
             </div>
             <div className="list">
-              {list.map((p) => (
+              {list.slice(0, shown).map((p) => (
                 <button key={p.id} type="button" className="card" onClick={() => setCurrentId(p.id)}>
                   <Visual p={p} />
                   <span className="card-body">
@@ -194,8 +206,16 @@ export default function App() {
                   </span>
                 </button>
               ))}
+              {list.length > shown && (
+                <button type="button" className="more" onClick={() => setShown((n) => n + 40)}>Voir plus de boissons</button>
+              )}
               {list.length === 0 && <div className="empty">Aucune boisson ne correspond. Scanne-la pour l&rsquo;ajouter !</div>}
             </div>
+            <p className="credit">
+              {isDemo
+                ? 'Catalogue de démonstration : produits et notes fictifs.'
+                : 'Données produit : Open Food Facts (licence ODbL). Notes : communauté zéro.'}
+            </p>
           </section>
         )}
 
@@ -299,7 +319,7 @@ export default function App() {
                 {ratings[current.id].tags.length > 0 && <span>{ratings[current.id].tags.join(' · ')}</span>}
               </div>
             )}
-            {current.source !== 'off' && DEMO_REVIEWS.map((r) => (
+            {isDemo && current.source !== 'off' && DEMO_REVIEWS.map((r) => (
               <div key={r.who} className="review">
                 <span><strong>{r.who}</strong><span className="stars" aria-label={`${r.stars} sur 5`}>{starText(r.stars)}</span></span>
                 <span>{r.text}</span>

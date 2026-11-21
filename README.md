@@ -12,6 +12,10 @@ Prototype d'app (PWA) qui référence et note les boissons sans alcool ou très 
 
 Limites du prototype : le catalogue de départ est fictif, et les notes sont enregistrées dans le navigateur (localStorage). Il n'y a pas encore de vraie communauté partagée.
 
+## Base de données
+
+Le catalogue réel vient d'Open Food Facts, importé chaque semaine par GitHub Actions (`scripts/import-off.mjs`). Tant que l'import n'a pas tourné, l'app affiche le catalogue de démonstration. Le schéma complet, avec la future base communautaire PocketBase, est dans [`docs/base-de-donnees.md`](docs/base-de-donnees.md).
+
 ## Lancer en local
 
 ```bash

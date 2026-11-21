@@ -1,0 +1,41 @@
+name: Import du catalogue Open Food Facts
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 4 * * 1' # chaque lundi à 4h17 UTC
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/import-off.mjs'
+      - '.github/workflows/import-catalogue.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: import-catalogue
+  cancel-in-progress: false
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Import depuis Open Food Facts
+        run: node scripts/import-off.mjs
+      - name: Commit du catalogue
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/data/products.json
+          if git diff --cached --quiet; then
+            echo "Catalogue inchangé"
+          else
+            git commit -m "Catalogue : mise à jour depuis Open Food Facts"
+            git push
+          fi
