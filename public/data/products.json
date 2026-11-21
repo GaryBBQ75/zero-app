@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-21T20:47:16.857Z",
+ "generatedAt": "2026-11-21T21:18:17.823Z",
  "sources": {
   "openFoodFacts": {
    "count": 1024,
@@ -7,11 +7,11 @@
    "license": "ODbL 1.0"
   },
   "curated": {
-   "added": 732,
+   "added": 736,
    "enriched": 96
   }
  },
- "count": 1756,
+ "count": 1760,
  "products": [
   {
    "id": "off-3770037280016",
@@ -17149,6 +17149,86 @@
    "region": "Normandie",
    "note": null,
    "sourceUrl": "https://www.gueuledejoie.com/blogs/news/boisson-sans-alcool-francaise-made-in-france",
+   "retailers": [],
+   "source": "curated"
+  },
+  {
+   "id": "cur-osan-bulles-vegetales-tagete-mirabelle",
+   "barcode": null,
+   "name": "Bulles végétales Tagète & Mirabelle",
+   "brand": "Osan",
+   "cat": "aperitif",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": null,
+   "price": "16,50 €",
+   "image": null,
+   "popularity": 0,
+   "style": "Pétillant botanique",
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.lepetitballon.com/collections/sans-alcool",
+   "retailers": [],
+   "source": "curated"
+  },
+  {
+   "id": "cur-petit-beret-orange-spritz-bitter",
+   "barcode": null,
+   "name": "Orange Spritz Bitter",
+   "brand": "Le Petit Béret",
+   "cat": "aperitif",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": "74 cl",
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": "Spritz",
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.lilovino.com/1953-sans-alcool",
+   "retailers": [],
+   "source": "curated"
+  },
+  {
+   "id": "cur-giffard-liqueur-fleur-sureau",
+   "barcode": null,
+   "name": "Liqueur Fleur de Sureau sans alcool",
+   "brand": "Giffard",
+   "cat": "spiritueux",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": "70 cl",
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": "Liqueur",
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.lilovino.com/1953-sans-alcool",
+   "retailers": [],
+   "source": "curated"
+  },
+  {
+   "id": "cur-paon-qui-boit-presqu-ile",
+   "barcode": null,
+   "name": "Presqu'île",
+   "brand": "Le Paon Qui Boit",
+   "cat": "soft",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": "75 cl",
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": "Infusion fermentée pétillante basilic et piment",
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.lepaonquiboit.com/",
    "retailers": [],
    "source": "curated"
   },

@@ -1414,6 +1414,46 @@
    "abv": null,
    "region": "Normandie",
    "source": "https://www.gueuledejoie.com/blogs/news/boisson-sans-alcool-francaise-made-in-france"
+  },
+  {
+   "style": "Pétillant botanique",
+   "abv": null,
+   "region": null,
+   "brand": "Osan",
+   "name": "Bulles végétales Tagète & Mirabelle",
+   "cat": "aperitif",
+   "price": "16,50 €",
+   "source": "https://www.lepetitballon.com/collections/sans-alcool"
+  },
+  {
+   "style": "Spritz",
+   "abv": null,
+   "region": null,
+   "brand": "Le Petit Béret",
+   "name": "Orange Spritz Bitter",
+   "cat": "aperitif",
+   "quantity": "74 cl",
+   "source": "https://www.lilovino.com/1953-sans-alcool"
+  },
+  {
+   "style": "Liqueur",
+   "abv": null,
+   "region": null,
+   "brand": "Giffard",
+   "name": "Liqueur Fleur de Sureau sans alcool",
+   "cat": "spiritueux",
+   "quantity": "70 cl",
+   "source": "https://www.lilovino.com/1953-sans-alcool"
+  },
+  {
+   "style": "Infusion fermentée pétillante basilic et piment",
+   "abv": null,
+   "region": null,
+   "brand": "Le Paon Qui Boit",
+   "name": "Presqu'île",
+   "cat": "soft",
+   "quantity": "75 cl",
+   "source": "https://www.lepaonquiboit.com/"
   }
  ]
 }
