@@ -13,7 +13,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: import-catalogue
+  group: merge-catalogue
   cancel-in-progress: false
 
 jobs:
@@ -36,6 +36,5 @@ jobs:
             echo "Catalogue inchangé"
           else
             git commit -m "Catalogue : fusion des produits curés"
-            git pull --rebase
-            git push
+            git push || (git fetch origin main && git checkout -B main origin/main && node scripts/merge-catalogue.mjs && git add public/data/products.json && git commit -m "Catalogue : fusion" && git push origin main)
           fi

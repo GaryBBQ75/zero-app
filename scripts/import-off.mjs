@@ -39,7 +39,7 @@ export const SOURCES = [
 const FIELDS = [
   'code', 'product_name', 'product_name_fr', 'brands', 'quantity',
   'nutriments', 'image_front_small_url', 'image_front_url', 'categories_tags', 'unique_scans_n',
-  'ingredients_text_fr', 'ingredients_text', 'labels_tags', 'origins', 'manufacturing_places', 'generic_name_fr',
+  'ingredients_text_fr', 'ingredients_text', 'labels_tags', 'packaging_tags', 'origins', 'manufacturing_places', 'generic_name_fr',
 ].join(',')
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms))
@@ -91,6 +91,7 @@ export function normalize(p, cat) {
     description: (p.generic_name_fr || '').trim() || null,
     labels: (p.labels_tags || []).filter((l) => /organic|bio|vegan|gluten-free|no-gluten/.test(l)).map((l) => l.replace(/^[a-z]{2}:/, '')),
     origin: [p.origins, p.manufacturing_places].filter(Boolean).join(', ') || null,
+    packaging: (p.packaging_tags || []).map((t) => t.replace(/^[a-z]{2}:/, '')).join(' ') || null,
     popularity: p.unique_scans_n || 0,
     source: 'off',
   }

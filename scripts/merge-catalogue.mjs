@@ -145,6 +145,55 @@ export function cleanName(name, brand) {
 
 const CAT_DEFAULT = { biere: 'Bière', vin: 'Vin', cidre: 'Cidre', aperitif: 'Apéritif', spiritueux: 'Spiritueux', kombucha: 'Kombucha', soft: 'Boisson' }
 
+// ---------- Formats : contenance et contenant ----------
+export function normQty(text) {
+  if (!text) return null
+  const t = String(text).replace(',', '.').toLowerCase()
+  const pack = t.match(/(\d+)\s*[x×]\s*(\d+(?:\.\d+)?)\s*(cl|ml|l)\b/)
+  const one = pack ? null : t.match(/(\d+(?:\.\d+)?)\s*(cl|ml|l)\b/)
+  const toCl = (v, u) => (u === 'ml' ? v / 10 : u === 'l' ? v * 100 : v)
+  const fmt = (cl) => (cl >= 100 ? `${String(cl / 100).replace('.', ',')} L` : `${String(Math.round(cl * 10) / 10).replace('.', ',')} cl`)
+  if (pack) return `${pack[1]} × ${fmt(toCl(Number(pack[2]), pack[3]))}`
+  if (one) {
+    const cl = toCl(Number(one[1]), one[2])
+    if (cl < 5 || cl > 600) return null
+    return fmt(cl)
+  }
+  return null
+}
+export function detectContainer(text) {
+  const t = ` ${(text || '').toLowerCase()} `
+  if (/\b(can|cans|canette|canettes|boîte|boite|bte|slim|aluminium)\b/.test(t)) return 'Canette'
+  if (/\b(f[uû]t|keg)\b/.test(t)) return 'Fût'
+  if (/\b(brique|tetra|carton)\b/.test(t)) return 'Brique'
+  if (/\b(pet|plastique|plastic)\b|plastic-bottle/.test(t)) return 'Bouteille plastique'
+  if (/glass|verre|\bvp\b|\bvr\b|glass-bottle/.test(t)) return 'Bouteille en verre'
+  if (/\b(bouteille|btl|bottle|magnum|demi-bouteille)\b/.test(t)) return 'Bouteille'
+  return null
+}
+const fmtKey = (f) => `${f.quantity || ''}|${f.container || ''}`
+function addFormat(item, f) {
+  if (!f || (!f.quantity && !f.container && !f.barcode)) return
+  item.formats = item.formats || []
+  const same = item.formats.find((x) => fmtKey(x) === fmtKey(f))
+  if (same) {
+    if (f.barcode && !same.barcode) same.barcode = f.barcode
+    return
+  }
+  // un format sans contenant ou sans taille est fusionné avec un format plus précis
+  const looser = item.formats.find((x) => (!x.container || !f.container) && x.quantity && x.quantity === f.quantity)
+  if (looser) {
+    looser.container = looser.container || f.container
+    looser.barcode = looser.barcode || f.barcode
+    return
+  }
+  item.formats.push(f)
+}
+const qtyRank = (q) => {
+  const m = (q || '').replace(',', '.').match(/(\d+(?:\.\d+)?)\s*(cl|l)/i)
+  return m ? Number(m[1]) * (/l$/i.test(m[2]) && !/cl/i.test(m[2]) ? 100 : 1) : 9999
+}
+
 const RX_KOMBUCHA = /kom ?b?u?t?cha|kombuch|kambucha|k[ée]fir|kefir|k[ée]fruit|kamat[ée]/i
 const RX_CIDRE = /\b(cidre|cider|poir[ée])\b/i
 const RX_EXCLUDE = /ginger ?beer|ginger ?ale|\btonic\b|\bcola\b|limonade|orangeade|schweppes|orangina|ice ?tea|th[ée] glac[ée]|\bjus de (pomme|raisin|fruits?|orange|poire)\b|\bnectar\b|\bsirop\b|eau (min[ée]rale|gazeuse|p[ée]tillante)|\bsoda\b/i
@@ -165,10 +214,17 @@ export function finalize(products) {
     else if (RX_CIDRE.test(text)) cat = 'cidre'
     let name = cleanName(p.name, brand) || p.style || CAT_DEFAULT[cat] || 'Boisson'
     if (norm(name) === norm(brand) || norm(name) === '') name = p.style || CAT_DEFAULT[cat] || 'Boisson'
-    const item = { ...p, brand, name, cat }
+    const rawText = `${p.name} ${p.quantity || ''} ${p.packaging || ''} ${p.rawTitle || ''}`
+    const format = { quantity: normQty(p.quantity) || normQty(rawText), container: detectContainer(rawText), barcode: p.barcode || null }
+    const item = { ...p, brand, name, cat, formats: [], barcodes: p.barcode ? [p.barcode] : [] }
+    addFormat(item, format)
     const key = `${norm(brand)}|${norm(name)}|${cat}`
     const prev = seen.get(key)
     if (prev) {
+      addFormat(prev, format)
+      if (p.barcode) prev.barcodes = [...new Set([...prev.barcodes, p.barcode])]
+      for (const f of ['ingredients', 'description', 'origin', 'country']) prev[f] = prev[f] ?? item[f] ?? null
+      prev.labels = [...new Set([...(prev.labels || []), ...(item.labels || [])])]
       for (const f of ['abv', 'sugar', 'kcal', 'image', 'price', 'quantity', 'region', 'style', 'barcode']) prev[f] = prev[f] ?? item[f] ?? null
       prev.popularity = Math.max(prev.popularity || 0, item.popularity || 0)
       if (item.retailers) prev.retailers = [...new Set([...(prev.retailers || []), ...item.retailers])]
@@ -234,32 +290,34 @@ const priceTxt = (n) => (n ? `${n.toFixed(2).replace('.', ',')} €` : null)
 export function applyBarcodes(products, barcodes) {
   if (!barcodes) return { products, assigned: 0, fused: 0 }
   const byId = new Map(products.map((p) => [p.id, p]))
-  const byCode = new Map(products.filter((p) => p.barcode).map((p) => [p.barcode, p]))
+  const byCode = new Map()
+  for (const p of products) for (const c of [p.barcode, ...(p.barcodes || [])].filter(Boolean)) byCode.set(c, p)
   const drop = new Set()
   let assigned = 0
   let fused = 0
   const assign = (p, code) => {
-    if (!p || p.barcode || drop.has(p.id)) return
+    if (!p || drop.has(p.id) || (p.barcodes || []).includes(code)) return
     const owner = byCode.get(code)
     if (owner && owner !== p) {
       for (const f of ['region', 'style', 'note', 'price', 'quantity', 'sourceUrl', 'abv', 'sugar', 'kcal']) owner[f] = owner[f] ?? p[f] ?? null
       owner.retailers = [...new Set([...(owner.retailers || []), ...(p.retailers || [])])]
+      for (const f of p.formats || []) addFormat(owner, f)
       drop.add(p.id)
       fused++
       return
     }
-    p.barcode = code
+    p.barcode = p.barcode || code
+    p.barcodes = [...new Set([...(p.barcodes || []), code])]
     byCode.set(code, p)
     assigned++
   }
-  const candidates = products.filter((p) => !p.barcode)
+  const candidates = products
   for (const s of barcodes.shops || []) {
     const t = norm(s.title)
-    let match = candidates.find((p) => !p.barcode && p.rawTitle && norm(p.rawTitle) === t)
+    let match = candidates.find((p) => p.rawTitle && norm(p.rawTitle) === t)
     if (!match) {
       const vb = norm(s.vendor)
       match = candidates.find((p) => {
-        if (p.barcode) return false
         const pb = norm(p.brand)
         const brandOk = pb && (t.includes(pb) || (vb && (vb.includes(pb) || pb.includes(vb))))
         return brandOk && similarity(p.name, s.title) >= 0.75
@@ -275,6 +333,7 @@ export function applyBarcodes(products, barcodes) {
       match.shopUrls = { ...(match.shopUrls || {}), [s.shop]: s.url }
       match.retailers = [...new Set([...(match.retailers || []), s.shop])]
     }
+    if (match && !drop.has(match.id)) addFormat(match, { quantity: normQty(s.title), container: detectContainer(`${s.title} ${(s.tags || []).join(' ')}`), barcode: s.barcode || null })
     if (s.barcode) assign(match, s.barcode)
   }
   for (const o of barcodes.off || []) assign(byId.get(o.id), o.barcode)
@@ -295,6 +354,13 @@ async function main() {
     rest.labels = [...new Set([...(rest.labels || []), ...labelsFrom(rest.name, rest.note, rest.style)])]
     rest.country = rest.country || countryFrom(rest.origin) || countryFrom(rest.region) || (rest.region ? 'France' : null)
     if (rest.abv == null) rest.abv = abvFrom(rest.name)
+    rest.formats = (rest.formats || [])
+      .map((f) => (['biere', 'soft', 'kombucha'].includes(rest.cat) && qtyRank(f.quantity) > 100 && qtyRank(f.quantity) < 9999 && !/×/.test(f.quantity || '')
+        ? { ...f, container: 'Pack' }
+        : f))
+      .sort((a, b) => qtyRank(a.quantity) - qtyRank(b.quantity))
+    rest.barcodes = [...new Set([rest.barcode, ...(rest.barcodes || [])].filter(Boolean))]
+    delete rest.packaging
     return rest
   })
   const out = {

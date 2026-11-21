@@ -41,6 +41,10 @@ const ROW = {
   pays: <><path d="M12 21s-6-5.5-6-11a6 6 0 0 1 12 0c0 5.5-6 11-6 11z" /><circle cx="12" cy="10" r="2.2" /></>,
   style: <><path d="M4 7h16M4 12h10M4 17h13" /></>,
   boutique: <><path d="M4 9l1.5-5h13L20 9" /><path d="M4 9h16v2a3 3 0 0 1-5.3 2 3 3 0 0 1-5.4 0A3 3 0 0 1 4 11z" /><path d="M5 13v7h14v-7" /></>,
+  canette: <><rect x="7" y="3" width="10" height="18" rx="2.5" /><path d="M7 7h10M7 17h10" /></>,
+  bouteille: <><path d="M10 2h4v4c0 1 3 2 3 6v8a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2v-8c0-4 3-5 3-6z" /><path d="M7 13h10" /></>,
+  pack: <><rect x="3" y="9" width="18" height="11" rx="2" /><path d="M7 9V5h10v4M9 9v11M15 9v11" /></>,
+  fut: <><ellipse cx="12" cy="5" rx="7" ry="2.5" /><path d="M5 5v14c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5V5M5 12c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5" /></>,
   info: <><circle cx="12" cy="12" r="9" /><path d="M12 11v5M12 8h.01" /></>,
 }
 

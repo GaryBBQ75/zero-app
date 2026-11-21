@@ -143,7 +143,7 @@ export default function App() {
   const onCode = useCallback(async (code) => {
     setScanError('')
     if (links[code] && all[links[code]]) { setCurrentId(links[code]); return }
-    const known = Object.values(all).find((p) => p.barcode === code)
+    const known = Object.values(all).find((p) => p.barcode === code || (p.barcodes || []).includes(code))
     if (known) { setCurrentId(known.id); return }
     setScanBusy(true)
     try {
@@ -232,7 +232,12 @@ export default function App() {
                   <span className="card-body">
                     <span className="card-name">{p.name}</span>
                     <span className="card-sub">{p.brand} · {CAT_LABEL[p.cat]}</span>
-                    <span className="card-meta"><AbvPill abv={p.abv} /><span>{p.count ? `${p.count} avis` : 'Nouveau'}</span></span>
+                    <span className="card-meta">
+                      <AbvPill abv={p.abv} />
+                      {(p.labels || []).includes('bio') && <span className="pill pill-bio">Bio</span>}
+                      {(p.labels || []).includes('sans gluten') && <span className="pill pill-gf">Sans gluten</span>}
+                      <span>{p.count ? `${p.count} avis` : 'Nouveau'}</span>
+                    </span>
                   </span>
                   {p.score != null && (
                     <span className="score-col">

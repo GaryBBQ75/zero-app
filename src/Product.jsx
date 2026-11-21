@@ -54,10 +54,13 @@ function Row({ r }) {
   )
 }
 
+const containerIcon = (c) => (c === 'Canette' ? 'canette' : c === 'Pack' ? 'pack' : c === 'Fût' ? 'fut' : 'bouteille')
+
 export default function Product({ p, rating, onBack, onRate, onOpen, similar }) {
   const [moreDesc, setMoreDesc] = useState(false)
   const [showIngr, setShowIngr] = useState(false)
   const rows = useMemo(() => buildRows(p), [p])
+  const formats = (p.formats || []).filter((f) => f.quantity || f.container)
   const c = CAT_COLOR[p.cat] || CAT_COLOR.autre
   const shops = Object.entries(p.shopUrls || {})
   const otherRetailers = (p.retailers || []).filter((r) => !(p.shopUrls || {})[r])
@@ -78,6 +81,13 @@ export default function Product({ p, rating, onBack, onRate, onOpen, similar }) 
           <span className="chip-cat" style={{ background: c.bg, color: c.fg }}><CatIcon cat={p.cat} size={16} />{CAT_LABEL[p.cat]}</span>
           <h1>{p.name}</h1>
           <p className="pv-brand">{p.brand}{p.country && <> · <RowIcon name="pays" size={15} color="#6B7280" /> {p.country}</>}</p>
+          {(p.labels || []).length > 0 && (
+            <div className="plabels">
+              {p.labels.includes('bio') && <span className="plabel bio"><RowIcon name="bio" size={16} color="#166534" />Bio</span>}
+              {p.labels.includes('sans gluten') && <span className="plabel gf"><RowIcon name="gluten" size={16} color="#92400E" />Sans gluten</span>}
+              {p.labels.includes('vegan') && <span className="plabel vegan"><RowIcon name="vegan" size={16} color="#065F46" />Vegan</span>}
+            </div>
+          )}
         </div>
 
         <div className="score-card">
@@ -110,13 +120,26 @@ export default function Product({ p, rating, onBack, onRate, onOpen, similar }) 
           <p className="pmissing"><RowIcon name="info" size={16} color="#6B7280" /> Non communiqué : {rows.missing.join(', ').toLowerCase()}</p>
         )}
 
-        {(p.style || p.region || p.quantity || p.price) && (
+        {formats.length > 0 && (
+          <section className="psec">
+            <h2>{formats.length > 1 ? `Existe en ${formats.length} formats` : 'Format'}</h2>
+            <div className="pformats">
+              {formats.map((f) => (
+                <span key={`${f.quantity}-${f.container}`} className="pformat">
+                  <RowIcon name={containerIcon(f.container)} size={22} color="var(--accent-dark)" />
+                  <span><strong>{f.quantity || 'Taille ?'}</strong><small>{f.container || 'Contenant non précisé'}</small></span>
+                </span>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {(p.style || p.region || p.price) && (
           <section className="psec">
             <h2>Caractéristiques</h2>
             <div className="pgrid">
               {p.style && <div><small>Style</small><strong>{p.style}</strong></div>}
               {p.region && <div><small>Origine</small><strong>{p.region}</strong></div>}
-              {p.quantity && <div><small>Format</small><strong>{p.quantity}</strong></div>}
               {p.price && <div><small>Prix indicatif</small><strong>{p.price}</strong></div>}
             </div>
           </section>
