@@ -7,7 +7,7 @@ export const CATEGORIES = [
   { id: 'vin', label: 'Vins' },
   { id: 'aperitif', label: 'Apéritifs' },
   { id: 'spiritueux', label: 'Spiritueux' },
-  { id: 'soft', label: 'Softs' },
+  { id: 'soft', label: 'Néo-sodas & fermentés' },
 ]
 
 export const CAT_LABEL = {
@@ -15,7 +15,7 @@ export const CAT_LABEL = {
   vin: 'Vin',
   aperitif: 'Apéritif',
   spiritueux: 'Spiritueux',
-  soft: 'Soft',
+  soft: 'Néo-soda / fermenté',
   autre: 'Boisson',
 }
 

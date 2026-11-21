@@ -1,0 +1,40 @@
+name: Fusion du catalogue curé
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'data/curated-products.json'
+      - 'scripts/merge-catalogue.mjs'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: import-catalogue
+  cancel-in-progress: false
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Fusion OFF + produits curés
+        run: node scripts/merge-catalogue.mjs
+      - name: Commit du catalogue
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/data/products.json
+          if git diff --cached --quiet; then
+            echo "Catalogue inchangé"
+          else
+            git commit -m "Catalogue : fusion des produits curés"
+            git pull --rebase
+            git push
+          fi

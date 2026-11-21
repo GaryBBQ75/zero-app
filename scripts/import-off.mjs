@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // Import du catalogue de boissons sans alcool vendues en France depuis Open Food Facts.
-// Sortie : public/data/products.json
+// Sortie : data/off-products.json, puis fusion avec le catalogue curé (scripts/merge-catalogue.mjs)
 // Données : Open Food Facts, licence ODbL (attribution obligatoire, partage à l'identique de la base).
 //
 // Usage : node scripts/import-off.mjs
@@ -9,9 +9,10 @@
 import { mkdir, writeFile } from 'node:fs/promises'
 import { dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { execFileSync } from 'node:child_process'
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')
-const OUT = resolve(ROOT, 'public/data/products.json')
+const OUT = resolve(ROOT, 'data/off-products.json')
 const MAX_PAGES = Number(process.env.OFF_MAX_PAGES || 5)
 const MAX_ABV = 1.2 // seuil légal français de la mention « sans alcool » pour la bière
 const UA = 'zero-app/0.1 (https://github.com/GaryBBQ75/zero-app)'
@@ -121,7 +122,8 @@ async function main() {
   }
   await mkdir(dirname(OUT), { recursive: true })
   await writeFile(OUT, JSON.stringify(out, null, 1) + '\n')
-  console.log(`Total : ${products.length} produits écrits dans public/data/products.json`)
+  console.log(`Total : ${products.length} produits OFF écrits dans data/off-products.json`)
+  execFileSync(process.execPath, [resolve(ROOT, 'scripts/merge-catalogue.mjs')], { stdio: 'inherit' })
 }
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) {

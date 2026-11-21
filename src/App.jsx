@@ -307,6 +307,13 @@ export default function App() {
               <div><small>Calories / 100 ml</small><strong>{current.kcal == null ? '?' : `${Math.round(current.kcal)} kcal`}</strong></div>
               <div><small>Prix indicatif</small><strong>{current.price ?? '?'}</strong></div>
             </div>
+            {(current.style || current.region || current.note) && (
+              <div className="origin">
+                {current.style && <span><small>Style</small>{current.style}</span>}
+                {current.region && <span><small>Origine</small>{current.region}</span>}
+                {current.note && <span><small>À savoir</small>{current.note}</span>}
+              </div>
+            )}
             {current.tags.length > 0 && (
               <div>
                 <h2 className="h3">Ce qu&rsquo;en disent les gens</h2>
@@ -326,6 +333,12 @@ export default function App() {
               </div>
             ))}
             {current.source === 'off' && <p className="credit">Données produit : Open Food Facts (licence ODbL).</p>}
+            {current.source === 'curated' && (
+              <p className="credit">
+                Fiche ajoutée par l&rsquo;équipe zéro, infos à compléter par la communauté.
+                {current.sourceUrl && <> <a href={current.sourceUrl} target="_blank" rel="noreferrer">Source</a></>}
+              </p>
+            )}
           </div>
           <div className="cta">
             <button type="button" className="btn-primary" onClick={openRating}>{ratings[current.id] ? 'Modifier ma note' : 'Noter en 10 secondes'}</button>
