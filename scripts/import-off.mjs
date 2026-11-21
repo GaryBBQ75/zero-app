@@ -32,7 +32,7 @@ export const SOURCES = [
   { tag: 'en:non-alcoholic-aperitifs', cat: 'aperitif' },
   { tag: 'en:non-alcoholic-cocktails', cat: 'aperitif' },
   { tag: 'en:mocktails', cat: 'aperitif' },
-  { tag: 'en:non-alcoholic-ciders', cat: 'soft' },
+  { tag: 'en:non-alcoholic-ciders', cat: 'cidre' },
   { tag: 'en:kombuchas', cat: 'soft' },
 ]
 

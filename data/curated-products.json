@@ -1,72 +1,1419 @@
 {
-  "about": "Catalogue complémentaire à Open Food Facts : brasseries artisanales, domaines et marques françaises de boissons sans alcool repérés par recherche web (novembre 2026). Seules les informations trouvées dans la source sont renseignées ; un taux d'alcool inconnu reste à null. À compléter et vérifier au fil de l'eau.",
-  "products": [
-    { "brand": "Tandem", "name": "Même Pas Mal", "cat": "biere", "style": "Blonde", "abv": 0.5, "region": "Hauts-de-France", "source": "https://www.sanzalc.com/collections/les-10-meilleures-bieres-sans-alcool" },
-    { "brand": "Prizm", "name": "NEIPA sans alcool", "cat": "biere", "style": "NEIPA", "abv": 0, "region": "Occitanie (près de Montpellier)", "source": "https://www.soiffard.fr/biere-sans-alcool/" },
-    { "brand": "Brasserie Parallèle", "name": "Blanche sans alcool", "cat": "biere", "style": "Blanche", "abv": 0.3, "region": "Gironde", "source": "https://www.soiffard.fr/biere-sans-alcool/" },
-    { "brand": "Lyderic", "name": "Blonde sans alcool", "cat": "biere", "style": "Blonde", "abv": 0.4, "region": "Hauts-de-France (près de Lille)", "source": "https://www.soiffard.fr/biere-sans-alcool/" },
-    { "brand": "Brasserie du Mont Salève", "name": "Blanche sans alcool", "cat": "biere", "style": "Blanche", "abv": 0.45, "region": "Haute-Savoie", "source": "https://bieronomy.com/378-sans-alcool" },
-    { "brand": "Brasserie de la Pleine Lune", "name": "Fleur de Lune IPA sans alcool", "cat": "biere", "style": "IPA", "abv": null, "region": "Drôme (Chabeuil)", "source": "https://bieronomy.com/378-sans-alcool" },
-    { "brand": "Piggy Brewing", "name": "Extra Lucid NEIPA sans alcool", "cat": "biere", "style": "NEIPA", "abv": null, "region": null, "source": "https://bieronomy.com/378-sans-alcool" },
-    { "brand": "Brasserie Elixkir", "name": "Glitch", "cat": "biere", "style": "Pale Ale", "abv": null, "region": null, "source": "https://bieronomy.com/378-sans-alcool" },
-    { "brand": "Edmond", "name": "La Blonde bio", "cat": "biere", "style": "Blonde", "abv": 0.5, "region": null, "note": "Microbrasserie entièrement dédiée au sans alcool", "source": "https://www.sanzalc.com/collections/les-10-meilleures-bieres-sans-alcool?page=2" },
-    { "brand": "Brasserie Météor", "name": "Météor Sans Alcool", "cat": "biere", "style": "Blonde", "abv": null, "region": "Grand Est", "source": "https://bieres-et-brasseries.fr/bieres-brasseries/les-bieres-sans-alcool/" },
-    { "brand": "Brasserie Toussaint", "name": "Micro IPA sans alcool", "cat": "biere", "style": "IPA", "abv": null, "region": "Île-de-France", "source": "https://bieres-et-brasseries.fr/bieres-brasseries/les-bieres-sans-alcool/" },
-    { "brand": "Ninkasi", "name": "Sans Culotte", "cat": "biere", "style": null, "abv": null, "region": "Lyon", "source": "https://www.biere-art.com/boire-de-la-biere-artisanale-francaise-sans-alcool-tendance-du-moment/" },
-    { "brand": "Brasserie Artisanale du Luberon", "name": "L'Envie Sans Alcool", "cat": "biere", "style": null, "abv": null, "region": "Vaucluse", "source": "https://www.biere-art.com/boire-de-la-biere-artisanale-francaise-sans-alcool-tendance-du-moment/" },
-    { "brand": "Grand Morin", "name": "The One", "cat": "biere", "style": null, "abv": null, "region": "Microbrasserie du Pont de Coude", "note": "Bio", "source": "https://www.boisson-sans-alcool.com/marques_biere-sans-alcool-france/" },
-    { "brand": "Goxoa", "name": "Goxoa sans alcool", "cat": "biere", "style": "Blonde", "abv": null, "region": null, "source": "https://www.lavoiemaltee.fr/quel-est-la-meilleure-biere-sans-alcool/" },
-    { "brand": "Goudale", "name": "Goudale Citron sans alcool", "cat": "biere", "style": "Witbier", "abv": null, "region": null, "source": "https://www.lavoiemaltee.fr/quel-est-la-meilleure-biere-sans-alcool/" },
-    { "brand": "L'Eurélienne", "name": "IPA sans alcool", "cat": "biere", "style": "IPA", "abv": 0.7, "region": "Eure-et-Loir (près de Chartres)", "source": "https://www.lavoiemaltee.fr/quel-est-la-meilleure-biere-sans-alcool/" },
-    { "brand": "Licorne", "name": "Licorne Brune sans alcool", "cat": "biere", "style": "Brune", "abv": 0, "region": null, "source": "https://www.lavoiemaltee.fr/quel-est-la-meilleure-biere-sans-alcool/" },
-    { "brand": "Craig Allan", "name": "Agent Modérateur", "cat": "biere", "style": "IPA", "abv": null, "region": null, "source": "https://infobiere.net/meilleures-bieres-sans-alcool/" },
-    { "brand": "Motte Cordonnier", "name": "Louis 0°", "cat": "biere", "style": "Blonde", "abv": 0.5, "region": null, "source": "https://www.sanzalc.com/collections/les-10-meilleures-bieres-sans-alcool?page=2" },
-    { "brand": "SAM", "name": "Blonde sans alcool", "cat": "biere", "style": "Blonde", "abv": null, "region": "Lille", "source": "https://www.sanzalc.com/blogs/articles/biere-sans-alcool-le-guide-ultime-pour-choisir-en-2026-50-selections-testees" },
-    { "brand": "Brasserie Occitane", "name": "IPA sans alcool", "cat": "biere", "style": "IPA", "abv": null, "region": "Occitanie", "source": "https://meilleurbiere.fr/blog/comment-choisir-un-comparatif-de-biere-artisanale-francaise-en-2026" },
-    { "brand": "Trottinette", "name": "IPA sans alcool", "cat": "biere", "style": "IPA", "abv": null, "region": null, "source": "https://www.sanzalc.com/collections/les-10-meilleures-bieres-sans-alcool" },
-
-    { "brand": "Domaine UBY", "name": "0% Rouge", "cat": "vin", "style": "Rouge", "abv": 0, "region": "Gers", "source": "https://www.vinatis.com/conseils/marques-qui-se-demarquent-dans-la-tendance-sans-alcool" },
-    { "brand": "Domaine UBY", "name": "0% Blanc", "cat": "vin", "style": "Blanc", "abv": 0, "region": "Gers", "source": "https://www.vinatis.com/conseils/marques-qui-se-demarquent-dans-la-tendance-sans-alcool" },
-    { "brand": "Pierre Chavin", "name": "Pierre Zéro Signature Chardonnay", "cat": "vin", "style": "Blanc", "abv": null, "region": null, "source": "https://www.1envie1vin.com/blog/guide-vin/top-vins-sans-alcool-ou-acheter-du-vin-sans-alcool/" },
-    { "brand": "Pierre Chavin", "name": "Chavin Zéro Blanc de Blancs", "cat": "vin", "style": "Pétillant", "abv": null, "region": null, "source": "https://www.1envie1vin.com/blog/guide-vin/top-vins-sans-alcool-ou-acheter-du-vin-sans-alcool/" },
-    { "brand": "Domaine de Montrose", "name": "Zéro Rosé", "cat": "vin", "style": "Rosé", "abv": null, "region": null, "source": "https://www.vinatis.com/conseils/marques-qui-se-demarquent-dans-la-tendance-sans-alcool" },
-    { "brand": "Villa Noria", "name": "Levin Pinot Noir Bio", "cat": "vin", "style": "Rouge", "abv": null, "region": null, "source": "https://www.1envie1vin.com/blog/guide-vin/top-vins-sans-alcool-ou-acheter-du-vin-sans-alcool/" },
-    { "brand": "Moderato", "name": "Prince Oscar", "cat": "vin", "style": "Rouge", "abv": null, "region": "Gers", "source": "https://www.gueuledejoie.com/blogs/news/tour-de-france-sans-alcool-bordeaux-sud-ouest" },
-    { "brand": "Moderato", "name": "Eden", "cat": "vin", "style": "Blanc (Sauvignon)", "abv": null, "region": "Gers", "source": "https://www.gueuledejoie.com/blogs/news/tour-de-france-sans-alcool-bordeaux-sud-ouest" },
-    { "brand": "Domaine de la Grenaudière", "name": "Phénomène", "cat": "vin", "style": "Blanc (Melon de Bourgogne)", "abv": null, "region": "Pays nantais", "source": "https://www.gueuledejoie.com/blogs/news/tour-de-france-sans-alcool-loire-alsace-est" },
-    { "brand": "Cave de Ribeauvillé", "name": "Rib0 mousseux", "cat": "vin", "style": "Pétillant (Muscat)", "abv": null, "region": "Alsace", "source": "https://www.gueuledejoie.com/blogs/news/tour-de-france-sans-alcool-loire-alsace-est" },
-    { "brand": "Sarment Zéro", "name": "Chenin désalcoolisé", "cat": "vin", "style": "Blanc (Chenin)", "abv": null, "region": "Sologne", "source": "https://www.gueuledejoie.com/blogs/news/tour-de-france-sans-alcool-loire-alsace-est" },
-    { "brand": "La Côte de Vincent", "name": "Riesling-Ryvaner désalcoolisé", "cat": "vin", "style": "Blanc", "abv": null, "region": "Alsace", "source": "https://www.gueuledejoie.com/blogs/news/tour-de-france-sans-alcool-loire-alsace-est" },
-    { "brand": "Domaine J. de Villebois", "name": "Sauvignon désalcoolisé", "cat": "vin", "style": "Blanc (Sauvignon)", "abv": null, "region": "Val de Loire", "source": "https://www.sans-alcool-du-vigneron.fr/collections/vins" },
-    { "brand": "Moukipic", "name": "Mousseux sans alcool", "cat": "vin", "style": "Pétillant", "abv": null, "region": "Fontvieille (Domaine Estoublons)", "source": "https://www.boisson-sans-alcool.com/marques_vin-mousseux-sans-alcool/" },
-    { "brand": "Domaine de la Levratière", "name": "L'Emoustillant", "cat": "vin", "style": "Pétillant rosé", "abv": null, "region": "Beaujolais (Villié-Morgon)", "source": "https://www.boisson-sans-alcool.com/marques_vin-sans-alcool/" },
-    { "brand": "French Bloom", "name": "Effervescent sans alcool", "cat": "vin", "style": "Pétillant", "abv": null, "region": null, "source": "https://www.lagrandeepicerie.com/fr/cave/sans-alcool" },
-    { "brand": "Le Petit Béret", "name": "Vin sans alcool", "cat": "vin", "style": null, "abv": null, "region": "Béziers", "source": "https://bigmedia.bpifrance.fr/nos-actualites/5-marques-francaises-pour-vos-aperitifs-estivaux" },
-
-    { "brand": "JNPR", "name": "JNPR N°2", "cat": "spiritueux", "style": "Épicé, poivré", "abv": null, "region": null, "source": "https://www.lagrandeepicerie.com/fr/cave/sans-alcool" },
-    { "brand": "JNPR", "name": "JNPR N°3", "cat": "spiritueux", "style": "Botanique", "abv": null, "region": null, "source": "https://www.lagrandeepicerie.com/fr/cave/sans-alcool" },
-    { "brand": "Citadelle", "name": "Citadelle sans alcool", "cat": "spiritueux", "style": "Esprit gin, 19 botaniques", "abv": null, "region": null, "source": "https://www.ldqm-mulhouse.fr/vins-desalcoolises-aperitifs-sans-alcool/" },
-    { "brand": "Esprit de Plantes", "name": "Spiritueux sans alcool", "cat": "spiritueux", "style": null, "abv": 0, "region": null, "source": "https://www.ldqm-mulhouse.fr/vins-desalcoolises-aperitifs-sans-alcool/" },
-    { "brand": "Djin", "name": "Djin", "cat": "spiritueux", "style": null, "abv": null, "region": null, "source": "https://www.toutlevin.com/article/la-tendance-des-spiritueux-sans-alcool" },
-    { "brand": "Osco", "name": "Apéritif au verjus", "cat": "aperitif", "style": "Amer méditerranéen", "abv": 0, "region": null, "note": "Bio", "source": "https://bigmedia.bpifrance.fr/nos-actualites/5-marques-francaises-pour-vos-aperitifs-estivaux" },
-    { "brand": "Jardins", "name": "Jardins Suspendus", "cat": "aperitif", "style": "Orange amère, romarin", "abv": null, "region": null, "source": "https://bienoubien.com/magazine/selection-aperitifs-sans-alcool/" },
-    { "brand": "Jardins", "name": "Jardins Fleuris", "cat": "aperitif", "style": "Sureau, bergamote", "abv": null, "region": null, "source": "https://bienoubien.com/magazine/selection-aperitifs-sans-alcool/" },
-    { "brand": "Jardins", "name": "Bulles de Jardins Raisin blanc & Noix", "cat": "aperitif", "style": "Pétillant", "abv": null, "region": null, "source": "https://bienoubien.com/magazine/selection-aperitifs-sans-alcool/" },
-    { "brand": "Sober Spirits", "name": "Spritz", "cat": "aperitif", "style": "Spritz", "abv": 0, "region": null, "source": "https://www.sansalcoolshop.fr/spiritueux-sans-alcool" },
-
-    { "brand": "Yass", "name": "Soda prébiotique", "cat": "soft", "style": "Néo-soda aux fibres", "abv": 0, "region": null, "note": "Marque française, fabriqué en Allemagne", "source": "https://www.ria.fr/actualites/boissons/quest-ce-que-yass-ce-soda-prebiotique-qui-arrive-en-france/" },
-    { "brand": "Rise Drinks", "name": "Citron-Basilic", "cat": "soft", "style": "Néo-soda aux fibres", "abv": 0, "region": "Charente", "source": "https://www.risedrinks.com/" },
-    { "brand": "Rise Drinks", "name": "Framboise-Hibiscus", "cat": "soft", "style": "Néo-soda aux fibres", "abv": 0, "region": "Charente", "source": "https://www.risedrinks.com/" },
-    { "brand": "Karma", "name": "Kombucha Gingembre-Citron", "cat": "soft", "style": "Kombucha", "abv": null, "region": "Bretagne", "source": "https://alcoolfree.fr/blog/meilleur-kombucha-2026" },
-    { "brand": "Lökki", "name": "Kombucha", "cat": "soft", "style": "Kombucha", "abv": null, "region": "Provence", "source": "https://kombucha-mania.com/marque-kombucha/" },
-    { "brand": "So Kombucha", "name": "Kombucha", "cat": "soft", "style": "Kombucha", "abv": null, "region": "Nouvelle-Aquitaine", "source": "https://kombucha-mania.com/marque-kombucha/" },
-    { "brand": "Foliz", "name": "Kombucha", "cat": "soft", "style": "Kombucha", "abv": null, "region": "Gers", "source": "https://kombucha-mania.com/marque-kombucha/" },
-    { "brand": "Goodsy", "name": "Kombucha", "cat": "soft", "style": "Kombucha", "abv": null, "region": "Nord", "source": "https://kombucha-mania.com/top-10-meilleures-marques-kombucha-france-2025-guide-expert/" },
-    { "brand": "Noko", "name": "Kombucha", "cat": "soft", "style": "Kombucha", "abv": null, "region": "Nord", "source": "https://kombucha-mania.com/top-10-meilleures-marques-kombucha-france-2025-guide-expert/" },
-    { "brand": "Kyo", "name": "Kombucha", "cat": "soft", "style": "Kombucha", "abv": null, "region": null, "source": "https://madeinfr.fr/etudes-de-marche/agroalimentaire-alimentation/le-marche-du-kombucha-et-du-kefir-en-france/" },
-    { "brand": "Ciao", "name": "Kombucha", "cat": "soft", "style": "Kombucha", "abv": null, "region": null, "source": "https://madeinfr.fr/etudes-de-marche/agroalimentaire-alimentation/le-marche-du-kombucha-et-du-kefir-en-france/" },
-    { "brand": "Les Kéfirs de Sylvie", "name": "Kéfir de fruits", "cat": "soft", "style": "Kéfir de fruits", "abv": null, "region": "Alsace (Labo Dumoulin)", "source": "https://www.lsa-conso.fr/tout-savoir-sur-la-folle-croissance-du-marche-des-boissons-fermentees,462459/" },
-    { "brand": "Symbiose", "name": "Kéfir L'Original", "cat": "soft", "style": "Kéfir de fruits", "abv": null, "region": "Paris", "source": "https://www.bioaddict.fr/les-boissons-fermentees-bio-un-tresor-pour-la-sante/" },
-    { "brand": "Brasserie Parallèle", "name": "Kéfir de fruits", "cat": "soft", "style": "Kéfir de fruits", "abv": null, "region": "Gironde", "source": "https://www.azade.fr/boissons/kombuchas-et-kefirs" }
-  ]
+ "about": "Catalogue complémentaire à Open Food Facts : brasseries artisanales, domaines et marques françaises de boissons sans alcool repérés par recherche web (novembre 2026). Seules les informations trouvées dans la source sont renseignées ; un taux d'alcool inconnu reste à null. À compléter et vérifier au fil de l'eau.",
+ "products": [
+  {
+   "brand": "Tandem",
+   "name": "Même Pas Mal",
+   "cat": "biere",
+   "style": "Blonde",
+   "abv": 0.5,
+   "region": "Hauts-de-France",
+   "source": "https://www.sanzalc.com/collections/les-10-meilleures-bieres-sans-alcool"
+  },
+  {
+   "brand": "Prizm",
+   "name": "NEIPA sans alcool",
+   "cat": "biere",
+   "style": "NEIPA",
+   "abv": 0,
+   "region": "Occitanie (près de Montpellier)",
+   "source": "https://www.soiffard.fr/biere-sans-alcool/"
+  },
+  {
+   "brand": "Brasserie Parallèle",
+   "name": "Blanche sans alcool",
+   "cat": "biere",
+   "style": "Blanche",
+   "abv": 0.3,
+   "region": "Gironde",
+   "source": "https://www.soiffard.fr/biere-sans-alcool/"
+  },
+  {
+   "brand": "Lyderic",
+   "name": "Blonde sans alcool",
+   "cat": "biere",
+   "style": "Blonde",
+   "abv": 0.4,
+   "region": "Hauts-de-France (près de Lille)",
+   "source": "https://www.soiffard.fr/biere-sans-alcool/"
+  },
+  {
+   "brand": "Brasserie du Mont Salève",
+   "name": "Blanche sans alcool",
+   "cat": "biere",
+   "style": "Blanche",
+   "abv": 0.45,
+   "region": "Haute-Savoie",
+   "source": "https://bieronomy.com/378-sans-alcool"
+  },
+  {
+   "brand": "Brasserie de la Pleine Lune",
+   "name": "Fleur de Lune IPA sans alcool",
+   "cat": "biere",
+   "style": "IPA",
+   "abv": null,
+   "region": "Drôme (Chabeuil)",
+   "source": "https://bieronomy.com/378-sans-alcool"
+  },
+  {
+   "brand": "Piggy Brewing",
+   "name": "Extra Lucid NEIPA sans alcool",
+   "cat": "biere",
+   "style": "NEIPA",
+   "abv": null,
+   "region": null,
+   "source": "https://bieronomy.com/378-sans-alcool"
+  },
+  {
+   "brand": "Brasserie Elixkir",
+   "name": "Glitch",
+   "cat": "biere",
+   "style": "Pale Ale",
+   "abv": null,
+   "region": null,
+   "source": "https://bieronomy.com/378-sans-alcool"
+  },
+  {
+   "brand": "Edmond",
+   "name": "La Blonde bio",
+   "cat": "biere",
+   "style": "Blonde",
+   "abv": 0.5,
+   "region": null,
+   "note": "Microbrasserie entièrement dédiée au sans alcool",
+   "source": "https://www.sanzalc.com/collections/les-10-meilleures-bieres-sans-alcool?page=2"
+  },
+  {
+   "brand": "Brasserie Météor",
+   "name": "Météor Sans Alcool",
+   "cat": "biere",
+   "style": "Blonde",
+   "abv": null,
+   "region": "Grand Est",
+   "source": "https://bieres-et-brasseries.fr/bieres-brasseries/les-bieres-sans-alcool/"
+  },
+  {
+   "brand": "Brasserie Toussaint",
+   "name": "Micro IPA sans alcool",
+   "cat": "biere",
+   "style": "IPA",
+   "abv": null,
+   "region": "Île-de-France",
+   "source": "https://bieres-et-brasseries.fr/bieres-brasseries/les-bieres-sans-alcool/"
+  },
+  {
+   "brand": "Ninkasi",
+   "name": "Sans Culotte",
+   "cat": "biere",
+   "style": null,
+   "abv": null,
+   "region": "Lyon",
+   "source": "https://www.biere-art.com/boire-de-la-biere-artisanale-francaise-sans-alcool-tendance-du-moment/"
+  },
+  {
+   "brand": "Brasserie Artisanale du Luberon",
+   "name": "L'Envie Sans Alcool",
+   "cat": "biere",
+   "style": null,
+   "abv": null,
+   "region": "Vaucluse",
+   "source": "https://www.biere-art.com/boire-de-la-biere-artisanale-francaise-sans-alcool-tendance-du-moment/"
+  },
+  {
+   "brand": "Grand Morin",
+   "name": "The One",
+   "cat": "biere",
+   "style": null,
+   "abv": null,
+   "region": "Microbrasserie du Pont de Coude",
+   "note": "Bio",
+   "source": "https://www.boisson-sans-alcool.com/marques_biere-sans-alcool-france/"
+  },
+  {
+   "brand": "Goxoa",
+   "name": "Goxoa sans alcool",
+   "cat": "biere",
+   "style": "Blonde",
+   "abv": null,
+   "region": null,
+   "source": "https://www.lavoiemaltee.fr/quel-est-la-meilleure-biere-sans-alcool/"
+  },
+  {
+   "brand": "Goudale",
+   "name": "Goudale Citron sans alcool",
+   "cat": "biere",
+   "style": "Witbier",
+   "abv": null,
+   "region": null,
+   "source": "https://www.lavoiemaltee.fr/quel-est-la-meilleure-biere-sans-alcool/"
+  },
+  {
+   "brand": "L'Eurélienne",
+   "name": "IPA sans alcool",
+   "cat": "biere",
+   "style": "IPA",
+   "abv": 0.7,
+   "region": "Eure-et-Loir (près de Chartres)",
+   "source": "https://www.lavoiemaltee.fr/quel-est-la-meilleure-biere-sans-alcool/"
+  },
+  {
+   "brand": "Licorne",
+   "name": "Licorne Brune sans alcool",
+   "cat": "biere",
+   "style": "Brune",
+   "abv": 0,
+   "region": null,
+   "source": "https://www.lavoiemaltee.fr/quel-est-la-meilleure-biere-sans-alcool/"
+  },
+  {
+   "brand": "Craig Allan",
+   "name": "Agent Modérateur",
+   "cat": "biere",
+   "style": "IPA",
+   "abv": null,
+   "region": null,
+   "source": "https://infobiere.net/meilleures-bieres-sans-alcool/"
+  },
+  {
+   "brand": "Motte Cordonnier",
+   "name": "Louis 0°",
+   "cat": "biere",
+   "style": "Blonde",
+   "abv": 0.5,
+   "region": null,
+   "source": "https://www.sanzalc.com/collections/les-10-meilleures-bieres-sans-alcool?page=2"
+  },
+  {
+   "brand": "SAM",
+   "name": "Blonde sans alcool",
+   "cat": "biere",
+   "style": "Blonde",
+   "abv": null,
+   "region": "Lille",
+   "source": "https://www.sanzalc.com/blogs/articles/biere-sans-alcool-le-guide-ultime-pour-choisir-en-2026-50-selections-testees"
+  },
+  {
+   "brand": "Brasserie Occitane",
+   "name": "IPA sans alcool",
+   "cat": "biere",
+   "style": "IPA",
+   "abv": null,
+   "region": "Occitanie",
+   "source": "https://meilleurbiere.fr/blog/comment-choisir-un-comparatif-de-biere-artisanale-francaise-en-2026"
+  },
+  {
+   "brand": "Trottinette",
+   "name": "IPA sans alcool",
+   "cat": "biere",
+   "style": "IPA",
+   "abv": null,
+   "region": null,
+   "source": "https://www.sanzalc.com/collections/les-10-meilleures-bieres-sans-alcool"
+  },
+  {
+   "brand": "Domaine UBY",
+   "name": "0% Rouge",
+   "cat": "vin",
+   "style": "Rouge",
+   "abv": 0,
+   "region": "Gers",
+   "source": "https://www.vinatis.com/conseils/marques-qui-se-demarquent-dans-la-tendance-sans-alcool"
+  },
+  {
+   "brand": "Domaine UBY",
+   "name": "0% Blanc",
+   "cat": "vin",
+   "style": "Blanc",
+   "abv": 0,
+   "region": "Gers",
+   "source": "https://www.vinatis.com/conseils/marques-qui-se-demarquent-dans-la-tendance-sans-alcool"
+  },
+  {
+   "brand": "Pierre Chavin",
+   "name": "Pierre Zéro Signature Chardonnay",
+   "cat": "vin",
+   "style": "Blanc",
+   "abv": null,
+   "region": null,
+   "source": "https://www.1envie1vin.com/blog/guide-vin/top-vins-sans-alcool-ou-acheter-du-vin-sans-alcool/"
+  },
+  {
+   "brand": "Pierre Chavin",
+   "name": "Chavin Zéro Blanc de Blancs",
+   "cat": "vin",
+   "style": "Pétillant",
+   "abv": null,
+   "region": null,
+   "source": "https://www.1envie1vin.com/blog/guide-vin/top-vins-sans-alcool-ou-acheter-du-vin-sans-alcool/"
+  },
+  {
+   "brand": "Domaine de Montrose",
+   "name": "Zéro Rosé",
+   "cat": "vin",
+   "style": "Rosé",
+   "abv": null,
+   "region": null,
+   "source": "https://www.vinatis.com/conseils/marques-qui-se-demarquent-dans-la-tendance-sans-alcool"
+  },
+  {
+   "brand": "Villa Noria",
+   "name": "Levin Pinot Noir Bio",
+   "cat": "vin",
+   "style": "Rouge",
+   "abv": null,
+   "region": null,
+   "source": "https://www.1envie1vin.com/blog/guide-vin/top-vins-sans-alcool-ou-acheter-du-vin-sans-alcool/"
+  },
+  {
+   "brand": "Moderato",
+   "name": "Prince Oscar",
+   "cat": "vin",
+   "style": "Rouge",
+   "abv": null,
+   "region": "Gers",
+   "source": "https://www.gueuledejoie.com/blogs/news/tour-de-france-sans-alcool-bordeaux-sud-ouest"
+  },
+  {
+   "brand": "Moderato",
+   "name": "Eden",
+   "cat": "vin",
+   "style": "Blanc (Sauvignon)",
+   "abv": null,
+   "region": "Gers",
+   "source": "https://www.gueuledejoie.com/blogs/news/tour-de-france-sans-alcool-bordeaux-sud-ouest"
+  },
+  {
+   "brand": "Domaine de la Grenaudière",
+   "name": "Phénomène",
+   "cat": "vin",
+   "style": "Blanc (Melon de Bourgogne)",
+   "abv": null,
+   "region": "Pays nantais",
+   "source": "https://www.gueuledejoie.com/blogs/news/tour-de-france-sans-alcool-loire-alsace-est"
+  },
+  {
+   "brand": "Cave de Ribeauvillé",
+   "name": "Rib0 mousseux",
+   "cat": "vin",
+   "style": "Pétillant (Muscat)",
+   "abv": null,
+   "region": "Alsace",
+   "source": "https://www.gueuledejoie.com/blogs/news/tour-de-france-sans-alcool-loire-alsace-est"
+  },
+  {
+   "brand": "Sarment Zéro",
+   "name": "Chenin désalcoolisé",
+   "cat": "vin",
+   "style": "Blanc (Chenin)",
+   "abv": null,
+   "region": "Sologne",
+   "source": "https://www.gueuledejoie.com/blogs/news/tour-de-france-sans-alcool-loire-alsace-est"
+  },
+  {
+   "brand": "La Côte de Vincent",
+   "name": "Riesling-Ryvaner désalcoolisé",
+   "cat": "vin",
+   "style": "Blanc",
+   "abv": null,
+   "region": "Alsace",
+   "source": "https://www.gueuledejoie.com/blogs/news/tour-de-france-sans-alcool-loire-alsace-est"
+  },
+  {
+   "brand": "Domaine J. de Villebois",
+   "name": "Sauvignon désalcoolisé",
+   "cat": "vin",
+   "style": "Blanc (Sauvignon)",
+   "abv": null,
+   "region": "Val de Loire",
+   "source": "https://www.sans-alcool-du-vigneron.fr/collections/vins"
+  },
+  {
+   "brand": "Moukipic",
+   "name": "Mousseux sans alcool",
+   "cat": "vin",
+   "style": "Pétillant",
+   "abv": null,
+   "region": "Fontvieille (Domaine Estoublons)",
+   "source": "https://www.boisson-sans-alcool.com/marques_vin-mousseux-sans-alcool/"
+  },
+  {
+   "brand": "Domaine de la Levratière",
+   "name": "L'Emoustillant",
+   "cat": "vin",
+   "style": "Pétillant rosé",
+   "abv": null,
+   "region": "Beaujolais (Villié-Morgon)",
+   "source": "https://www.boisson-sans-alcool.com/marques_vin-sans-alcool/"
+  },
+  {
+   "brand": "French Bloom",
+   "name": "Effervescent sans alcool",
+   "cat": "vin",
+   "style": "Pétillant",
+   "abv": null,
+   "region": null,
+   "source": "https://www.lagrandeepicerie.com/fr/cave/sans-alcool"
+  },
+  {
+   "brand": "Le Petit Béret",
+   "name": "Vin sans alcool",
+   "cat": "vin",
+   "style": null,
+   "abv": null,
+   "region": "Béziers",
+   "source": "https://bigmedia.bpifrance.fr/nos-actualites/5-marques-francaises-pour-vos-aperitifs-estivaux"
+  },
+  {
+   "brand": "JNPR",
+   "name": "JNPR N°2",
+   "cat": "spiritueux",
+   "style": "Épicé, poivré",
+   "abv": null,
+   "region": null,
+   "source": "https://www.lagrandeepicerie.com/fr/cave/sans-alcool"
+  },
+  {
+   "brand": "JNPR",
+   "name": "JNPR N°3",
+   "cat": "spiritueux",
+   "style": "Botanique",
+   "abv": null,
+   "region": null,
+   "source": "https://www.lagrandeepicerie.com/fr/cave/sans-alcool"
+  },
+  {
+   "brand": "Citadelle",
+   "name": "Citadelle sans alcool",
+   "cat": "spiritueux",
+   "style": "Esprit gin, 19 botaniques",
+   "abv": null,
+   "region": null,
+   "source": "https://www.ldqm-mulhouse.fr/vins-desalcoolises-aperitifs-sans-alcool/"
+  },
+  {
+   "brand": "Esprit de Plantes",
+   "name": "Spiritueux sans alcool",
+   "cat": "spiritueux",
+   "style": null,
+   "abv": 0,
+   "region": null,
+   "source": "https://www.ldqm-mulhouse.fr/vins-desalcoolises-aperitifs-sans-alcool/"
+  },
+  {
+   "brand": "Djin",
+   "name": "Djin",
+   "cat": "spiritueux",
+   "style": null,
+   "abv": null,
+   "region": null,
+   "source": "https://www.toutlevin.com/article/la-tendance-des-spiritueux-sans-alcool"
+  },
+  {
+   "brand": "Osco",
+   "name": "Apéritif au verjus",
+   "cat": "aperitif",
+   "style": "Amer méditerranéen",
+   "abv": 0,
+   "region": null,
+   "note": "Bio",
+   "source": "https://bigmedia.bpifrance.fr/nos-actualites/5-marques-francaises-pour-vos-aperitifs-estivaux"
+  },
+  {
+   "brand": "Jardins",
+   "name": "Jardins Suspendus",
+   "cat": "aperitif",
+   "style": "Orange amère, romarin",
+   "abv": null,
+   "region": null,
+   "source": "https://bienoubien.com/magazine/selection-aperitifs-sans-alcool/"
+  },
+  {
+   "brand": "Jardins",
+   "name": "Jardins Fleuris",
+   "cat": "aperitif",
+   "style": "Sureau, bergamote",
+   "abv": null,
+   "region": null,
+   "source": "https://bienoubien.com/magazine/selection-aperitifs-sans-alcool/"
+  },
+  {
+   "brand": "Jardins",
+   "name": "Bulles de Jardins Raisin blanc & Noix",
+   "cat": "aperitif",
+   "style": "Pétillant",
+   "abv": null,
+   "region": null,
+   "source": "https://bienoubien.com/magazine/selection-aperitifs-sans-alcool/"
+  },
+  {
+   "brand": "Sober Spirits",
+   "name": "Spritz",
+   "cat": "aperitif",
+   "style": "Spritz",
+   "abv": 0,
+   "region": null,
+   "source": "https://www.sansalcoolshop.fr/spiritueux-sans-alcool"
+  },
+  {
+   "brand": "Yass",
+   "name": "Soda prébiotique",
+   "cat": "soft",
+   "style": "Néo-soda aux fibres",
+   "abv": 0,
+   "region": null,
+   "note": "Marque française, fabriqué en Allemagne",
+   "source": "https://www.ria.fr/actualites/boissons/quest-ce-que-yass-ce-soda-prebiotique-qui-arrive-en-france/"
+  },
+  {
+   "brand": "Rise Drinks",
+   "name": "Citron-Basilic",
+   "cat": "soft",
+   "style": "Néo-soda aux fibres",
+   "abv": 0,
+   "region": "Charente",
+   "source": "https://www.risedrinks.com/"
+  },
+  {
+   "brand": "Rise Drinks",
+   "name": "Framboise-Hibiscus",
+   "cat": "soft",
+   "style": "Néo-soda aux fibres",
+   "abv": 0,
+   "region": "Charente",
+   "source": "https://www.risedrinks.com/"
+  },
+  {
+   "brand": "Karma",
+   "name": "Kombucha Gingembre-Citron",
+   "cat": "soft",
+   "style": "Kombucha",
+   "abv": null,
+   "region": "Bretagne",
+   "source": "https://alcoolfree.fr/blog/meilleur-kombucha-2026"
+  },
+  {
+   "brand": "Lökki",
+   "name": "Kombucha",
+   "cat": "soft",
+   "style": "Kombucha",
+   "abv": null,
+   "region": "Provence",
+   "source": "https://kombucha-mania.com/marque-kombucha/"
+  },
+  {
+   "brand": "So Kombucha",
+   "name": "Kombucha",
+   "cat": "soft",
+   "style": "Kombucha",
+   "abv": null,
+   "region": "Nouvelle-Aquitaine",
+   "source": "https://kombucha-mania.com/marque-kombucha/"
+  },
+  {
+   "brand": "Foliz",
+   "name": "Kombucha",
+   "cat": "soft",
+   "style": "Kombucha",
+   "abv": null,
+   "region": "Gers",
+   "source": "https://kombucha-mania.com/marque-kombucha/"
+  },
+  {
+   "brand": "Goodsy",
+   "name": "Kombucha",
+   "cat": "soft",
+   "style": "Kombucha",
+   "abv": null,
+   "region": "Nord",
+   "source": "https://kombucha-mania.com/top-10-meilleures-marques-kombucha-france-2025-guide-expert/"
+  },
+  {
+   "brand": "Noko",
+   "name": "Kombucha",
+   "cat": "soft",
+   "style": "Kombucha",
+   "abv": null,
+   "region": "Nord",
+   "source": "https://kombucha-mania.com/top-10-meilleures-marques-kombucha-france-2025-guide-expert/"
+  },
+  {
+   "brand": "Kyo",
+   "name": "Kombucha",
+   "cat": "soft",
+   "style": "Kombucha",
+   "abv": null,
+   "region": null,
+   "source": "https://madeinfr.fr/etudes-de-marche/agroalimentaire-alimentation/le-marche-du-kombucha-et-du-kefir-en-france/"
+  },
+  {
+   "brand": "Ciao",
+   "name": "Kombucha",
+   "cat": "soft",
+   "style": "Kombucha",
+   "abv": null,
+   "region": null,
+   "source": "https://madeinfr.fr/etudes-de-marche/agroalimentaire-alimentation/le-marche-du-kombucha-et-du-kefir-en-france/"
+  },
+  {
+   "brand": "Les Kéfirs de Sylvie",
+   "name": "Kéfir de fruits",
+   "cat": "soft",
+   "style": "Kéfir de fruits",
+   "abv": null,
+   "region": "Alsace (Labo Dumoulin)",
+   "source": "https://www.lsa-conso.fr/tout-savoir-sur-la-folle-croissance-du-marche-des-boissons-fermentees,462459/"
+  },
+  {
+   "brand": "Symbiose",
+   "name": "Kéfir L'Original",
+   "cat": "soft",
+   "style": "Kéfir de fruits",
+   "abv": null,
+   "region": "Paris",
+   "source": "https://www.bioaddict.fr/les-boissons-fermentees-bio-un-tresor-pour-la-sante/"
+  },
+  {
+   "brand": "Brasserie Parallèle",
+   "name": "Kéfir de fruits",
+   "cat": "soft",
+   "style": "Kéfir de fruits",
+   "abv": null,
+   "region": "Gironde",
+   "source": "https://www.azade.fr/boissons/kombuchas-et-kefirs"
+  },
+  {
+   "brand": "Nicolas",
+   "name": "100% Désalcoolisé Cabernet-Sauvignon",
+   "cat": "vin",
+   "style": "Rouge",
+   "abv": 0,
+   "region": null,
+   "source": "https://www.nicolas.com/en/Soft/c/08",
+   "price": "7,90 €",
+   "quantity": "75 cl"
+  },
+  {
+   "brand": "Nicolas",
+   "name": "100% Désalcoolisé Chardonnay",
+   "cat": "vin",
+   "style": "Blanc",
+   "abv": 0,
+   "region": null,
+   "source": "https://www.nicolas.com/en/Soft/c/08",
+   "price": "7,90 €",
+   "quantity": "75 cl"
+  },
+  {
+   "brand": "Nicolas",
+   "name": "100% Désalcoolisé Rosé",
+   "cat": "vin",
+   "style": "Rosé",
+   "abv": null,
+   "region": null,
+   "source": "https://www.nicolas.com/en/OTHERS/NICOLAS-100%25-DESALCOOLISE-CABERNET-SAUVIGNON/p/504191.html",
+   "price": "7,90 €",
+   "quantity": "75 cl"
+  },
+  {
+   "brand": "Nicolas",
+   "name": "100% Désalcoolisé Blanc de Blancs",
+   "cat": "vin",
+   "style": "Pétillant",
+   "abv": null,
+   "region": null,
+   "source": "https://www.nicolas.com/en/AUTRES/NICOLAS-100%25-DESALCOOLISE-CABERNET-SAUVIGNON/p/504191.html",
+   "price": "11,90 €",
+   "quantity": "75 cl"
+  },
+  {
+   "brand": "Pierre Zéro",
+   "name": "Spritz sans alcool",
+   "cat": "aperitif",
+   "style": "Spritz effervescent",
+   "abv": 0,
+   "region": null,
+   "source": "https://www.nicolas.com/en/Soft/c/08",
+   "price": "10,90 €",
+   "quantity": "75 cl"
+  },
+  {
+   "brand": "Tanqueray",
+   "name": "Tanqueray 0.0%",
+   "cat": "spiritueux",
+   "style": "Gin",
+   "abv": 0,
+   "region": null,
+   "source": "https://www.nicolas.com/en/Soft/c/08",
+   "price": "24,90 €",
+   "quantity": "70 cl"
+  },
+  {
+   "brand": "Moderato",
+   "name": "Sigalas Rabaud sans alcool",
+   "cat": "vin",
+   "style": "Blanc liquoreux",
+   "abv": 0,
+   "region": null,
+   "source": "https://www.nicolas.com/en/Soft/c/08",
+   "price": "29,90 €",
+   "quantity": "75 cl"
+  },
+  {
+   "brand": "Nectarose",
+   "name": "Sparkling 0%",
+   "cat": "vin",
+   "style": "Pétillant rosé",
+   "abv": 0,
+   "region": null,
+   "source": "https://www.nicolas.com/en/Soft/c/08",
+   "price": "14,40 €",
+   "quantity": "73 cl"
+  },
+  {
+   "brand": "Lyre's",
+   "name": "Classico",
+   "cat": "vin",
+   "style": "Pétillant",
+   "abv": null,
+   "region": null,
+   "source": "https://www.nicolas.com/en/OTHERS/BORN-TO-BE-FREE-VIN-SANS-ALCOOL-%28DESALCOOLISE%29/p/498073.html",
+   "price": "11,60 €",
+   "quantity": "75 cl"
+  },
+  {
+   "brand": "Veuve du Vernay",
+   "name": "Sans alcool",
+   "cat": "vin",
+   "style": "Pétillant",
+   "abv": null,
+   "region": null,
+   "source": "https://www.nicolas.com/en/AUTRES/NECTAROSE-SPARKLING-0%25/p/498152.html",
+   "price": "9,50 €",
+   "quantity": "75 cl"
+  },
+  {
+   "brand": "French Bloom",
+   "name": "Blanc",
+   "cat": "vin",
+   "style": "Pétillant",
+   "abv": null,
+   "region": null,
+   "source": "https://www.nicolas.com/en/AUTRES/NECTAROSE-SPARKLING-0%25/p/498152.html",
+   "price": "29,00 €",
+   "quantity": "75 cl"
+  },
+  {
+   "brand": "French Bloom",
+   "name": "Rosé",
+   "cat": "vin",
+   "style": "Pétillant rosé",
+   "abv": null,
+   "region": null,
+   "source": "https://www.nicolas.com/en/LIQUORS/GENEPI-VIEILLE-RECETTE-/p/491939.html",
+   "price": "34,00 €",
+   "quantity": "75 cl"
+  },
+  {
+   "brand": "Domaine UBY",
+   "name": "Zéro Alcool Sauvignon Blanc",
+   "cat": "vin",
+   "style": "Blanc (Sauvignon)",
+   "abv": null,
+   "region": "Gers",
+   "source": "https://www.nicolas.com/en/LIQUORS/GENEPI-VIEILLE-RECETTE-/p/491939.html",
+   "price": "8,00 €",
+   "quantity": "75 cl"
+  },
+  {
+   "brand": "Tempera",
+   "name": "Riva",
+   "cat": "vin",
+   "style": null,
+   "abv": null,
+   "region": null,
+   "source": "https://www.nicolas.com/en/LIQUORS/GENEPI-VIEILLE-RECETTE-/p/491939.html",
+   "price": "16,70 €",
+   "quantity": "75 cl"
+  },
+  {
+   "brand": "Brasserie Parallèle",
+   "name": "Bière sans alcool",
+   "cat": "biere",
+   "style": "Blonde",
+   "abv": null,
+   "region": "Gironde",
+   "source": "https://www.nicolas.com/en/Soft/c/08",
+   "price": "3,60 €",
+   "quantity": "33 cl"
+  },
+  {
+   "brand": "Born to be Free",
+   "name": "Vin blanc sec sans alcool",
+   "cat": "vin",
+   "style": "Blanc",
+   "abv": null,
+   "region": null,
+   "source": "https://www.houra.fr/catalogue/sans-alcool-B1488586-1.html",
+   "price": "7,49 €",
+   "note": "Famille Pugibet",
+   "quantity": "75 cl"
+  },
+  {
+   "brand": "Born to be Free",
+   "name": "Vin rosé sans alcool",
+   "cat": "vin",
+   "style": "Rosé",
+   "abv": null,
+   "region": null,
+   "source": "https://www.houra.fr/catalogue/sans-alcool-B1488586-1.html",
+   "price": "7,49 €",
+   "quantity": "75 cl"
+  },
+  {
+   "brand": "Born to be Free",
+   "name": "Vin rouge sans alcool",
+   "cat": "vin",
+   "style": "Rouge",
+   "abv": null,
+   "region": null,
+   "source": "https://www.houra.fr/catalogue/sans-alcool-B1488586-1.html",
+   "price": "7,49 €",
+   "quantity": "75 cl"
+  },
+  {
+   "brand": "Bonne Nouvelle",
+   "name": "Rosé sans alcool",
+   "cat": "vin",
+   "style": "Rosé",
+   "abv": null,
+   "region": null,
+   "source": "https://www.houra.fr/catalogue/sans-alcool-B1488586-1.html",
+   "quantity": "75 cl"
+  },
+  {
+   "brand": "Bonne Nouvelle",
+   "name": "Rouge sans alcool",
+   "cat": "vin",
+   "style": "Rouge",
+   "abv": null,
+   "region": null,
+   "source": "https://www.houra.fr/catalogue/sans-alcool-B1488586-1.html",
+   "quantity": "75 cl"
+  },
+  {
+   "brand": "Bonne Nouvelle",
+   "name": "Blanc sans alcool",
+   "cat": "vin",
+   "style": "Blanc",
+   "abv": null,
+   "region": null,
+   "source": "https://www.houra.fr/catalogue/sans-alcool-B1488586-1.html",
+   "quantity": "75 cl"
+  },
+  {
+   "brand": "Gratien & Meyer",
+   "name": "Festillant blanc sans alcool",
+   "cat": "vin",
+   "style": "Pétillant",
+   "abv": null,
+   "region": null,
+   "source": "https://www.houra.fr/catalogue/sans-alcool-B1488586-1.html",
+   "quantity": "75 cl"
+  },
+  {
+   "brand": "Estandon",
+   "name": "Zéro sur Vin rosé",
+   "cat": "vin",
+   "style": "Rosé",
+   "abv": null,
+   "region": "Provence",
+   "source": "https://www.houra.fr/catalogue/sans-alcool-B1488586-1.html",
+   "price": "6,90 €",
+   "quantity": "75 cl"
+  },
+  {
+   "brand": "Estandon",
+   "name": "Virgin rosé",
+   "cat": "vin",
+   "style": "Rosé",
+   "abv": 0.5,
+   "region": "Provence",
+   "source": "https://www.houra.fr/catalogue/sans-alcool-B1488586-1.html",
+   "price": "6,90 €",
+   "quantity": "75 cl"
+  },
+  {
+   "brand": "D'Artigny",
+   "name": "Pétillant sans alcool",
+   "cat": "vin",
+   "style": "Pétillant",
+   "abv": null,
+   "region": null,
+   "source": "https://www.houra.fr/catalogue/sans-alcool-B1488586-1.html",
+   "quantity": "75 cl"
+  },
+  {
+   "brand": "D'Artigny",
+   "name": "Pétillant muscat",
+   "cat": "vin",
+   "style": "Pétillant (Muscat)",
+   "abv": null,
+   "region": null,
+   "source": "https://www.houra.fr/catalogue/sans-alcool-B1488586-1.html",
+   "quantity": "75 cl"
+  },
+  {
+   "brand": "D'Artigny",
+   "name": "Pétillant framboise",
+   "cat": "vin",
+   "style": "Pétillant aromatisé",
+   "abv": null,
+   "region": null,
+   "source": "https://www.houra.fr/catalogue/sans-alcool-B1488586-1.html",
+   "quantity": "75 cl"
+  },
+  {
+   "brand": "D'Artigny",
+   "name": "Pétillant pêche",
+   "cat": "vin",
+   "style": "Pétillant aromatisé",
+   "abv": null,
+   "region": null,
+   "source": "https://www.houra.fr/catalogue/sans-alcool-B1488586-1.html",
+   "quantity": "75 cl"
+  },
+  {
+   "brand": "D'Artigny",
+   "name": "Cuvée prestige",
+   "cat": "vin",
+   "style": "Pétillant",
+   "abv": null,
+   "region": null,
+   "source": "https://www.houra.fr/catalogue/sans-alcool-B1488586-1.html",
+   "quantity": "75 cl"
+  },
+  {
+   "brand": "Fine Bouche",
+   "name": "Syrah rosé bio",
+   "cat": "vin",
+   "style": "Rosé",
+   "abv": null,
+   "region": null,
+   "source": "https://www.houra.fr/catalogue/sans-alcool-B1488586-1.html",
+   "quantity": "75 cl"
+  },
+  {
+   "brand": "Fine Bouche",
+   "name": "Chardonnay bio",
+   "cat": "vin",
+   "style": "Blanc",
+   "abv": null,
+   "region": null,
+   "source": "https://www.houra.fr/catalogue/sans-alcool-B1488586-1.html",
+   "quantity": "75 cl"
+  },
+  {
+   "brand": "Fine Bouche",
+   "name": "Blanc de Blancs mousseux bio",
+   "cat": "vin",
+   "style": "Pétillant",
+   "abv": null,
+   "region": null,
+   "source": "https://www.houra.fr/catalogue/sans-alcool-B1488586-1.html",
+   "quantity": "75 cl"
+  },
+  {
+   "brand": "Fine Bouche",
+   "name": "Pinot Noir bio",
+   "cat": "vin",
+   "style": "Rouge",
+   "abv": null,
+   "region": null,
+   "source": "https://www.houra.fr/catalogue/sans-alcool-B1488586-1.html",
+   "quantity": "75 cl"
+  },
+  {
+   "brand": "Divin Origine",
+   "name": "Rosé sans alcool",
+   "cat": "vin",
+   "style": "Rosé",
+   "abv": null,
+   "region": null,
+   "source": "https://www.houra.fr/catalogue/sans-alcool-B1488586-1.html",
+   "price": "11,20 €",
+   "quantity": "75 cl"
+  },
+  {
+   "brand": "Divin Origine",
+   "name": "Sauvignon effervescent",
+   "cat": "vin",
+   "style": "Pétillant",
+   "abv": null,
+   "region": null,
+   "source": "https://www.houra.fr/catalogue/sans-alcool-B1488586-1.html",
+   "price": "11,90 €",
+   "quantity": "75 cl"
+  },
+  {
+   "brand": "Baron Chanteclerc",
+   "name": "Effervescent rosé",
+   "cat": "vin",
+   "style": "Pétillant rosé",
+   "abv": null,
+   "region": null,
+   "source": "https://www.houra.fr/catalogue/sans-alcool-B1488586-1.html",
+   "price": "8,95 €",
+   "quantity": "75 cl"
+  },
+  {
+   "brand": "Baron Chanteclerc",
+   "name": "Effervescent blanc",
+   "cat": "vin",
+   "style": "Pétillant",
+   "abv": null,
+   "region": null,
+   "source": "https://www.houra.fr/catalogue/sans-alcool-B1488586-1.html",
+   "price": "8,95 €",
+   "quantity": "75 cl"
+  },
+  {
+   "brand": "Hérisson",
+   "name": "Chardonnay Bulles",
+   "cat": "vin",
+   "style": "Pétillant",
+   "abv": null,
+   "region": null,
+   "source": "https://www.houra.fr/catalogue/sans-alcool-B1488586-1.html",
+   "price": "7,95 €",
+   "quantity": "75 cl"
+  },
+  {
+   "brand": "Les Ormes de Cambras",
+   "name": "Merlot sans alcool",
+   "cat": "vin",
+   "style": "Rouge",
+   "abv": null,
+   "region": null,
+   "source": "https://fr.linkedin.com/in/chloecapy"
+  },
+  {
+   "brand": "Les Ormes de Cambras",
+   "name": "Sauvignon sans alcool",
+   "cat": "vin",
+   "style": "Blanc",
+   "abv": null,
+   "region": null,
+   "source": "https://fr.linkedin.com/in/chloecapy"
+  },
+  {
+   "brand": "Vilaveroni",
+   "name": "Effervescent sans alcool",
+   "cat": "vin",
+   "style": "Pétillant",
+   "abv": null,
+   "region": "Italie",
+   "source": "https://fr.linkedin.com/in/chloecapy"
+  },
+  {
+   "brand": "Pyrène",
+   "name": "L'Insouciant Sauvignon Blanc",
+   "cat": "vin",
+   "style": "Blanc",
+   "abv": 0.5,
+   "region": null,
+   "source": "https://www.saq.com/fr/contenu/inspiration/partager/suggestions-produits-faible-alcool"
+  },
+  {
+   "brand": "Nozeco",
+   "name": "Peach Bellini",
+   "cat": "vin",
+   "style": "Pétillant aromatisé",
+   "abv": 0.5,
+   "region": null,
+   "source": "https://www.saq.com/fr/contenu/inspiration/partager/suggestions-produits-faible-alcool"
+  },
+  {
+   "brand": "Adriatico",
+   "name": "Amaretto sans alcool",
+   "cat": "spiritueux",
+   "style": "Amaretto",
+   "abv": null,
+   "region": null,
+   "source": "https://www.houra.fr/catalogue/sans-alcool-B1488586-1.html",
+   "price": "27,90 €",
+   "quantity": "70 cl"
+  },
+  {
+   "brand": "Osco",
+   "name": "L'Original",
+   "cat": "aperitif",
+   "style": "Apéritif au verjus, bio",
+   "abv": null,
+   "region": null,
+   "source": "https://www.houra.fr/catalogue/sans-alcool-B1488586-1.html",
+   "price": "24,90 €",
+   "quantity": "70 cl"
+  },
+  {
+   "brand": "Havaniets",
+   "name": "Spiritueux sans alcool",
+   "cat": "spiritueux",
+   "style": "Esprit rhum",
+   "abv": null,
+   "region": null,
+   "source": "https://www.houra.fr/catalogue/sans-alcool-B1488586-1.html",
+   "price": "36,50 €",
+   "quantity": "50 cl"
+  },
+  {
+   "brand": "Nona",
+   "name": "Spritz",
+   "cat": "aperitif",
+   "style": "Spritz",
+   "abv": null,
+   "region": null,
+   "source": "https://www.houra.fr/catalogue/sans-alcool-B1488586-1.html",
+   "price": "29,90 €",
+   "quantity": "70 cl"
+  },
+  {
+   "brand": "Nona",
+   "name": "June",
+   "cat": "spiritueux",
+   "style": "Esprit gin",
+   "abv": null,
+   "region": null,
+   "source": "https://www.houra.fr/catalogue/sans-alcool-B1488586-1.html",
+   "price": "29,90 €",
+   "quantity": "70 cl"
+  },
+  {
+   "brand": "Fluère",
+   "name": "Original",
+   "cat": "spiritueux",
+   "style": "Botanique",
+   "abv": null,
+   "region": null,
+   "source": "https://www.houra.fr/catalogue/sans-alcool-B1488586-1.html",
+   "price": "25,50 €",
+   "quantity": "70 cl"
+  },
+  {
+   "brand": "Fluère",
+   "name": "Smoked Agave",
+   "cat": "spiritueux",
+   "style": "Esprit tequila",
+   "abv": null,
+   "region": null,
+   "source": "https://www.houra.fr/catalogue/sans-alcool-B1488586-1.html",
+   "price": "25,50 €",
+   "quantity": "70 cl"
+  },
+  {
+   "brand": "Fluère",
+   "name": "Dark Roast",
+   "cat": "spiritueux",
+   "style": "Café",
+   "abv": null,
+   "region": null,
+   "source": "https://www.houra.fr/catalogue/sans-alcool-B1488586-1.html",
+   "price": "25,50 €",
+   "quantity": "70 cl"
+  },
+  {
+   "brand": "Fluère",
+   "name": "Raspberry",
+   "cat": "spiritueux",
+   "style": "Framboise",
+   "abv": null,
+   "region": null,
+   "source": "https://www.houra.fr/catalogue/sans-alcool-B1488586-1.html",
+   "price": "25,50 €",
+   "quantity": "70 cl"
+  },
+  {
+   "brand": "Suze",
+   "name": "Suze Tonic 0%",
+   "cat": "aperitif",
+   "style": "Prêt à boire",
+   "abv": 0,
+   "region": null,
+   "source": "https://www.toutlevin.com/article/no-alcool-low-alcool-la-nouvelle-tendance"
+  },
+  {
+   "brand": "Blancart",
+   "name": "Anise",
+   "cat": "aperitif",
+   "style": "Anisé",
+   "abv": null,
+   "region": null,
+   "source": "https://www.sansalcoolshop.fr/spiritueux-sans-alcool"
+  },
+  {
+   "brand": "Freely",
+   "name": "A-Peritivo",
+   "cat": "aperitif",
+   "style": "Amer",
+   "abv": 0,
+   "region": null,
+   "source": "https://www.sansalcoolshop.fr/spiritueux-sans-alcool"
+  },
+  {
+   "brand": "Cidre Mauret",
+   "name": "La Source",
+   "cat": "cidre",
+   "style": "Cidre doux",
+   "abv": 0,
+   "region": "Normandie",
+   "source": "https://www.cidremauret.fr/7/nos-cidres-french-natural-cider.html"
+  },
+  {
+   "brand": "Cidre Mauret",
+   "name": "Le Fraisier",
+   "cat": "cidre",
+   "style": "Cidre aromatisé",
+   "abv": 0,
+   "region": "Normandie",
+   "source": "https://www.cidremauret.fr/7/nos-cidres-french-natural-cider.html"
+  },
+  {
+   "brand": "Maison Noa",
+   "name": "Cidre brut 0.0%",
+   "cat": "cidre",
+   "style": "Brut",
+   "abv": 0,
+   "region": null,
+   "source": "https://www.gueuledejoie.com/products/maison-noa-cidre",
+   "note": "12 kcal / 100 ml, vegan",
+   "quantity": "25 cl"
+  },
+  {
+   "brand": "Loïc Raison",
+   "name": "Sans Alcool",
+   "cat": "cidre",
+   "style": "Cidre",
+   "abv": 0,
+   "region": "Bretagne (Domagné)",
+   "source": "https://caryatide.net/cidre-sans-alcool/"
+  },
+  {
+   "brand": "Sassy",
+   "name": "Cidre bio sans alcool",
+   "cat": "cidre",
+   "style": "Cidre bio",
+   "abv": 0,
+   "region": "Normandie",
+   "source": "https://maison-sassy.com/"
+  },
+  {
+   "brand": "Cidrerie Kerné",
+   "name": "Cidre sans alcool",
+   "cat": "cidre",
+   "style": "Brut",
+   "abv": null,
+   "region": "Bretagne (Finistère)",
+   "source": "https://caryatide.net/cidre-sans-alcool/"
+  },
+  {
+   "brand": "Val de Rance",
+   "name": "Cidre désalcoolisé",
+   "cat": "cidre",
+   "style": "Cidre",
+   "abv": null,
+   "region": "Bretagne (Côtes-d'Armor)",
+   "source": "https://caryatide.net/cidre-sans-alcool/"
+  },
+  {
+   "brand": "La Flibuste",
+   "name": "Cidre sans alcool",
+   "cat": "cidre",
+   "style": "Cidre",
+   "abv": null,
+   "region": "Bretagne",
+   "source": "https://www.sans-alcool.fr/cidres-sans-alcool.php"
+  },
+  {
+   "brand": "Fournier",
+   "name": "Cidre sans alcool",
+   "cat": "cidre",
+   "style": "Cidre",
+   "abv": null,
+   "region": "Normandie (Orne)",
+   "source": "https://www.sans-alcool.fr/cidres-sans-alcool.php"
+  },
+  {
+   "brand": "Mikkeller",
+   "name": "Drink'in the Sun",
+   "cat": "biere",
+   "style": null,
+   "abv": null,
+   "region": "Danemark",
+   "source": "https://unepetitemousse.fr/categorie/boutique/alcool/sans-alcool"
+  },
+  {
+   "brand": "Mikkeller",
+   "name": "Easy Peasy",
+   "cat": "biere",
+   "style": null,
+   "abv": null,
+   "region": "Danemark",
+   "source": "https://unepetitemousse.fr/categorie/boutique/alcool/sans-alcool"
+  },
+  {
+   "brand": "Mikkeller",
+   "name": "Weird Weather",
+   "cat": "biere",
+   "style": null,
+   "abv": null,
+   "region": "Danemark",
+   "source": "https://unepetitemousse.fr/categorie/boutique/alcool/sans-alcool"
+  },
+  {
+   "brand": "Mikkeller",
+   "name": "Energibajer",
+   "cat": "biere",
+   "style": null,
+   "abv": null,
+   "region": "Danemark",
+   "source": "https://unepetitemousse.fr/categorie/boutique/alcool/sans-alcool"
+  },
+  {
+   "brand": "BrewDog",
+   "name": "Punk AF",
+   "cat": "biere",
+   "style": "IPA",
+   "abv": null,
+   "region": "Écosse",
+   "source": "https://unepetitemousse.fr/categorie/boutique/alcool/sans-alcool"
+  },
+  {
+   "brand": "Brulo",
+   "name": "Session IPA",
+   "cat": "biere",
+   "style": "IPA",
+   "abv": null,
+   "region": "Écosse",
+   "source": "https://boisson.fr/sans-alcool/alternatives/"
+  },
+  {
+   "brand": "Brulo",
+   "name": "Stout",
+   "cat": "biere",
+   "style": "Stout",
+   "abv": null,
+   "region": "Écosse",
+   "source": "https://boisson.fr/sans-alcool/alternatives/"
+  },
+  {
+   "brand": "Brulo",
+   "name": "5 Fruit Gose",
+   "cat": "biere",
+   "style": "Gose",
+   "abv": 0.5,
+   "region": "Écosse",
+   "source": "https://www.sanzalc.com/collections/les-10-meilleures-bieres-sans-alcool?page=2"
+  },
+  {
+   "brand": "Big Drop",
+   "name": "Stout",
+   "cat": "biere",
+   "style": "Stout",
+   "abv": null,
+   "region": null,
+   "source": "https://boisson.fr/sans-alcool/alternatives/",
+   "price": "3,50 €",
+   "quantity": "33 cl"
+  },
+  {
+   "brand": "Cloudwater",
+   "name": "Chubbles AF",
+   "cat": "biere",
+   "style": "Triple IPA",
+   "abv": null,
+   "region": "Angleterre",
+   "source": "https://bieronomy.com/378-sans-alcool",
+   "quantity": "44 cl"
+  },
+  {
+   "brand": "Cornet",
+   "name": "Cornet 0.3%",
+   "cat": "biere",
+   "style": "Blonde",
+   "abv": 0.3,
+   "region": "Belgique",
+   "source": "https://www.sanzalc.com/collections/les-10-meilleures-bieres-sans-alcool"
+  },
+  {
+   "brand": "Belgian Balance",
+   "name": "IPA sans alcool",
+   "cat": "biere",
+   "style": "IPA",
+   "abv": null,
+   "region": "Belgique",
+   "source": "https://www.sanzalc.com/collections/les-10-meilleures-bieres-sans-alcool"
+  },
+  {
+   "brand": "La Chouffe",
+   "name": "Chouffe sans alcool",
+   "cat": "biere",
+   "style": null,
+   "abv": null,
+   "region": "Belgique",
+   "source": "https://www.sanzalc.com/collections/les-10-meilleures-bieres-sans-alcool"
+  },
+  {
+   "brand": "La Trappe",
+   "name": "Nillis",
+   "cat": "biere",
+   "style": "Ambrée",
+   "abv": null,
+   "region": "Pays-Bas",
+   "source": "https://www.sanzalc.com/collections/les-10-meilleures-bieres-sans-alcool"
+  },
+  {
+   "brand": "Leffe",
+   "name": "Leffe 00",
+   "cat": "biere",
+   "style": "Blonde d'abbaye",
+   "abv": null,
+   "region": "Belgique",
+   "source": "https://infobiere.net/meilleures-bieres-sans-alcool/"
+  },
+  {
+   "brand": "Corona",
+   "name": "Corona Cero",
+   "cat": "biere",
+   "style": "Lager",
+   "abv": 0,
+   "region": "Mexique",
+   "source": "https://corporate.nicolas.com/wp-content/uploads/2025/05/Alerte-media-Dry-January-2025.pdf"
+  },
+  {
+   "brand": "Tourtel",
+   "name": "Tourtel Twist Citron",
+   "cat": "biere",
+   "style": "Aromatisée",
+   "abv": 0,
+   "region": null,
+   "source": "https://sansdegre.fr/meilleures-bieres-sans-alcool-2026-notre-selection/"
+  },
+  {
+   "brand": "Penrose",
+   "name": "Bière sans alcool",
+   "cat": "biere",
+   "style": null,
+   "abv": null,
+   "region": "France",
+   "source": "https://www.gueuledejoie.com/blogs/news/boisson-sans-alcool-francaise-made-in-france"
+  },
+  {
+   "brand": "De Sutter",
+   "name": "Bière sans alcool",
+   "cat": "biere",
+   "style": null,
+   "abv": null,
+   "region": "Normandie",
+   "source": "https://www.gueuledejoie.com/blogs/news/boisson-sans-alcool-francaise-made-in-france"
+  }
+ ]
 }

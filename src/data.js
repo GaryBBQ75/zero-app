@@ -5,6 +5,7 @@ export const CATEGORIES = [
   { id: 'all', label: 'Tout' },
   { id: 'biere', label: 'Bières' },
   { id: 'vin', label: 'Vins' },
+  { id: 'cidre', label: 'Cidres' },
   { id: 'aperitif', label: 'Apéritifs' },
   { id: 'spiritueux', label: 'Spiritueux' },
   { id: 'soft', label: 'Néo-sodas & fermentés' },
@@ -13,6 +14,7 @@ export const CATEGORIES = [
 export const CAT_LABEL = {
   biere: 'Bière',
   vin: 'Vin',
+  cidre: 'Cidre',
   aperitif: 'Apéritif',
   spiritueux: 'Spiritueux',
   soft: 'Néo-soda / fermenté',
@@ -22,6 +24,7 @@ export const CAT_LABEL = {
 export const CAT_TINT = {
   biere: '#FEF3C7',
   vin: '#FCE7F3',
+  cidre: '#FEF9C3',
   aperitif: '#FFEDD5',
   spiritueux: '#E0F2FE',
   soft: '#DCFCE7',

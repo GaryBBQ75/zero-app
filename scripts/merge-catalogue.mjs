@@ -39,7 +39,10 @@ export function sameProduct(off, cur) {
 }
 
 export function merge(offProducts, curatedProducts) {
-  const products = offProducts.map((p) => ({ ...p }))
+  const products = offProducts.map((p) => ({
+    ...p,
+    cat: /\b(cidre|cider)\b/i.test(`${p.name} ${p.brand}`) ? 'cidre' : p.cat,
+  }))
   let added = 0
   let enriched = 0
   for (const c of curatedProducts) {
@@ -49,6 +52,7 @@ export function merge(offProducts, curatedProducts) {
       match.region = match.region ?? c.region ?? null
       match.style = match.style ?? c.style ?? null
       match.abv = match.abv ?? c.abv ?? null
+      match.price = match.price ?? c.price ?? null
       enriched++
       continue
     }
@@ -61,7 +65,8 @@ export function merge(offProducts, curatedProducts) {
       abv: c.abv ?? null,
       sugar: null,
       kcal: null,
-      quantity: null,
+      quantity: c.quantity ?? null,
+      price: c.price ?? null,
       image: null,
       popularity: 0,
       style: c.style ?? null,
