@@ -8,7 +8,8 @@ export const CATEGORIES = [
   { id: 'cidre', label: 'Cidres' },
   { id: 'aperitif', label: 'Apéritifs' },
   { id: 'spiritueux', label: 'Spiritueux' },
-  { id: 'soft', label: 'Néo-sodas & fermentés' },
+  { id: 'kombucha', label: 'Kombuchas & kéfirs' },
+  { id: 'soft', label: 'Néo-sodas & infusions' },
 ]
 
 export const CAT_LABEL = {
@@ -17,7 +18,8 @@ export const CAT_LABEL = {
   cidre: 'Cidre',
   aperitif: 'Apéritif',
   spiritueux: 'Spiritueux',
-  soft: 'Néo-soda / fermenté',
+  kombucha: 'Kombucha / kéfir',
+  soft: 'Néo-soda / infusion',
   autre: 'Boisson',
 }
 
@@ -27,6 +29,7 @@ export const CAT_TINT = {
   cidre: '#FEF9C3',
   aperitif: '#FFEDD5',
   spiritueux: '#E0F2FE',
+  kombucha: '#ECFCCB',
   soft: '#DCFCE7',
   autre: '#F3F4F6',
 }

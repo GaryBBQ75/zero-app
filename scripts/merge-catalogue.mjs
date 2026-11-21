@@ -87,23 +87,117 @@ export function merge(offProducts, curatedProducts) {
   return { products, added, enriched }
 }
 
+// ---------- Normalisation : noms propres, marques, rubriques, exclusions ----------
+
+const SMALL = new Set(['de', 'du', 'des', 'la', 'le', 'les', 'et', 'à', 'au', 'aux', 'en', 'sur', 'by', 'x', "l'", "d'"])
+const isShouty = (s) => {
+  const letters = s.replace(/[^A-Za-zÀ-ÖØ-öø-ÿ]/g, '')
+  return letters.length > 3 && letters === letters.toUpperCase()
+}
+const titleCase = (s) => s.toLowerCase().split(' ').map((w, i) => {
+  if (i > 0 && SMALL.has(w)) return w
+  return w.charAt(0).toUpperCase() + w.slice(1)
+}).join(' ')
+const capFirst = (s) => (s ? s.charAt(0).toUpperCase() + s.slice(1) : s)
+const escapeRx = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+
+export function cleanBrand(brand, name, known = null) {
+  let b = (brand || '').trim()
+  const GENERIC = /^(bi[èe]re|beer|kombucha|vin|cidre|boisson|0%|marque (inconnue|à préciser))$/i
+  if (!b || /^[\d%.,\s°]+$/.test(b) || GENERIC.test(b)) {
+    const STOP = /^(sans|alcool|organic|bio|the|la|le|les|l'|de|du|des|cerveza|tea|boisson|pur|blanche|blonde|ambr[ée]e|brune)$/i
+    const words = (name || '').trim().split(/\s+/).filter((w) => /^1664$/.test(w) || (!GENERIC.test(w) && !STOP.test(w) && !/^[\d%.,°]+$/.test(w)))
+    b = words[0] || ''
+    if (known && b && !known.has(norm(b)) && !/^1664$/.test(b)) b = ''
+  }
+  b = b.replace(/\s+(kombucha|brewery|brasserie)$/i, '').trim()
+  if (b.length > 4 && isShouty(b)) b = titleCase(b)
+  b = capFirst(b)
+  return b || 'Marque à préciser'
+}
+
+export function cleanName(name, brand) {
+  const original = (name || '').trim()
+  let n = ' ' + original + ' '
+  n = n.replace(/\b\d+\s*x\s*\d+(?:[.,]\d+)?\s*(cl|ml|l)\b/gi, ' ')
+  n = n.replace(/\b\d+(?:[.,]\d+)?\s*(cl|ml|l)\b/gi, ' ')
+  n = n.replace(/<?\s*\d+(?:[.,]\d+)?\s*%\s*(vol\.?)?/gi, ' ')
+  n = n.replace(/\b0[.,]\d+\b|\b\d?[.,]?\d+\s*°/g, ' ')
+  n = n.replace(/\b(d[ée]gr[ée]s?\s+(d'?\s*)?alc+o+l|sans alc+o+l|non alcoolis[ée]e?s?|alcohol[- ]free|non[- ]alcoholic|z[ée]ro alc+o+l|alc+o+l)\b/gi, ' ')
+  n = n.replace(/\b(can|vp|vc|x\d+)\b/gi, ' ')
+  n = n.replace(/\b(ble|bte|bt|pack|lot|vr|bouteille|canette|bocal)\b/gi, ' ')
+  if (brand && brand !== 'Marque à préciser') {
+    const rx = new RegExp('(^|\\s)' + escapeRx(brand) + '(?=\\s|$)', 'gi')
+    const without = n.replace(rx, ' ')
+    if (without.replace(/[^\p{L}]/gu, '').length >= 3) n = without
+  }
+  n = n.replace(/\s+[-–:,]\s*(?=\s|$)/g, ' ').replace(/\(\s*\)/g, ' ')
+  n = n.replace(/\s{2,}/g, ' ').trim().replace(/^[-–:,.\s]+|[-–:,.\s]+$/g, '')
+  n = n.replace(/\s[°%]+(?=\s|$)/g, ' ').replace(/\s{2,}/g, ' ').trim()
+  n = n.split(' ').map((w) => (w.length > 3 && isShouty(w) ? w.charAt(0) + w.slice(1).toLowerCase() : w)).join(' ')
+  n = n.split(' ').filter((w, i, a) => i === 0 || w.toLowerCase() !== a[i - 1].toLowerCase()).join(' ')
+  if (isShouty(n)) n = titleCase(n)
+  n = capFirst(n)
+  if (n.replace(/[^\p{L}]/gu, '').length < 2) n = ''
+  return n
+}
+
+const CAT_DEFAULT = { biere: 'Bière', vin: 'Vin', cidre: 'Cidre', aperitif: 'Apéritif', spiritueux: 'Spiritueux', kombucha: 'Kombucha', soft: 'Boisson' }
+
+const RX_KOMBUCHA = /kombucha|k[ée]fir|kefir|kefruit/i
+const RX_CIDRE = /\b(cidre|cider|poir[ée])\b/i
+const RX_EXCLUDE = /ginger ?beer|ginger ?ale|\btonic\b|\bcola\b|limonade|orangeade|schweppes|orangina|ice ?tea|th[ée] glac[ée]|\bjus de (pomme|raisin|fruits?|orange|poire)\b|\bnectar\b|\bsirop\b|eau (min[ée]rale|gazeuse|p[ée]tillante)|\bsoda\b/i
+const RX_KEEP_SODA = /pr[ée]biotique|fibres|clean soda|kombucha|k[ée]fir/i
+
+export function finalize(products) {
+  const kept = []
+  const seen = new Map()
+  const known = new Set(products.map((p) => (p.brand || '').trim()).filter((b) => b && !/^[\d%.,\s°]+$/.test(b) && !/^marque/i.test(b)).map(norm))
+  let excluded = 0
+  for (const p of products) {
+    const text = `${p.name} ${p.brand} ${p.style || ''}`
+    if (RX_EXCLUDE.test(text) && !RX_KEEP_SODA.test(text)) { excluded++; continue }
+    const brand = cleanBrand(p.brand, p.name, known)
+    let cat = p.cat
+    if (RX_KOMBUCHA.test(text)) cat = 'kombucha'
+    else if (RX_CIDRE.test(text)) cat = 'cidre'
+    let name = cleanName(p.name, brand) || p.style || CAT_DEFAULT[cat] || 'Boisson'
+    if (norm(name) === norm(brand) || norm(name) === '') name = p.style || CAT_DEFAULT[cat] || 'Boisson'
+    const item = { ...p, brand, name, cat }
+    const key = `${norm(brand)}|${norm(name)}|${cat}`
+    const prev = seen.get(key)
+    if (prev) {
+      for (const f of ['abv', 'sugar', 'kcal', 'image', 'price', 'quantity', 'region', 'style', 'barcode']) prev[f] = prev[f] ?? item[f] ?? null
+      prev.popularity = Math.max(prev.popularity || 0, item.popularity || 0)
+      if (item.retailers) prev.retailers = [...new Set([...(prev.retailers || []), ...item.retailers])]
+      continue
+    }
+    seen.set(key, item)
+    kept.push(item)
+  }
+  return { products: kept, excluded }
+}
+
 async function main() {
   const off = await readJson(OFF, { products: [] })
   const curated = await readJson(CURATED, { products: [] })
   const retailers = await readJson(RETAILERS, { products: [] })
-  const { products, added, enriched } = merge(off.products || [], [...(curated.products || []), ...(retailers.products || [])])
+  const merged = merge(off.products || [], [...(curated.products || []), ...(retailers.products || [])])
+  const { added, enriched } = merged
+  const { products, excluded } = finalize(merged.products)
   const out = {
     generatedAt: new Date().toISOString(),
     sources: {
       openFoodFacts: { count: (off.products || []).length, importedAt: off.generatedAt ?? null, license: 'ODbL 1.0' },
       curated: { added, enriched },
+      excluded,
     },
     count: products.length,
     products,
   }
   await mkdir(dirname(OUT), { recursive: true })
   await writeFile(OUT, JSON.stringify(out, null, 1) + '\n')
-  console.log(`Catalogue : ${products.length} produits (${(off.products || []).length} OFF, ${added} ajoutés à la main, ${enriched} fiches OFF enrichies)`)
+  console.log(`Catalogue : ${products.length} produits (${(off.products || []).length} OFF, ${added} ajoutés à la main, ${enriched} fiches enrichies, ${excluded} sodas/mixers écartés)`)
 }
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
