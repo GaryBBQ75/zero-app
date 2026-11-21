@@ -9,7 +9,7 @@ export const CATEGORIES = [
   { id: 'aperitif', label: 'Apéritifs' },
   { id: 'spiritueux', label: 'Spiritueux' },
   { id: 'kombucha', label: 'Kombuchas & kéfirs' },
-  { id: 'soft', label: 'Néo-sodas & infusions' },
+  { id: 'soft', label: 'Sodas & co' },
 ]
 
 export const CAT_LABEL = {
@@ -19,7 +19,7 @@ export const CAT_LABEL = {
   aperitif: 'Apéritif',
   spiritueux: 'Spiritueux',
   kombucha: 'Kombucha / kéfir',
-  soft: 'Néo-soda / infusion',
+  soft: 'Soda / infusion',
   autre: 'Boisson',
 }
 

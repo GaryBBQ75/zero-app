@@ -144,9 +144,10 @@ export function cleanName(name, brand) {
 
 const CAT_DEFAULT = { biere: 'Bière', vin: 'Vin', cidre: 'Cidre', aperitif: 'Apéritif', spiritueux: 'Spiritueux', kombucha: 'Kombucha', soft: 'Boisson' }
 
-const RX_KOMBUCHA = /kombucha|k[ée]fir|kefir|kefruit/i
+const RX_KOMBUCHA = /kom ?b?u?t?cha|kombuch|kambucha|k[ée]fir|kefir|k[ée]fruit|kamat[ée]/i
 const RX_CIDRE = /\b(cidre|cider|poir[ée])\b/i
 const RX_EXCLUDE = /ginger ?beer|ginger ?ale|\btonic\b|\bcola\b|limonade|orangeade|schweppes|orangina|ice ?tea|th[ée] glac[ée]|\bjus de (pomme|raisin|fruits?|orange|poire)\b|\bnectar\b|\bsirop\b|eau (min[ée]rale|gazeuse|p[ée]tillante)|\bsoda\b/i
+const RX_EXCLUDE_EXTRA = /green tea|th[ée] vert menthe|\bmat[ée]\b(?! ?k)/i
 const RX_KEEP_SODA = /pr[ée]biotique|fibres|clean soda|kombucha|k[ée]fir/i
 
 export function finalize(products) {
@@ -156,7 +157,7 @@ export function finalize(products) {
   let excluded = 0
   for (const p of products) {
     const text = `${p.name} ${p.brand} ${p.style || ''}`
-    if (RX_EXCLUDE.test(text) && !RX_KEEP_SODA.test(text)) { excluded++; continue }
+    if ((RX_EXCLUDE.test(text) || RX_EXCLUDE_EXTRA.test(text)) && !RX_KEEP_SODA.test(text)) { excluded++; continue }
     const brand = cleanBrand(p.brand, p.name, known)
     let cat = p.cat
     if (RX_KOMBUCHA.test(text)) cat = 'kombucha'
@@ -174,6 +175,10 @@ export function finalize(products) {
     }
     seen.set(key, item)
     kept.push(item)
+  }
+  const kombuchaBrands = new Set(kept.filter((p) => p.cat === 'kombucha' && p.brand !== 'Marque à préciser').map((p) => norm(p.brand)))
+  for (const p of kept) {
+    if (p.cat === 'soft' && kombuchaBrands.has(norm(p.brand)) && !/clean soda|infusion|soda/i.test(p.name)) p.cat = 'kombucha'
   }
   return { products: kept, excluded }
 }
