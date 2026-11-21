@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-21T21:18:38.817Z",
+ "generatedAt": "2026-11-21T21:34:22.080Z",
  "sources": {
   "openFoodFacts": {
    "count": 1024,
@@ -7,11 +7,11 @@
    "license": "ODbL 1.0"
   },
   "curated": {
-   "added": 736,
-   "enriched": 96
+   "added": 829,
+   "enriched": 113
   }
  },
- "count": 1760,
+ "count": 1853,
  "products": [
   {
    "id": "off-3770037280016",
@@ -2850,7 +2850,10 @@
    "source": "off",
    "region": null,
    "style": "Pétillant",
-   "price": "29,00 €"
+   "price": "29,00 €",
+   "retailers": [
+    "Sans Alcool du Vigneron"
+   ]
   },
   {
    "id": "off-5600787049114",
@@ -15818,7 +15821,9 @@
    "region": null,
    "note": null,
    "sourceUrl": "https://www.nicolas.com/en/LIQUORS/GENEPI-VIEILLE-RECETTE-/p/491939.html",
-   "retailers": [],
+   "retailers": [
+    "Sans Alcool du Vigneron"
+   ],
    "source": "curated"
   },
   {
@@ -15840,7 +15845,8 @@
    "sourceUrl": "https://www.nicolas.com/en/LIQUORS/GENEPI-VIEILLE-RECETTE-/p/491939.html",
    "retailers": [
     "Gueule de Joie",
-    "Sanzalc"
+    "Sanzalc",
+    "Lilovino"
    ],
    "source": "curated"
   },
@@ -16224,7 +16230,8 @@
    "note": null,
    "sourceUrl": "https://www.houra.fr/catalogue/sans-alcool-B1488586-1.html",
    "retailers": [
-    "Gueule de Joie"
+    "Gueule de Joie",
+    "Sans Alcool du Vigneron"
    ],
    "source": "curated"
   },
@@ -17824,7 +17831,7 @@
    "abv": 0.5,
    "sugar": null,
    "kcal": null,
-   "quantity": null,
+   "quantity": "75 cl",
    "price": null,
    "image": null,
    "popularity": 0,
@@ -17833,7 +17840,9 @@
    "note": null,
    "sourceUrl": "https://www.sanzalc.com",
    "retailers": [
-    "Sanzalc"
+    "Lilovino",
+    "Sanzalc",
+    "Nicolas"
    ],
    "source": "curated"
   },
@@ -18232,7 +18241,8 @@
    "sourceUrl": "https://www.sanzalc.com",
    "retailers": [
     "Sanzalc",
-    "Gueule de Joie"
+    "Gueule de Joie",
+    "Sans Alcool du Vigneron"
    ],
    "source": "curated"
   },
@@ -19145,6 +19155,7 @@
    "note": null,
    "sourceUrl": "https://www.sanzalc.com",
    "retailers": [
+    "Sans Alcool du Vigneron",
     "Sanzalc"
    ],
    "source": "curated"
@@ -19167,6 +19178,7 @@
    "note": null,
    "sourceUrl": "https://www.sanzalc.com",
    "retailers": [
+    "Sans Alcool du Vigneron",
     "Sanzalc"
    ],
    "source": "curated"
@@ -19189,7 +19201,8 @@
    "note": null,
    "sourceUrl": "https://www.sanzalc.com",
    "retailers": [
-    "Sanzalc"
+    "Sanzalc",
+    "Sans Alcool du Vigneron"
    ],
    "source": "curated"
   },
@@ -19211,6 +19224,7 @@
    "note": null,
    "sourceUrl": "https://www.sanzalc.com",
    "retailers": [
+    "Sans Alcool du Vigneron",
     "Sanzalc"
    ],
    "source": "curated"
@@ -19255,6 +19269,7 @@
    "note": null,
    "sourceUrl": "https://www.sanzalc.com",
    "retailers": [
+    "Sans Alcool du Vigneron",
     "Sanzalc"
    ],
    "source": "curated"
@@ -19277,7 +19292,8 @@
    "note": null,
    "sourceUrl": "https://www.sanzalc.com",
    "retailers": [
-    "Sanzalc"
+    "Sanzalc",
+    "Sans Alcool du Vigneron"
    ],
    "source": "curated"
   },
@@ -19299,7 +19315,8 @@
    "note": null,
    "sourceUrl": "https://www.sanzalc.com",
    "retailers": [
-    "Sanzalc"
+    "Sanzalc",
+    "Sans Alcool du Vigneron"
    ],
    "source": "curated"
   },
@@ -19321,7 +19338,8 @@
    "note": null,
    "sourceUrl": "https://www.sanzalc.com",
    "retailers": [
-    "Sanzalc"
+    "Sanzalc",
+    "Sans Alcool du Vigneron"
    ],
    "source": "curated"
   },
@@ -19813,6 +19831,7 @@
    "note": null,
    "sourceUrl": "https://www.sanzalc.com",
    "retailers": [
+    "Sans Alcool du Vigneron",
     "Sanzalc",
     "Gueule de Joie"
    ],
@@ -20479,6 +20498,7 @@
    "note": null,
    "sourceUrl": "https://www.sanzalc.com",
    "retailers": [
+    "Sans Alcool du Vigneron",
     "Sanzalc"
    ],
    "source": "curated"
@@ -20501,7 +20521,8 @@
    "note": null,
    "sourceUrl": "https://www.sanzalc.com",
    "retailers": [
-    "Sanzalc"
+    "Sanzalc",
+    "Sans Alcool du Vigneron"
    ],
    "source": "curated"
   },
@@ -20523,7 +20544,8 @@
    "note": null,
    "sourceUrl": "https://www.sanzalc.com",
    "retailers": [
-    "Sanzalc"
+    "Sanzalc",
+    "Sans Alcool du Vigneron"
    ],
    "source": "curated"
   },
@@ -20766,6 +20788,7 @@
    "note": null,
    "sourceUrl": "https://www.sanzalc.com",
    "retailers": [
+    "Sans Alcool du Vigneron",
     "Sanzalc"
    ],
    "source": "curated"
@@ -21013,7 +21036,8 @@
    "sourceUrl": "https://www.sanzalc.com",
    "retailers": [
     "Sanzalc",
-    "Gueule de Joie"
+    "Gueule de Joie",
+    "Sans Alcool du Vigneron"
    ],
    "source": "curated"
   },
@@ -21612,7 +21636,8 @@
    "note": null,
    "sourceUrl": "https://www.sanzalc.com",
    "retailers": [
-    "Sanzalc"
+    "Sanzalc",
+    "Sans Alcool du Vigneron"
    ],
    "source": "curated"
   },
@@ -21855,7 +21880,8 @@
    "note": null,
    "sourceUrl": "https://www.sanzalc.com",
    "retailers": [
-    "Sanzalc"
+    "Sanzalc",
+    "Sans Alcool du Vigneron"
    ],
    "source": "curated"
   },
@@ -21968,7 +21994,8 @@
    "sourceUrl": "https://www.sanzalc.com",
    "retailers": [
     "Sanzalc",
-    "Gueule de Joie"
+    "Gueule de Joie",
+    "Sans Alcool du Vigneron"
    ],
    "source": "curated"
   },
@@ -23673,6 +23700,7 @@
    "note": null,
    "sourceUrl": "https://www.sanzalc.com",
    "retailers": [
+    "Sans Alcool du Vigneron",
     "Sanzalc"
    ],
    "source": "curated"
@@ -24536,7 +24564,8 @@
    "note": null,
    "sourceUrl": "https://www.sanzalc.com",
    "retailers": [
-    "Sanzalc"
+    "Sanzalc",
+    "Sans Alcool du Vigneron"
    ],
    "source": "curated"
   },
@@ -25549,7 +25578,8 @@
    "note": null,
    "sourceUrl": "https://www.gueuledejoie.com",
    "retailers": [
-    "Gueule de Joie"
+    "Gueule de Joie",
+    "Nicolas"
    ],
    "source": "curated"
   },
@@ -28079,7 +28109,8 @@
    "note": null,
    "sourceUrl": "https://www.gueuledejoie.com",
    "retailers": [
-    "Gueule de Joie"
+    "Gueule de Joie",
+    "Sans Alcool du Vigneron"
    ],
    "source": "curated"
   },
@@ -28695,7 +28726,8 @@
    "note": null,
    "sourceUrl": "https://www.gueuledejoie.com",
    "retailers": [
-    "Gueule de Joie"
+    "Gueule de Joie",
+    "Sans Alcool du Vigneron"
    ],
    "source": "curated"
   },
@@ -30059,7 +30091,8 @@
    "note": null,
    "sourceUrl": "https://www.gueuledejoie.com",
    "retailers": [
-    "Gueule de Joie"
+    "Gueule de Joie",
+    "Sans Alcool du Vigneron"
    ],
    "source": "curated"
   },
@@ -30345,7 +30378,8 @@
    "note": null,
    "sourceUrl": "https://www.gueuledejoie.com",
    "retailers": [
-    "Gueule de Joie"
+    "Gueule de Joie",
+    "Sans Alcool du Vigneron"
    ],
    "source": "curated"
   },
@@ -30367,7 +30401,8 @@
    "note": null,
    "sourceUrl": "https://www.gueuledejoie.com",
    "retailers": [
-    "Gueule de Joie"
+    "Gueule de Joie",
+    "Sans Alcool du Vigneron"
    ],
    "source": "curated"
   },
@@ -30522,6 +30557,2052 @@
    "sourceUrl": "https://www.gueuledejoie.com",
    "retailers": [
     "Gueule de Joie"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-strauch-blanc-pur-bio-petillant",
+   "barcode": null,
+   "name": "Blanc Pur Bio pétillant",
+   "brand": "Strauch",
+   "cat": "vin",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": null,
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.sans-alcool-du-vigneron.fr",
+   "retailers": [
+    "Sans Alcool du Vigneron"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-strauch-rose-pur-bio-petillant",
+   "barcode": null,
+   "name": "Rosé Pur Bio pétillant",
+   "brand": "Strauch",
+   "cat": "vin",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": null,
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.sans-alcool-du-vigneron.fr",
+   "retailers": [
+    "Sans Alcool du Vigneron"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-daniel-mattern-nolimit-riesling",
+   "barcode": null,
+   "name": "NoLimit Riesling",
+   "brand": "Daniel Mattern",
+   "cat": "vin",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": null,
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.sans-alcool-du-vigneron.fr",
+   "retailers": [
+    "Sans Alcool du Vigneron"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-cave-ribeauville-rib0-sparkling",
+   "barcode": null,
+   "name": "Rib0 Sparkling",
+   "brand": "Cave de Ribeauvillé",
+   "cat": "vin",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": null,
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.sans-alcool-du-vigneron.fr",
+   "retailers": [
+    "Sans Alcool du Vigneron"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-cave-ribeauville-rib0-blanc",
+   "barcode": null,
+   "name": "Rib0 blanc",
+   "brand": "Cave de Ribeauvillé",
+   "cat": "vin",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": null,
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.sans-alcool-du-vigneron.fr",
+   "retailers": [
+    "Sans Alcool du Vigneron"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-loffler-null-alkohol-blanc-rivaner",
+   "barcode": null,
+   "name": "Null Alkohol Blanc Rivaner",
+   "brand": "Löffler",
+   "cat": "aperitif",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": null,
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.sans-alcool-du-vigneron.fr",
+   "retailers": [
+    "Sans Alcool du Vigneron"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-loffler-null-alkohol-rot-pinot-noir",
+   "barcode": null,
+   "name": "Null Alkohol Rot Pinot Noir",
+   "brand": "Löffler",
+   "cat": "vin",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": null,
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.sans-alcool-du-vigneron.fr",
+   "retailers": [
+    "Sans Alcool du Vigneron"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-loffler-null-alkohol-rose",
+   "barcode": null,
+   "name": "Null Alkohol Rosé",
+   "brand": "Löffler",
+   "cat": "vin",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": null,
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.sans-alcool-du-vigneron.fr",
+   "retailers": [
+    "Sans Alcool du Vigneron"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-bergdolt-reif-nett-reverse-riesling",
+   "barcode": null,
+   "name": "Reverse Riesling",
+   "brand": "Bergdolt-Reif & Nett",
+   "cat": "vin",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": null,
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.sans-alcool-du-vigneron.fr",
+   "retailers": [
+    "Sans Alcool du Vigneron"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-bergdolt-reif-nett-reverse-pinot-bianco",
+   "barcode": null,
+   "name": "Reverse Pinot Bianco",
+   "brand": "Bergdolt-Reif & Nett",
+   "cat": "vin",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": null,
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.sans-alcool-du-vigneron.fr",
+   "retailers": [
+    "Sans Alcool du Vigneron"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-matthias-anton-blanc-blanc-petillant",
+   "barcode": null,
+   "name": "Blanc de Blanc pétillant",
+   "brand": "Matthias Anton",
+   "cat": "vin",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": null,
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.sans-alcool-du-vigneron.fr",
+   "retailers": [
+    "Sans Alcool du Vigneron"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-matthias-anton-riesling-free",
+   "barcode": null,
+   "name": "Riesling Free",
+   "brand": "Matthias Anton",
+   "cat": "vin",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": null,
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.sans-alcool-du-vigneron.fr",
+   "retailers": [
+    "Sans Alcool du Vigneron"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-matthias-anton-rose-free",
+   "barcode": null,
+   "name": "Rosé Free",
+   "brand": "Matthias Anton",
+   "cat": "vin",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": null,
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.sans-alcool-du-vigneron.fr",
+   "retailers": [
+    "Sans Alcool du Vigneron"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-matthias-anton-rose-sparkling-free",
+   "barcode": null,
+   "name": "Rosé Sparkling Free",
+   "brand": "Matthias Anton",
+   "cat": "vin",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": null,
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.sans-alcool-du-vigneron.fr",
+   "retailers": [
+    "Sans Alcool du Vigneron"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-daniel-mattern-nolimit-rose",
+   "barcode": null,
+   "name": "NoLimit Rosé",
+   "brand": "Daniel Mattern",
+   "cat": "vin",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": null,
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.sans-alcool-du-vigneron.fr",
+   "retailers": [
+    "Sans Alcool du Vigneron"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-loffler-null-alkohol-blanc-blancs-petillant",
+   "barcode": null,
+   "name": "Null Alkohol Blanc de Blancs pétillant",
+   "brand": "Löffler",
+   "cat": "vin",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": null,
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.sans-alcool-du-vigneron.fr",
+   "retailers": [
+    "Sans Alcool du Vigneron"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-loffler-null-alkohol-winter-gluhtraum-vin-chaud",
+   "barcode": null,
+   "name": "Null Alkohol Winter-Glühtraum vin chaud",
+   "brand": "Löffler",
+   "cat": "vin",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": null,
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.sans-alcool-du-vigneron.fr",
+   "retailers": [
+    "Sans Alcool du Vigneron"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-daniel-mattern-nolimit-sauvignon-blanc",
+   "barcode": null,
+   "name": "NoLimit Sauvignon Blanc",
+   "brand": "Daniel Mattern",
+   "cat": "vin",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": null,
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.sans-alcool-du-vigneron.fr",
+   "retailers": [
+    "Sans Alcool du Vigneron"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-bergdolt-reif-nett-reverse-rot",
+   "barcode": null,
+   "name": "Reverse Rot",
+   "brand": "Bergdolt-Reif & Nett",
+   "cat": "vin",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": null,
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.sans-alcool-du-vigneron.fr",
+   "retailers": [
+    "Sans Alcool du Vigneron"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-bibo-runge-deserteur-sparkling-riesling",
+   "barcode": null,
+   "name": "Déserteur Sparkling Riesling",
+   "brand": "Bibo Runge",
+   "cat": "vin",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": null,
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.sans-alcool-du-vigneron.fr",
+   "retailers": [
+    "Sans Alcool du Vigneron"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-bibo-runge-deserteur-sparkling-rose",
+   "barcode": null,
+   "name": "Déserteur Sparkling Rosé",
+   "brand": "Bibo Runge",
+   "cat": "vin",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": null,
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.sans-alcool-du-vigneron.fr",
+   "retailers": [
+    "Sans Alcool du Vigneron"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-grenaudiere-phenomene-melon",
+   "barcode": null,
+   "name": "Phénomène Melon",
+   "brand": "Domaine de la Grenaudière",
+   "cat": "vin",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": null,
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.sans-alcool-du-vigneron.fr",
+   "retailers": [
+    "Sans Alcool du Vigneron"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-vignobles-raguenot-tip-top-rouge",
+   "barcode": null,
+   "name": "Tip Top Rouge",
+   "brand": "Vignobles Raguenot",
+   "cat": "vin",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": null,
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.sans-alcool-du-vigneron.fr",
+   "retailers": [
+    "Sans Alcool du Vigneron"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-elefant-riesling",
+   "barcode": null,
+   "name": "Riesling",
+   "brand": "Elefant",
+   "cat": "vin",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": null,
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.sans-alcool-du-vigneron.fr",
+   "retailers": [
+    "Sans Alcool du Vigneron"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-strauch-rouge-pur",
+   "barcode": null,
+   "name": "Rouge Pur",
+   "brand": "Strauch",
+   "cat": "vin",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": null,
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.sans-alcool-du-vigneron.fr",
+   "retailers": [
+    "Sans Alcool du Vigneron"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-matthias-anton-sauvignon-blanc-free",
+   "barcode": null,
+   "name": "Sauvignon Blanc Free",
+   "brand": "Matthias Anton",
+   "cat": "vin",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": null,
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.sans-alcool-du-vigneron.fr",
+   "retailers": [
+    "Sans Alcool du Vigneron"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-divin-petillant",
+   "barcode": null,
+   "name": "Pétillant",
+   "brand": "Divin",
+   "cat": "vin",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": null,
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.sans-alcool-du-vigneron.fr",
+   "retailers": [
+    "Sans Alcool du Vigneron"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-divin-petillant-rose",
+   "barcode": null,
+   "name": "Pétillant Rosé",
+   "brand": "Divin",
+   "cat": "vin",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": null,
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.sans-alcool-du-vigneron.fr",
+   "retailers": [
+    "Sans Alcool du Vigneron"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-daniel-mattern-natural-dry-alternative-au-gin",
+   "barcode": null,
+   "name": "Natural Dry alternative au gin",
+   "brand": "Daniel Mattern",
+   "cat": "spiritueux",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": null,
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.sans-alcool-du-vigneron.fr",
+   "retailers": [
+    "Sans Alcool du Vigneron"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-vignobles-raguenot-tip-top-blanc",
+   "barcode": null,
+   "name": "Tip Top Blanc",
+   "brand": "Vignobles Raguenot",
+   "cat": "vin",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": null,
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.sans-alcool-du-vigneron.fr",
+   "retailers": [
+    "Sans Alcool du Vigneron"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-vignobles-raguenot-tip-top-rose",
+   "barcode": null,
+   "name": "Tip Top Rosé",
+   "brand": "Vignobles Raguenot",
+   "cat": "vin",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": null,
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.sans-alcool-du-vigneron.fr",
+   "retailers": [
+    "Sans Alcool du Vigneron"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-vignobles-raguenot-tip-top-cremant-petillant",
+   "barcode": null,
+   "name": "Tip Top Crémant pétillant",
+   "brand": "Vignobles Raguenot",
+   "cat": "vin",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": null,
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.sans-alcool-du-vigneron.fr",
+   "retailers": [
+    "Sans Alcool du Vigneron"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-matthias-anton-frizzante-petillant",
+   "barcode": null,
+   "name": "Frizzante pétillant",
+   "brand": "Matthias Anton",
+   "cat": "vin",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": null,
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.sans-alcool-du-vigneron.fr",
+   "retailers": [
+    "Sans Alcool du Vigneron"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-french-bloom-cuvee-vintage-petillant",
+   "barcode": null,
+   "name": "La Cuvée Vintage pétillant",
+   "brand": "French Bloom",
+   "cat": "vin",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": null,
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.sans-alcool-du-vigneron.fr",
+   "retailers": [
+    "Sans Alcool du Vigneron"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-bergdolt-reif-nett-breakaway-merlot",
+   "barcode": null,
+   "name": "Breakaway Merlot",
+   "brand": "Bergdolt-Reif & Nett",
+   "cat": "vin",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": null,
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.sans-alcool-du-vigneron.fr",
+   "retailers": [
+    "Sans Alcool du Vigneron"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-loffler-null-alkohol-sweet-january-vin-glace",
+   "barcode": null,
+   "name": "Null Alkohol Sweet January vin de glace",
+   "brand": "Löffler",
+   "cat": "vin",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": null,
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.sans-alcool-du-vigneron.fr",
+   "retailers": [
+    "Sans Alcool du Vigneron"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-loffler-null-alkohol-pinot-gris",
+   "barcode": null,
+   "name": "Null Alkohol Pinot Gris",
+   "brand": "Löffler",
+   "cat": "vin",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": null,
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.sans-alcool-du-vigneron.fr",
+   "retailers": [
+    "Sans Alcool du Vigneron"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-grenaudiere-bulles-phenomene-petillant",
+   "barcode": null,
+   "name": "Bulles de Phénomène pétillant",
+   "brand": "Domaine de la Grenaudière",
+   "cat": "aperitif",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": null,
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.sans-alcool-du-vigneron.fr",
+   "retailers": [
+    "Sans Alcool du Vigneron"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-french-bloom-extra-brut-blanc-blancs",
+   "barcode": null,
+   "name": "Extra-Brut Blanc de Blancs",
+   "brand": "French Bloom",
+   "cat": "vin",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": null,
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.sans-alcool-du-vigneron.fr",
+   "retailers": [
+    "Sans Alcool du Vigneron"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-to-ur-campanets-rose",
+   "barcode": null,
+   "name": "Rosé",
+   "brand": "To%ur Campanets",
+   "cat": "vin",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": null,
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.sans-alcool-du-vigneron.fr",
+   "retailers": [
+    "Sans Alcool du Vigneron"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-to-ur-campanets-petillant",
+   "barcode": null,
+   "name": "Pétillant",
+   "brand": "To%ur Campanets",
+   "cat": "vin",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": null,
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.sans-alcool-du-vigneron.fr",
+   "retailers": [
+    "Sans Alcool du Vigneron"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-zeronic-fancy-red-cocktail",
+   "barcode": null,
+   "name": "Fancy Red cocktail",
+   "brand": "Zeronic",
+   "cat": "aperitif",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": null,
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.sans-alcool-du-vigneron.fr",
+   "retailers": [
+    "Sans Alcool du Vigneron"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-zeronic-fresh-white-cocktail",
+   "barcode": null,
+   "name": "Fresh White cocktail",
+   "brand": "Zeronic",
+   "cat": "aperitif",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": null,
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.sans-alcool-du-vigneron.fr",
+   "retailers": [
+    "Sans Alcool du Vigneron"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-majolia-gamay-rouge",
+   "barcode": null,
+   "name": "Le Gamay rouge",
+   "brand": "Majolia",
+   "cat": "vin",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": null,
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.sans-alcool-du-vigneron.fr",
+   "retailers": [
+    "Sans Alcool du Vigneron"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-french-paradox-malbec-rose",
+   "barcode": null,
+   "name": "Malbec Rosé",
+   "brand": "French Paradox",
+   "cat": "vin",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": null,
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.sans-alcool-du-vigneron.fr",
+   "retailers": [
+    "Sans Alcool du Vigneron"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-loffler-null-alkohol-chardonnay",
+   "barcode": null,
+   "name": "Null Alkohol Chardonnay",
+   "brand": "Löffler",
+   "cat": "vin",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": null,
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.sans-alcool-du-vigneron.fr",
+   "retailers": [
+    "Sans Alcool du Vigneron"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-maison-saint-aix-beau-viva-petillant-rose",
+   "barcode": null,
+   "name": "Beau Viva pétillant rosé",
+   "brand": "Maison Saint-Aix",
+   "cat": "vin",
+   "abv": 0,
+   "sugar": null,
+   "kcal": null,
+   "quantity": null,
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.sans-alcool-du-vigneron.fr",
+   "retailers": [
+    "Sans Alcool du Vigneron"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-french-paradox-sparkling-petillant",
+   "barcode": null,
+   "name": "Sparkling pétillant",
+   "brand": "French Paradox",
+   "cat": "vin",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": null,
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.sans-alcool-du-vigneron.fr",
+   "retailers": [
+    "Sans Alcool du Vigneron"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-grand-gold-chardonnay",
+   "barcode": null,
+   "name": "Chardonnay",
+   "brand": "Grand Gold",
+   "cat": "vin",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": null,
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.sans-alcool-du-vigneron.fr",
+   "retailers": [
+    "Sans Alcool du Vigneron"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-evil-twin-orange",
+   "barcode": null,
+   "name": "Orange",
+   "brand": "Evil Twin",
+   "cat": "vin",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": null,
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.sans-alcool-du-vigneron.fr",
+   "retailers": [
+    "Sans Alcool du Vigneron"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-divin-vigneron-blanc-blancs-petillant",
+   "barcode": null,
+   "name": "Vigneron Blanc de Blancs pétillant",
+   "brand": "Divin",
+   "cat": "vin",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": null,
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.sans-alcool-du-vigneron.fr",
+   "retailers": [
+    "Sans Alcool du Vigneron"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-bibo-runge-deserteur-pinot-noir",
+   "barcode": null,
+   "name": "Déserteur Pinot Noir",
+   "brand": "Bibo Runge",
+   "cat": "vin",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": null,
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.sans-alcool-du-vigneron.fr",
+   "retailers": [
+    "Sans Alcool du Vigneron"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-bibo-runge-deserteur-grand-zero-riesling",
+   "barcode": null,
+   "name": "Déserteur Grand Zero Riesling",
+   "brand": "Bibo Runge",
+   "cat": "vin",
+   "abv": 0,
+   "sugar": null,
+   "kcal": null,
+   "quantity": null,
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.sans-alcool-du-vigneron.fr",
+   "retailers": [
+    "Sans Alcool du Vigneron"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-bolle-blanc-blancs-petillant",
+   "barcode": null,
+   "name": "Blanc de Blancs pétillant",
+   "brand": "Bolle",
+   "cat": "vin",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": null,
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.sans-alcool-du-vigneron.fr",
+   "retailers": [
+    "Sans Alcool du Vigneron"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-bolle-rose-sparkling",
+   "barcode": null,
+   "name": "Rosé Sparkling",
+   "brand": "Bolle",
+   "cat": "vin",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": null,
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.sans-alcool-du-vigneron.fr",
+   "retailers": [
+    "Sans Alcool du Vigneron"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-bibo-runge-deserteur-pinot-secco-petillant",
+   "barcode": null,
+   "name": "Déserteur Pinot Secco pétillant",
+   "brand": "Bibo Runge",
+   "cat": "vin",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": null,
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.sans-alcool-du-vigneron.fr",
+   "retailers": [
+    "Sans Alcool du Vigneron"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-daniel-mattern-nolimit-reserve-spatlese-vendanges-tardives-blanc",
+   "barcode": null,
+   "name": "NoLimit Réserve Spätlese vendanges tardives blanc",
+   "brand": "Daniel Mattern",
+   "cat": "vin",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": null,
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.sans-alcool-du-vigneron.fr",
+   "retailers": [
+    "Sans Alcool du Vigneron"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-divin-vigneron-chenin-blanc-moelleux",
+   "barcode": null,
+   "name": "Vigneron Chenin Blanc Moelleux",
+   "brand": "Divin",
+   "cat": "vin",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": null,
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.sans-alcool-du-vigneron.fr",
+   "retailers": [
+    "Sans Alcool du Vigneron"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-divin-vigneron-chardonnay",
+   "barcode": null,
+   "name": "Vigneron Chardonnay",
+   "brand": "Divin",
+   "cat": "vin",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": null,
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.sans-alcool-du-vigneron.fr",
+   "retailers": [
+    "Sans Alcool du Vigneron"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-majolia-chardonnay-petillant",
+   "barcode": null,
+   "name": "Le Chardonnay Pétillant",
+   "brand": "Majolia",
+   "cat": "vin",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": null,
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.sans-alcool-du-vigneron.fr",
+   "retailers": [
+    "Sans Alcool du Vigneron"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-bibo-runge-deserteur-cuvee-blanc-zero",
+   "barcode": null,
+   "name": "Déserteur Cuvée Blanc Zero",
+   "brand": "Bibo Runge",
+   "cat": "vin",
+   "abv": 0,
+   "sugar": null,
+   "kcal": null,
+   "quantity": null,
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.sans-alcool-du-vigneron.fr",
+   "retailers": [
+    "Sans Alcool du Vigneron"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-bibo-runge-deserteur-sparkling-blanc-zero",
+   "barcode": null,
+   "name": "Déserteur Sparkling Blanc Zero",
+   "brand": "Bibo Runge",
+   "cat": "vin",
+   "abv": 0,
+   "sugar": null,
+   "kcal": null,
+   "quantity": null,
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.sans-alcool-du-vigneron.fr",
+   "retailers": [
+    "Sans Alcool du Vigneron"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-loffler-null-alkohol-secco-rose-petillant",
+   "barcode": null,
+   "name": "Null Alkohol Secco Rosé pétillant",
+   "brand": "Löffler",
+   "cat": "vin",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": null,
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.sans-alcool-du-vigneron.fr",
+   "retailers": [
+    "Sans Alcool du Vigneron"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-n-702-petillant",
+   "barcode": null,
+   "name": "Pétillant",
+   "brand": "N°702",
+   "cat": "vin",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": null,
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.sans-alcool-du-vigneron.fr",
+   "retailers": [
+    "Sans Alcool du Vigneron"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-tandem-",
+   "barcode": null,
+   "name": "Bière",
+   "brand": "Tandem",
+   "cat": "biere",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": "33 cl",
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.nicolas.com/fr/fr/sans-alcool/tous-les-produits.html",
+   "retailers": [
+    "Nicolas"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-hirsch-helles",
+   "barcode": null,
+   "name": "Helles",
+   "brand": "Hirsch",
+   "cat": "biere",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": "33 cl",
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.nicolas.com/fr/fr/sans-alcool/tous-les-produits.html",
+   "retailers": [
+    "Nicolas"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-lyderic-lyderic-blonde",
+   "barcode": null,
+   "name": "Lydéric Blonde",
+   "brand": "Lyderic",
+   "cat": "biere",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": "75 cl",
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.nicolas.com/fr/fr/sans-alcool/tous-les-produits.html",
+   "retailers": [
+    "Nicolas"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-nicolas-grenache-rose-desalcoolise",
+   "barcode": null,
+   "name": "Grenache Rosé Désalcoolisé",
+   "brand": "Nicolas",
+   "cat": "vin",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": "75 cl",
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.nicolas.com/fr/fr/sans-alcool/tous-les-produits.html",
+   "retailers": [
+    "Nicolas"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-lyre-s-classico-sparkling",
+   "barcode": null,
+   "name": "Classico Sparkling",
+   "brand": "Lyre's",
+   "cat": "vin",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": "75 cl",
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.nicolas.com/fr/fr/sans-alcool/tous-les-produits.html",
+   "retailers": [
+    "Nicolas"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-petit-beret-petit-beret-orange-spritz",
+   "barcode": null,
+   "name": "Petit Béret Orange Spritz",
+   "brand": "Le Petit Béret",
+   "cat": "aperitif",
+   "abv": 0,
+   "sugar": null,
+   "kcal": null,
+   "quantity": "74 cl",
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.nicolas.com/fr/fr/sans-alcool/tous-les-produits.html",
+   "retailers": [
+    "Nicolas"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-nasdrow-scarlet-co-cocktail-petillant",
+   "barcode": null,
+   "name": "Scarlet & Co cocktail pétillant",
+   "brand": "Nasdrow",
+   "cat": "aperitif",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": "25 cl",
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.nicolas.com/fr/fr/sans-alcool/tous-les-produits.html",
+   "retailers": [
+    "Nicolas"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-tanqueray-tonic-sans-sucre",
+   "barcode": null,
+   "name": "& Tonic Sans Sucre",
+   "brand": "Tanqueray",
+   "cat": "aperitif",
+   "abv": 0,
+   "sugar": null,
+   "kcal": null,
+   "quantity": "25 cl",
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.nicolas.com/fr/fr/sans-alcool/tous-les-produits.html",
+   "retailers": [
+    "Nicolas"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-uby-bulle-zero-alcool-petillant",
+   "barcode": null,
+   "name": "Bulle Zéro Alcool pétillant",
+   "brand": "Domaine UBY",
+   "cat": "vin",
+   "abv": 0,
+   "sugar": null,
+   "kcal": null,
+   "quantity": "75 cl",
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.lilovino.com/1953-sans-alcool",
+   "retailers": [
+    "Lilovino"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-uby-rose-zero-alcool",
+   "barcode": null,
+   "name": "Rosé Zéro Alcool",
+   "brand": "Domaine UBY",
+   "cat": "vin",
+   "abv": 0,
+   "sugar": null,
+   "kcal": null,
+   "quantity": "75 cl",
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.lilovino.com/1953-sans-alcool",
+   "retailers": [
+    "Lilovino"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-petit-beret-virgin-rose",
+   "barcode": null,
+   "name": "Virgin Rosé",
+   "brand": "Le Petit Béret",
+   "cat": "vin",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": "75 cl",
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.lilovino.com/1953-sans-alcool",
+   "retailers": [
+    "Lilovino"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-petit-beret-blanc-blancs-petillant",
+   "barcode": null,
+   "name": "Blanc de Blancs pétillant",
+   "brand": "Le Petit Béret",
+   "cat": "vin",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": "75 cl",
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.lilovino.com/1953-sans-alcool",
+   "retailers": [
+    "Lilovino"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-petit-beret-cuvee-vieilles-vignes-rouge",
+   "barcode": null,
+   "name": "Cuvée Vieilles Vignes Rouge",
+   "brand": "Le Petit Béret",
+   "cat": "vin",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": "75 cl",
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.lilovino.com/1953-sans-alcool",
+   "retailers": [
+    "Lilovino"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-petit-beret-virgin-sauvignon-blanc",
+   "barcode": null,
+   "name": "Virgin Sauvignon Blanc",
+   "brand": "Le Petit Béret",
+   "cat": "vin",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": "75 cl",
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.lilovino.com/1953-sans-alcool",
+   "retailers": [
+    "Lilovino"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-petit-beret-natural-botanic-spiritueux",
+   "barcode": null,
+   "name": "Natural Botanic spiritueux",
+   "brand": "Le Petit Béret",
+   "cat": "spiritueux",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": "75 cl",
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.lilovino.com/1953-sans-alcool",
+   "retailers": [
+    "Lilovino"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-giffard-liqueur-gingembre-spiritueux",
+   "barcode": null,
+   "name": "Liqueur de Gingembre spiritueux",
+   "brand": "Giffard",
+   "cat": "spiritueux",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": "70 cl",
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.lilovino.com/1953-sans-alcool",
+   "retailers": [
+    "Lilovino"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-prizm-bitter-n-8-aperitif-nolow",
+   "barcode": null,
+   "name": "Bitter N°8 apéritif - Nolow",
+   "brand": "Prizm",
+   "cat": "aperitif",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": "70 cl",
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.lilovino.com/1953-sans-alcool",
+   "retailers": [
+    "Lilovino"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-prizm-gin-n-4-nolow",
+   "barcode": null,
+   "name": "Gin Nº4 - Nolow",
+   "brand": "Prizm",
+   "cat": "spiritueux",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": "70 cl",
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.lilovino.com/1953-sans-alcool",
+   "retailers": [
+    "Lilovino"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-prizm-ginger-n-7-aperitif-nolow",
+   "barcode": null,
+   "name": "Ginger N°7 apéritif - Nolow",
+   "brand": "Prizm",
+   "cat": "aperitif",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": "70 cl",
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.lilovino.com/1953-sans-alcool",
+   "retailers": [
+    "Lilovino"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-seedlip-gin-grove-42",
+   "barcode": null,
+   "name": "Gin Grove 42",
+   "brand": "Seedlip",
+   "cat": "spiritueux",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": "70 cl",
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.lilovino.com/1953-sans-alcool",
+   "retailers": [
+    "Lilovino"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-seedlip-spice-gin-94",
+   "barcode": null,
+   "name": "Spice Gin 94",
+   "brand": "Seedlip",
+   "cat": "spiritueux",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": "70 cl",
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.lilovino.com/1953-sans-alcool",
+   "retailers": [
+    "Lilovino"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-seedlip-gin-garden-108",
+   "barcode": null,
+   "name": "Gin Garden 108",
+   "brand": "Seedlip",
+   "cat": "spiritueux",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": "70 cl",
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.lilovino.com/1953-sans-alcool",
+   "retailers": [
+    "Lilovino"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-pacific-anis-aperitif-anise",
+   "barcode": null,
+   "name": "Anis apéritif anisé",
+   "brand": "Pacific",
+   "cat": "aperitif",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": "100 cl",
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.lilovino.com/1953-sans-alcool",
+   "retailers": [
+    "Lilovino"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-divin-origine-chenin-vin-blanc",
+   "barcode": null,
+   "name": "Origine Chenin vin blanc",
+   "brand": "Divin",
+   "cat": "vin",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": null,
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.lepetitballon.com/collections/sans-alcool",
+   "retailers": [
+    "Le Petit Ballon"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-osan-infusion-gastronomique-betterave-mure",
+   "barcode": null,
+   "name": "Infusion gastronomique Betterave & Mûre",
+   "brand": "Osan",
+   "cat": "soft",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": null,
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.lepetitballon.com/collections/sans-alcool",
+   "retailers": [
+    "Le Petit Ballon"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-roman-vignes-sosie-vin-blanc-2024",
+   "barcode": null,
+   "name": "SOSIE vin blanc 2024",
+   "brand": "Roman des Vignes",
+   "cat": "vin",
+   "abv": 0,
+   "sugar": null,
+   "kcal": null,
+   "quantity": null,
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.lepetitballon.com/collections/sans-alcool",
+   "retailers": [
+    "Le Petit Ballon"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-divin-sauvignon-2024-vin-blanc",
+   "barcode": null,
+   "name": "Sauvignon 2024 vin blanc",
+   "brand": "Divin",
+   "cat": "vin",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": null,
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.lepetitballon.com/collections/sans-alcool",
+   "retailers": [
+    "Le Petit Ballon"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-chateau-peybonhomme-tours-vertu-infusion-vigneronne",
+   "barcode": null,
+   "name": "Vertu infusion vigneronne",
+   "brand": "Château Peybonhomme les Tours",
+   "cat": "soft",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": null,
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.lepetitballon.com/collections/sans-alcool",
+   "retailers": [
+    "Le Petit Ballon"
+   ],
+   "source": "curated"
+  },
+  {
+   "id": "cur-chateau-guilhem-o-raisin-2025",
+   "barcode": null,
+   "name": "O de Raisin 2025",
+   "brand": "Château Guilhem",
+   "cat": "soft",
+   "abv": null,
+   "sugar": null,
+   "kcal": null,
+   "quantity": null,
+   "price": null,
+   "image": null,
+   "popularity": 0,
+   "style": null,
+   "region": null,
+   "note": null,
+   "sourceUrl": "https://www.lepetitballon.com/collections/sans-alcool",
+   "retailers": [
+    "Le Petit Ballon"
    ],
    "source": "curated"
   }

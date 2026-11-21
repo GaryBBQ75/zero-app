@@ -15,7 +15,12 @@ ROOT = Path(__file__).resolve().parent.parent
 SOURCES = {
     'sanzalc': ('data/raw/sanzalc-titles.txt', 'https://www.sanzalc.com', 'Sanzalc'),
     'gueuledejoie': ('data/raw/gueuledejoie-titles.txt', 'https://www.gueuledejoie.com', 'Gueule de Joie'),
+    'vigneron': ('data/raw/vigneron-titles.txt', 'https://www.sans-alcool-du-vigneron.fr', 'Sans Alcool du Vigneron'),
+    'nicolas': ('data/raw/nicolas-titles.txt', 'https://www.nicolas.com/fr/fr/sans-alcool/tous-les-produits.html', 'Nicolas'),
+    'lilovino': ('data/raw/lilovino-titles.txt', 'https://www.lilovino.com/1953-sans-alcool', 'Lilovino'),
+    'petitballon': ('data/raw/petitballon-titles.txt', 'https://www.lepetitballon.com/collections/sans-alcool', 'Le Petit Ballon'),
 }
+SUFFIX_BRAND = {'gueuledejoie', 'vigneron', 'nicolas', 'lilovino', 'petitballon'}
 
 # Marques connues : la plus longue présente dans le titre l'emporte.
 BRANDS = [
@@ -49,7 +54,9 @@ BRANDS = [
     "Bargemone", "Krombacher", "Meteor", "Super 8", "Domaine de Montrose", "Nasdrow", "Château d'Estoublon",
     "Yoleau", "Paragon", "Oma Frida", "Trip", "Belzar", "Bitburger", "Les Brasseurs du Sornin", "La Face Cachée",
     "Majolia", "Ethic Drinks", "La Provenquière", "Les Brasseurs De La Jonte", "AIKAN", "Gueule de Joie",
-    "Kisumé", "Captain Morgan",
+    "Kisumé", "Captain Morgan", "Löffler", "Daniel Mattern", "Domaine UBY", "Le Petit Béret", "Seedlip", "Pacific",
+    "Giffard", "Osan", "Roman des Vignes", "Château Peybonhomme les Tours", "Château Guilhem", "Hirsch", "Lyderic",
+    "Nicolas", "Zeronic", "Maison Saint-Aix", "To%ur Campanets", "Elefant", "Grand Gold", "Evil Twin", "N°702",
 ]
 ALIASES = {
     'ribo': 'Cave de Ribeauvillé', 'rib0': 'Cave de Ribeauvillé', 'nooh': 'Château La Coste',
@@ -72,11 +79,11 @@ SKIP = re.compile(r"\b(sirop|carte[- ]cadeau|coffret|collection|pack|offre|calen
 
 CATS = [
     ('cidre', r"\bcidre|\bcider"),
-    ('soft', r"kombucha|k[ée]fir|infusion|clean soda|schorle|elixir|th[ée] p[ée]tillant|earl grey|unaju|spunky|houblonade|mindful blend|sapinca|ambijus|rish\b|antidote|antilope"),
-    ('aperitif', r"osco|jardins|bulles de|djin|gimber|lune d'archipel|plein soleil d'archipel|no ghost|nona ginger|spritz|ap[ée]riti|bitter|\bamer\b|amaroz|anis[ée]|cocktail|mojito|paloma|daïquiri|daiquiri|margarita|martini|vermouth|aperitivo|aperiniets|vrmh|bttr|sprz|nivers|feral|douze|tempera|riva|tierra|calda|pyra|aria|eterna|villa martelle|maïa|gin tonic|scarlet|limonello|limoncello|limello|botaniets|ose n°|palo santo|ruby rush|roots divino|finote|opius|ginto|gingerum"),
+    ('soft', r"o de raisin|infusion vigneronne|kombucha|k[ée]fir|infusion|clean soda|schorle|elixir|th[ée] p[ée]tillant|earl grey|unaju|spunky|houblonade|mindful blend|sapinca|ambijus|rish\b|antidote|antilope"),
+    ('aperitif', r"tonic sans sucre|osco|jardins|bulles de|djin|gimber|lune d'archipel|plein soleil d'archipel|no ghost|nona ginger|spritz|ap[ée]riti|bitter|\bamer\b|amaroz|anis[ée]|cocktail|mojito|paloma|daïquiri|daiquiri|margarita|martini|vermouth|aperitivo|aperiniets|vrmh|bttr|sprz|nivers|feral|douze|tempera|riva|tierra|calda|pyra|aria|eterna|villa martelle|maïa|gin tonic|scarlet|limonello|limoncello|limello|botaniets|ose n°|palo santo|ruby rush|roots divino|finote|opius|ginto|gingerum"),
     ('spiritueux', r"\bgin\b|rhum|whisky|bourbon|\bspirit|spiritueux|distillat|amaretto|tequila|agave|\bjnpr\b|rhhm|almave|everleaf|crocodile|atopia|havaniets|nona june|citadelle|yu no|far and son|feragaia|babylon garden|atlantis|american malt|white cane|dark cane|orange sec|coffee originale|gold cane|captain morgan|kahol|glen dochus|botanicals|hibiscus - far"),
     ('biere', r"highway to hell|cloudy krush|bi[èe]re|\bipa\b|neipa|lager|stout|gose|\bsour\b|\bale\b|pale|blonde|blanche|tripel|triple|kriek|\bwit\b|weissbier|brune|ambr[ée]e|pils|dubbel|wit\b|hazy|chug|cult|punk af|energibajer|weird weather|drink in the sun|easy peasy|bird of prey|minim'ale|placebo|pico bello|kasteel|chouffe|estaminet|jupiler|carlsberg|bitburger|vedett|lupulus|lowa trolls|même pas mal|agent modérateur|sport ?zot|a la cool|dark amber|prenzlauer|fun ?house|playground|bumper|special effects|spécial effects|c'est pas banal|la face cachée|piggy driver|karmeliet|bernardus|delirio|hommelbier|poussière de lune|crapauds fous|pecheresse|pêcheresse|fruitesse|rubus|tropical|donker|liefmans|cute and sober|young pug|motor oil|wrench|paljas|wild juice|unruly|all hopped up|implosion"),
-    ('vin', r"\bvin\b|effervescent|p[ée]tillant|mousseux|spumante|espumante|ros[ée]|rouge|blanc|chardonnay|sauvignon|merlot|pinot|syrah|cabernet|grenache|riesling|gew[uü]rz|colombard|chenin|viognier|tempranillo|verdejo|gamay|malbec|zweigelt|veltliner|muscat|melon|s[ée]millon|shiraz|brut|blend|cuv[ée]e|classico|french kiss|french touch|french cancan|granith|oma frida|kisumé|nooh|prince oscar|addiction|alternative 0|origo|fiora|calluna|java|oh my baie|equinoxe|équilibre|tip top|sauv'terre|o'dacieux"),
+    ('vin', r"\bvin\b|effervescent|p[ée]tillant|mousseux|spumante|espumante|ros[ée]|rouge|blanc|chardonnay|sauvignon|merlot|pinot|syrah|cabernet|grenache|riesling|gew[uü]rz|colombard|chenin|viognier|tempranillo|verdejo|gamay|malbec|zweigelt|veltliner|muscat|melon|s[ée]millon|shiraz|brut|\brot\b|blend|sparkling|secco|frizzante|crémant|cuv[ée]e|classico|french kiss|french touch|french cancan|granith|oma frida|kisumé|nooh|prince oscar|addiction|alternative 0|origo|fiora|calluna|java|oh my baie|equinoxe|équilibre|tip top|sauv'terre|o'dacieux"),
 ]
 
 def strip_accents(s):
@@ -94,7 +101,7 @@ def find_brand(title, source):
                 best = b
     if best:
         return best
-    if source == 'gueuledejoie' and ' - ' in title:
+    if source in SUFFIX_BRAND and ' - ' in title:
         return title.rsplit(' - ', 1)[1].strip()
     return None
 
