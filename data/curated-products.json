@@ -25,7 +25,7 @@
    "cat": "biere",
    "style": "Blanche",
    "abv": 0.3,
-   "region": "Gironde",
+   "region": "Floirac (Gironde)",
    "source": "https://www.soiffard.fr/biere-sans-alcool/"
   },
   {
@@ -79,9 +79,11 @@
    "cat": "biere",
    "style": "Blonde",
    "abv": 0.5,
-   "region": null,
+   "region": "Grenoble",
    "note": "Microbrasserie entièrement dédiée au sans alcool",
-   "source": "https://www.sanzalc.com/collections/les-10-meilleures-bieres-sans-alcool?page=2"
+   "source": "https://www.sanzalc.com/collections/les-10-meilleures-bieres-sans-alcool?page=2",
+   "sugar": 3,
+   "kcal": 9
   },
   {
    "brand": "Brasserie Météor",
@@ -405,7 +407,7 @@
    "cat": "spiritueux",
    "style": null,
    "abv": null,
-   "region": null,
+   "region": "Charente",
    "source": "https://www.toutlevin.com/article/la-tendance-des-spiritueux-sans-alcool"
   },
   {
@@ -542,7 +544,7 @@
    "cat": "soft",
    "style": "Kombucha",
    "abv": null,
-   "region": null,
+   "region": "Strasbourg",
    "source": "https://madeinfr.fr/etudes-de-marche/agroalimentaire-alimentation/le-marche-du-kombucha-et-du-kefir-en-france/"
   },
   {
@@ -578,7 +580,7 @@
    "cat": "soft",
    "style": "Kéfir de fruits",
    "abv": null,
-   "region": "Gironde",
+   "region": "Floirac (Gironde)",
    "source": "https://www.azade.fr/boissons/kombuchas-et-kefirs"
   },
   {
@@ -741,7 +743,7 @@
    "cat": "biere",
    "style": "Blonde",
    "abv": null,
-   "region": "Gironde",
+   "region": "Floirac (Gironde)",
    "source": "https://www.nicolas.com/en/Soft/c/08",
    "price": "3,60 €",
    "quantity": "33 cl"
@@ -1454,6 +1456,330 @@
    "cat": "soft",
    "quantity": "75 cl",
    "source": "https://www.lepaonquiboit.com/"
+  },
+  {
+   "style": "Blonde",
+   "abv": 0,
+   "region": "Concarneau (Finistère)",
+   "brand": "Brasserie de Bretagne",
+   "name": "Dremmwel Sans Alcool Blonde bio",
+   "cat": "biere",
+   "quantity": "33 cl",
+   "source": "https://www.breizh-info.com/2024/12/01/240963/dry-january-une-biere-bio-bretonne-sans-alcool-signee-brasserie-de-bretagne/"
+  },
+  {
+   "style": null,
+   "abv": null,
+   "region": "Brest",
+   "brand": "Poèm",
+   "name": "Bière sans alcool",
+   "cat": "biere",
+   "source": "https://www.tourismebretagne.com/preparer-mon-sejour/bouger-visiter/toutes-les-activites/brasserie-poem-brest-fr-2180756/"
+  },
+  {
+   "style": null,
+   "abv": null,
+   "region": "Montauban-de-Luchon (Haute-Garonne)",
+   "brand": "Brasserie artisanale du Vénasque",
+   "name": "Bière sans alcool",
+   "cat": "biere",
+   "source": "https://www.tourisme-occitanie.com/fr/fiche/degustation/brasserie-artisanale-du-venasque-montauban-de-luchon_TFODEGMID031V50SZL3/"
+  },
+  {
+   "style": "Blonde",
+   "abv": 0,
+   "region": "Bénifontaine (Brasserie Castelain)",
+   "brand": "Jade",
+   "name": "Jade 0.0 blonde bio",
+   "cat": "biere",
+   "quantity": "25 cl",
+   "source": "https://www.lsa-conso.fr/jade-0-0-la-biere-au-carrefour-des-tendances,367198"
+  },
+  {
+   "style": "Blonde",
+   "abv": null,
+   "region": "Brasserie de Saint-Omer (marque Auchan)",
+   "brand": "Sterling",
+   "name": "Sterling sans alcool",
+   "cat": "biere",
+   "source": "https://www.auchan.fr/bieres-auchan/ep-bieres-auchan"
+  },
+  {
+   "style": "Pale ale",
+   "abv": 0,
+   "region": "Paris",
+   "brand": "La Parisienne",
+   "name": "Blonde bio 0,0%",
+   "cat": "biere",
+   "source": "https://www.auchan.fr/la-parisienne-biere-blonde-sans-alcool-0-0-bio-bouteille/pr-C1788576"
+  },
+  {
+   "style": "IPA",
+   "abv": 0.4,
+   "region": "Paris",
+   "brand": "La Parisienne",
+   "name": "IPA bio sans alcool",
+   "cat": "biere",
+   "price": "3,50 €",
+   "source": "https://www.sanzalc.com/en/products/la-parisienne-ipa-beer-without-alcohol-organic-0-4"
+  },
+  {
+   "style": "IPA",
+   "abv": null,
+   "region": "Pantin",
+   "brand": "Gallia",
+   "name": "Bière de travail IPA sans alcool",
+   "cat": "biere",
+   "price": "3,30 €",
+   "quantity": "33 cl",
+   "barcode": "3700693901222",
+   "source": "https://www.lagrandeepicerie.com/biere-de-travail--ipa-sans-alcool/200064900000.html"
+  },
+  {
+   "style": "Kombucha",
+   "abv": null,
+   "region": "Wambrechies (Nord)",
+   "brand": "Brasserie L'Indispensable",
+   "name": "Kombucha",
+   "cat": "soft",
+   "source": "https://gastronomy.hautsdefrance.fr/?p=5344",
+   "note": "Marque Loven"
+  },
+  {
+   "style": "Rosé (Grenache)",
+   "abv": 0,
+   "region": "Provence",
+   "brand": "Château de la Galinière",
+   "name": "Sensation rosé sans alcool",
+   "cat": "vin",
+   "source": "https://www.vino.com/fr/dettaglio/la-galiniere-sensation-rose-alcohol-free-chateau-de-la-galiniere.html"
+  },
+  {
+   "style": "Pétillant rosé",
+   "abv": null,
+   "region": "Provence",
+   "brand": "Château de la Galinière",
+   "name": "Sensation pétillant rosé sans alcool",
+   "cat": "vin",
+   "price": "14,80 €",
+   "quantity": "75 cl",
+   "source": "https://www.vino.com/fr/dettaglio/la-galiniere-sensation-sparkling-alcohol-free-chateau-de-la-galiniere.html"
+  },
+  {
+   "style": "Pétillant rosé",
+   "abv": 0,
+   "region": "Provence",
+   "brand": "Château de Saint-Martin",
+   "name": "Fav0rite Sparkling Rosé",
+   "cat": "vin",
+   "source": "https://www.avenuedesvins.fr/en/vin-vin-de-france-fav0rite-sparkling-rose-desalcoolisee-0-11299.html"
+  },
+  {
+   "style": "Rosé",
+   "abv": null,
+   "region": null,
+   "brand": "JP Chenet",
+   "name": "Grenache Cinsault rosé sans alcool",
+   "cat": "vin",
+   "source": "https://www.vino.com/fr/dettaglio/grenache-cinsault-rose-alcohol-free-jp-chenet.html"
+  },
+  {
+   "style": "Pétillant",
+   "abv": 0,
+   "region": "Baux-de-Provence",
+   "brand": "Château d'Estoublon",
+   "name": "L'Excessive",
+   "cat": "vin",
+   "source": "https://www.myprovence.fr/ca-s-agite-dans-le-local/passez-a-table/top/bouches-du-rhone/vins-sans-alcool-boire-sans-moderation"
+  },
+  {
+   "style": "Apéritif à base de vin désalcoolisé",
+   "abv": 0,
+   "region": "Podensac (Gironde)",
+   "brand": "Lillet",
+   "name": "Lillet Blanc 0%",
+   "cat": "aperitif",
+   "source": "https://theabsolutcompany.com/media-room/press-release/say-bonjour-to-new-lillet-blanc-0/"
+  },
+  {
+   "style": "Distillat botanique, menthe",
+   "abv": null,
+   "region": null,
+   "brand": "Artonic",
+   "name": "Fresh Bloom",
+   "cat": "spiritueux",
+   "price": "29 €",
+   "source": "https://fr.gaultmillau.com/fr/news/aperitifs-sans-alcool-sur-lesquels-miser-durant-les-fetes"
+  },
+  {
+   "style": "À base de vin désalcoolisé et de plantes",
+   "abv": null,
+   "region": null,
+   "brand": "Pecette",
+   "name": "Apéritif méditerranéen sans alcool",
+   "cat": "aperitif",
+   "source": "https://ae.linkedin.com/in/nancykatrib"
+  },
+  {
+   "style": "Amer méditerranéen",
+   "abv": null,
+   "region": "États-Unis (vendu en France)",
+   "brand": "Ghia",
+   "name": "Apéritif sans alcool",
+   "cat": "aperitif",
+   "source": "https://www.whisky.fr/menu/blog/articles-sans-alcool/marque-aperitif-sans-alcool"
+  },
+  {
+   "style": "Blonde",
+   "abv": 0.5,
+   "region": "Corse",
+   "brand": "Pietra",
+   "name": "Pietra blonde sans alcool",
+   "cat": "biere",
+   "note": "Moins de 0,5 % d'alcool",
+   "source": "https://www.corsenetinfos.corsica/Pietra-et-maintenant-une-biere-blonde-sans-alcool_a78750.html"
+  },
+  {
+   "style": null,
+   "abv": null,
+   "region": "Marseille",
+   "brand": "SouthBrews",
+   "name": "Bière artisanale sans alcool",
+   "cat": "biere",
+   "source": "https://madeinmarseille.net/?p=47492"
+  },
+  {
+   "style": "Kombucha",
+   "abv": null,
+   "region": "Côte d'Opale",
+   "brand": "Bulles d'Opale",
+   "name": "Kombucha artisanal",
+   "cat": "soft",
+   "source": "https://gastronomy.hautsdefrance.fr/?p=4749"
+  },
+  {
+   "style": "Kombucha",
+   "abv": null,
+   "region": "Hauts-de-France",
+   "brand": "Beÿcha",
+   "name": "Kombucha",
+   "cat": "soft",
+   "source": "https://gastronomy.hautsdefrance.fr/?p=8371"
+  },
+  {
+   "style": "Kombucha",
+   "abv": null,
+   "region": "Pont-Saint-Esprit (Gard)",
+   "brand": "Oly Kombucha",
+   "name": "Kombucha gingembre citron miel",
+   "cat": "soft",
+   "source": "https://www.tourisme-occitanie.com/fr/fiche/degustation/brasserie-oly-kombucha-pont-saint-esprit_TFOSITRA2_DEG_7176197/"
+  },
+  {
+   "style": "Kombucha",
+   "abv": null,
+   "region": "Pont-Saint-Esprit (Gard)",
+   "brand": "Oly Kombucha",
+   "name": "Kombucha Bonbon",
+   "cat": "soft",
+   "source": "https://www.tourisme-occitanie.com/fr/fiche/degustation/brasserie-oly-kombucha-pont-saint-esprit_TFOSITRA2_DEG_7176197/"
+  },
+  {
+   "style": "Kombucha",
+   "abv": null,
+   "region": "Loire-Atlantique (brasserie Biomère)",
+   "brand": "Bio par Nature",
+   "name": "Kombucha bio aux plantes",
+   "cat": "soft",
+   "quantity": "75 cl",
+   "source": "https://www.auchan.fr/bio-par-nature-kombucha-au-the-blanc-bio/pr-C1730518"
+  },
+  {
+   "style": "Kombucha",
+   "abv": null,
+   "region": "Toulouse",
+   "brand": "Jubiles",
+   "name": "Kombucha",
+   "cat": "soft",
+   "source": "https://www.lsa-conso.fr/jubiles-veut-democratiserle-kombucha,349829"
+  },
+  {
+   "style": "Kombucha",
+   "abv": null,
+   "region": null,
+   "brand": "Mama Kombucha",
+   "name": "Kombucha artisanal bio",
+   "cat": "soft",
+   "source": "https://www.pourdebon.com/recherche?q=kombucha"
+  },
+  {
+   "style": "Kombucha",
+   "abv": null,
+   "region": null,
+   "brand": "TK Bio",
+   "name": "Kombucha Nature",
+   "cat": "soft",
+   "quantity": "33 cl",
+   "source": "https://www.pourdebon.com/recherche?q=kombucha"
+  },
+  {
+   "style": "Kombucha",
+   "abv": null,
+   "region": null,
+   "brand": "Vivant",
+   "name": "Kombucha bio",
+   "cat": "soft",
+   "source": "https://www.pourdebon.com/recherche?q=kombucha"
+  },
+  {
+   "style": "Kombucha",
+   "abv": null,
+   "region": "Wambrechies (Nord)",
+   "brand": "Loven",
+   "name": "Kombucha Citron Menthe & Fire",
+   "cat": "soft",
+   "quantity": "33 cl",
+   "source": "https://www.pourdebon.com/recherche?q=kombucha"
+  },
+  {
+   "style": "Kombucha",
+   "abv": null,
+   "region": "Erquy (Bretagne)",
+   "brand": "Ucha",
+   "name": "Kombucha",
+   "cat": "soft",
+   "source": "https://www.lsa-conso.fr/ucha-innove-avec-sa-ginger-beer-sans-alcool-en-canette,457203"
+  },
+  {
+   "style": "Pétillant infusé",
+   "abv": null,
+   "region": null,
+   "brand": "Florentina",
+   "name": "Boisson gazéifiée infusée fruits rouges bio",
+   "cat": "aperitif",
+   "price": "6,19 €",
+   "quantity": "75 cl",
+   "source": "https://www.greenweez.com/marque/florentina"
+  },
+  {
+   "style": "Kéfir de fruits",
+   "abv": null,
+   "region": null,
+   "brand": "L'Atelier du Ferment",
+   "name": "Kéfir Citron",
+   "cat": "soft",
+   "source": "https://fr.gaultmillau.com/fr/news/15-boissons-sans-alcool-a-base-de-fruits-et-de-plantes"
+  },
+  {
+   "style": "Rosé",
+   "abv": null,
+   "region": null,
+   "brand": "Le Petit Etoilé",
+   "name": "Profil vin rosé bio",
+   "cat": "vin",
+   "price": "7,49 €",
+   "quantity": "75 cl",
+   "source": "https://www.greenweez.com/marque/le-petit-etoile"
   }
  ]
 }

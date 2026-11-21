@@ -55,6 +55,9 @@ export function merge(offProducts, curatedProducts) {
       match.abv = match.abv ?? c.abv ?? null
       match.price = match.price ?? c.price ?? null
       match.quantity = match.quantity ?? c.quantity ?? null
+      match.sugar = match.sugar ?? c.sugar ?? null
+      match.kcal = match.kcal ?? c.kcal ?? null
+      match.note = match.note ?? c.note ?? null
       if (c.retailers) match.retailers = [...new Set([...(match.retailers || []), ...c.retailers])]
       enriched++
       continue
@@ -66,8 +69,8 @@ export function merge(offProducts, curatedProducts) {
       brand: c.brand,
       cat: c.cat,
       abv: c.abv ?? null,
-      sugar: null,
-      kcal: null,
+      sugar: c.sugar ?? null,
+      kcal: c.kcal ?? null,
       quantity: c.quantity ?? null,
       price: c.price ?? null,
       image: null,
