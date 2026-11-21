@@ -1,0 +1,13 @@
+{
+  "name": "zéro · boissons sans alcool",
+  "short_name": "zéro",
+  "description": "Les boissons sans alcool, notées par ceux qui les boivent.",
+  "lang": "fr",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f7f7f5",
+  "theme_color": "#0f766e",
+  "icons": [
+    { "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
