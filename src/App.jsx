@@ -1,7 +1,9 @@
 import { Suspense, lazy, useCallback, useEffect, useMemo, useState } from 'react'
 import { fetchByBarcode } from './off.js'
+import Product from './Product.jsx'
+import { CAT_COLOR, CatIcon } from './ui.jsx'
 import {
-  CATEGORIES, CAT_LABEL, CAT_TINT, RATING_TAGS, SEED, DEMO_REVIEWS, MAX_ABV,
+  CATEGORIES, CAT_LABEL, RATING_TAGS, SEED, MAX_ABV,
   fmt1, level, communityScore, starText,
 } from './data.js'
 
@@ -46,19 +48,11 @@ const Icon = {
   star: <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z" /></svg>,
 }
 
-function Bottle({ size = 1 }) {
+function Visual({ p }) {
+  const c = CAT_COLOR[p.cat] || CAT_COLOR.autre
   return (
-    <svg width={26 * size} height={34 * size} viewBox="0 0 26 34" fill="none" stroke="#374151" strokeWidth={1.8 / size} strokeLinejoin="round" aria-hidden="true">
-      <path d="M10 2h6v6c0 1.5 4 3 4 7v15a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V15c0-4 4-5.5 4-7z" />
-      <path d="M6 18h14" />
-    </svg>
-  )
-}
-
-function Visual({ p, big }) {
-  return (
-    <span className={big ? 'visual visual-big' : 'visual'} style={{ background: big ? 'rgba(255,255,255,.7)' : CAT_TINT[p.cat] }}>
-      {p.image ? <img src={p.image} alt="" /> : <Bottle size={big ? 1.8 : 1} />}
+    <span className="visual" style={{ background: p.image ? '#fff' : c.bg }}>
+      {p.image ? <img src={p.image} alt="" loading="lazy" /> : <CatIcon cat={p.cat} size={28} />}
     </span>
   )
 }
@@ -128,7 +122,18 @@ export default function App() {
       .sort((a, b) => (b.score ?? -1) - (a.score ?? -1) || (b.popularity ?? 0) - (a.popularity ?? 0))
   }, [all, cat, only00, q, withScore])
 
-  const current = currentId && all[currentId] ? withScore(all[currentId]) : null
+  const current = currentId && all[currentId]
+    ? { ...withScore(all[currentId]), demo: isDemo && all[currentId].source !== 'off' }
+    : null
+  const similar = useMemo(() => {
+    const base = currentId && all[currentId]
+    if (!base) return []
+    return Object.values(all)
+      .filter((p) => p.id !== base.id && p.cat === base.cat && p.brand !== base.brand)
+      .map(withScore)
+      .sort((a, b) => (b.score ?? -1) - (a.score ?? -1) || (b.image ? 1 : 0) - (a.image ? 1 : 0) || (b.popularity ?? 0) - (a.popularity ?? 0))
+      .slice(0, 8)
+  }, [currentId, all, withScore])
   const logged = Object.entries(ratings)
     .filter(([id]) => all[id])
     .sort((a, b) => b[1].date - a[1].date)
@@ -300,85 +305,14 @@ export default function App() {
       </nav>
 
       {current && (
-        <div className="product">
-          <div className="product-head" style={{ background: CAT_TINT[current.cat] }}>
-            <button type="button" className="round" aria-label="Retour" onClick={() => setCurrentId(null)}>{Icon.back}</button>
-            <div className="product-id">
-              <Visual p={current} big />
-              <div>
-                <small>{CAT_LABEL[current.cat]}</small>
-                <h1>{current.name}</h1>
-                <span>{current.brand}</span>
-              </div>
-            </div>
-          </div>
-          <div className="product-body">
-            <div className="score-card">
-              {current.score != null ? (
-                <span className="score-big" style={{ background: current.lvl.color }}>
-                  <strong>{fmt1(current.score)}</strong><small>/10</small>
-                </span>
-              ) : (
-                <span className="score-big empty" aria-hidden="true">{Icon.starSmall}</span>
-              )}
-              <div>
-                <strong style={{ color: current.score == null ? 'var(--ink)' : current.lvl.color }}>{current.score == null ? 'Nouveau sur zéro' : current.lvl.label}</strong>
-                <span>{current.count ? `Note de la communauté · ${current.count} avis` : 'Donne ton avis en premier'}</span>
-              </div>
-            </div>
-            <div className={current.abv === 0 ? 'abv-note zero' : 'abv-note low'}>
-              {Icon.info}
-              <span>
-                {current.abv == null
-                  ? 'Taux d’alcool non renseigné'
-                  : current.abv === 0
-                    ? 'Vrai 0,0 % : aucune trace d’alcool déclarée'
-                    : `Contient jusqu’à ${fmt1(current.abv)} % d’alcool`}
-              </span>
-            </div>
-            <div className="facts">
-              <div><small>Alcool</small><strong className={current.abv == null ? 'na' : ''}>{current.abv == null ? 'Non communiqué' : `${fmt1(current.abv)} %`}</strong></div>
-              <div><small>Sucres / 100 ml</small><strong className={current.sugar == null ? 'na' : ''}>{current.sugar == null ? 'Non communiqué' : `${fmt1(current.sugar)} g`}</strong></div>
-              <div><small>Calories / 100 ml</small><strong className={current.kcal == null ? 'na' : ''}>{current.kcal == null ? 'Non communiqué' : `${Math.round(current.kcal)} kcal`}</strong></div>
-              <div><small>Prix indicatif</small><strong className={current.price ? '' : 'na'}>{current.price ?? 'Non communiqué'}</strong></div>
-            </div>
-            {(current.style || current.region || current.note) && (
-              <div className="origin">
-                {current.style && <span><small>Style</small>{current.style}</span>}
-                {current.region && <span><small>Origine</small>{current.region}</span>}
-                {current.note && <span><small>À savoir</small>{current.note}</span>}
-              </div>
-            )}
-            {current.tags.length > 0 && (
-              <div>
-                <h2 className="h3">Ce qu&rsquo;en disent les gens</h2>
-                <div className="tags">{current.tags.map((t) => <span key={t}>{t}</span>)}</div>
-              </div>
-            )}
-            {ratings[current.id] && (
-              <div className="review mine">
-                <span><strong>Ma note</strong><span className="stars">{starText(ratings[current.id].stars)}</span></span>
-                {ratings[current.id].tags.length > 0 && <span>{ratings[current.id].tags.join(' · ')}</span>}
-              </div>
-            )}
-            {isDemo && current.source !== 'off' && DEMO_REVIEWS.map((r) => (
-              <div key={r.who} className="review">
-                <span><strong>{r.who}</strong><span className="stars" aria-label={`${r.stars} sur 5`}>{starText(r.stars)}</span></span>
-                <span>{r.text}</span>
-              </div>
-            ))}
-            {current.source === 'off' && <p className="credit">Données produit : Open Food Facts (licence ODbL).</p>}
-            {current.source === 'curated' && (
-              <p className="credit">
-                Fiche ajoutée par l&rsquo;équipe zéro, infos à compléter par la communauté.
-                {current.sourceUrl && <> <a href={current.sourceUrl} target="_blank" rel="noreferrer">Source</a></>}
-              </p>
-            )}
-          </div>
-          <div className="cta">
-            <button type="button" className="btn-primary" onClick={openRating}>{ratings[current.id] ? 'Modifier ma note' : 'Noter en 10 secondes'}</button>
-          </div>
-        </div>
+        <Product
+          p={current}
+          rating={ratings[current.id]}
+          similar={similar}
+          onBack={() => setCurrentId(null)}
+          onRate={openRating}
+          onOpen={(id) => setCurrentId(id)}
+        />
       )}
 
       {ratingOpen && (

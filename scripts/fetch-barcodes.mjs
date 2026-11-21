@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Récupère les codes-barres (EAN) des produits qui n'en ont pas.
+// Récupère les codes-barres (EAN) et enrichit les fiches (description, photo, taux d'alcool, labels).
 // 1. Boutiques Shopify des cavistes : chaque fiche produit expose ses variantes en JSON (/products/<handle>.js),
 //    avec le code-barres quand le marchand l'a saisi.
 // 2. Open Food Facts : recherche par marque et nom pour les produits restants.
@@ -37,6 +37,15 @@ async function get(url, type = 'text') {
   return null
 }
 
+const ENTITIES = { '&amp;': '&', '&lt;': '<', '&gt;': '>', '&quot;': '"', '&#39;': "'", '&nbsp;': ' ', '&rsquo;': '’', '&eacute;': 'é', '&egrave;': 'è', '&agrave;': 'à' }
+function cleanHtml(html) {
+  if (!html) return null
+  let t = html.replace(/<(br|\/p|\/li|\/h\d)[^>]*>/gi, '\n').replace(/<[^>]+>/g, ' ')
+  t = t.replace(/&[a-z#0-9]+;/gi, (e) => ENTITIES[e] ?? ' ')
+  t = t.split('\n').map((l) => l.replace(/\s+/g, ' ').trim()).filter(Boolean).join('\n')
+  return t.length > 2000 ? t.slice(0, 2000) : t
+}
+
 const locs = (xml) => [...(xml || '').matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1].replace(/&amp;/g, '&'))
 
 async function shopProducts(shop) {
@@ -49,10 +58,15 @@ async function shopProducts(shop) {
     const p = await get(`${url}.js`, 'json')
     await sleep(350)
     if (!p) continue
-    const barcode = (p.variants || []).map((v) => (v.barcode || '').trim()).find(validEan)
-    if (barcode) items.push({ shop: shop.label, title: p.title, vendor: p.vendor, barcode, url })
+    const barcode = (p.variants || []).map((v) => (v.barcode || '').trim()).find(validEan) || null
+    const description = cleanHtml(p.description)
+    const image = p.featured_image ? (p.featured_image.startsWith('//') ? `https:${p.featured_image}` : p.featured_image) : null
+    items.push({
+      shop: shop.label, title: p.title, vendor: p.vendor, type: p.type || null, tags: p.tags || [],
+      barcode, description, image, price: p.price ? Math.round(p.price) / 100 : null, url,
+    })
   }
-  console.log(`${shop.label} : ${urls.length} fiches lues, ${items.length} avec code-barres`)
+  console.log(`${shop.label} : ${urls.length} fiches lues, ${items.filter((i) => i.barcode).length} avec code-barres`)
   return items
 }
 

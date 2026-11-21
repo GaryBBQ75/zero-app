@@ -194,6 +194,41 @@ function similarity(a, b) {
   return common / Math.min(ta.size, tb.size)
 }
 
+// ---------- Enrichissement : pays, labels, taux d'alcool tirés des textes ----------
+const COUNTRIES = [
+  ['France', /\bfran(ce|çais|caise)\b|bretagne|normandie|alsace|provence|bordeaux|gironde|loire|occitanie|languedoc|paris|lyon|lille|nantes|corse|savoie|drôme|gers|charente|bourgogne|champagne|jura|beaujolais|hauts-de-france|grand est/i],
+  ['Belgique', /belgi/i], ['Allemagne', /allemagne|german|deutsch/i], ['Royaume-Uni', /royaume-uni|angleterre|écosse|ecosse|scotland|england|\buk\b|london|londres/i],
+  ['Espagne', /espagn|spain/i], ['Italie', /itali/i], ['Pays-Bas', /pays-bas|hollande|netherlands|néerland/i], ['Danemark', /danemark|danois|denmark/i],
+  ['Autriche', /autrich|austria/i], ['Estonie', /estoni/i], ['États-Unis', /états-unis|etats-unis|usa|américain/i], ['Mexique', /mexique|mexic/i], ['Suisse', /suisse|switzerland/i],
+]
+export function countryFrom(...texts) {
+  const t = texts.filter(Boolean).join(' ')
+  if (!t) return null
+  const ctx = t.match(/(origine|pays|provenance|brass[ée]e?s? (en|à)|produite? (en|à)|made in|élaboré(e)? (en|à)|fabriqu[ée]e? (en|à))\s*:?\s*([^.\n,;]{2,40})/i)
+  const zone = ctx ? ctx[6] : t
+  for (const [name, rx] of COUNTRIES) if (rx.test(zone)) return name
+  if (ctx) return null
+  for (const [name, rx] of COUNTRIES) if (rx.test(t)) return name
+  return null
+}
+export function abvFrom(...texts) {
+  const t = texts.filter(Boolean).join(' ').replace(/,/g, '.')
+  const m = t.match(/(<|moins de|inférieur à)?\s*(\d(?:\.\d{1,2})?)\s*%\s*(vol|d'alcool|alc|alcool)?/i)
+  if (!m) return null
+  const v = Number(m[2])
+  if (Number.isNaN(v) || v > 1.2) return null
+  return v
+}
+export function labelsFrom(...texts) {
+  const t = texts.filter(Boolean).join(' ')
+  const out = []
+  if (/\bbio\b|biologique|organic|\bab\b/i.test(t)) out.push('bio')
+  if (/vegan|végan|végétalien/i.test(t)) out.push('vegan')
+  if (/sans gluten|gluten[- ]free|no-gluten/i.test(t)) out.push('sans gluten')
+  return out
+}
+const priceTxt = (n) => (n ? `${n.toFixed(2).replace('.', ',')} €` : null)
+
 // Applique data/barcodes.json : codes des boutiques Shopify puis d'Open Food Facts.
 // Si le code existe déjà sur une autre fiche, les deux fiches sont fusionnées.
 export function applyBarcodes(products, barcodes) {
@@ -230,7 +265,17 @@ export function applyBarcodes(products, barcodes) {
         return brandOk && similarity(p.name, s.title) >= 0.75
       })
     }
-    assign(match, s.barcode)
+    if (match && !drop.has(match.id)) {
+      match.description = match.description || s.description || null
+      match.image = match.image || s.image || null
+      match.price = match.price || priceTxt(s.price)
+      if (match.abv == null) match.abv = abvFrom(s.title, (s.tags || []).join(' '), s.description)
+      match.labels = [...new Set([...(match.labels || []), ...labelsFrom(s.title, (s.tags || []).join(' '), s.description)])]
+      match.country = match.country || countryFrom(s.description)
+      match.shopUrls = { ...(match.shopUrls || {}), [s.shop]: s.url }
+      match.retailers = [...new Set([...(match.retailers || []), s.shop])]
+    }
+    if (s.barcode) assign(match, s.barcode)
   }
   for (const o of barcodes.off || []) assign(byId.get(o.id), o.barcode)
   return { products: products.filter((p) => !drop.has(p.id)), assigned, fused }
@@ -245,7 +290,13 @@ async function main() {
   const fin = finalize(merged.products)
   const { excluded } = fin
   const bc = applyBarcodes(fin.products, await readJson(resolve(ROOT, 'data/barcodes.json'), null))
-  const products = bc.products.map((p) => { const { rawTitle: _rawTitle, ...rest } = p; return rest })
+  const products = bc.products.map((p) => {
+    const { rawTitle: _rawTitle, ...rest } = p
+    rest.labels = [...new Set([...(rest.labels || []), ...labelsFrom(rest.name, rest.note, rest.style)])]
+    rest.country = rest.country || countryFrom(rest.origin) || countryFrom(rest.region) || (rest.region ? 'France' : null)
+    if (rest.abv == null) rest.abv = abvFrom(rest.name)
+    return rest
+  })
   const out = {
     generatedAt: new Date().toISOString(),
     sources: {

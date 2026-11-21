@@ -38,7 +38,8 @@ export const SOURCES = [
 
 const FIELDS = [
   'code', 'product_name', 'product_name_fr', 'brands', 'quantity',
-  'nutriments', 'image_front_small_url', 'categories_tags', 'unique_scans_n',
+  'nutriments', 'image_front_small_url', 'image_front_url', 'categories_tags', 'unique_scans_n',
+  'ingredients_text_fr', 'ingredients_text', 'labels_tags', 'origins', 'manufacturing_places', 'generic_name_fr',
 ].join(',')
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms))
@@ -85,7 +86,11 @@ export function normalize(p, cat) {
     sugar: num(n.sugars_100g),
     kcal: num(n['energy-kcal_100g']),
     quantity: p.quantity || null,
-    image: p.image_front_small_url || null,
+    image: p.image_front_url || p.image_front_small_url || null,
+    ingredients: (p.ingredients_text_fr || p.ingredients_text || '').trim() || null,
+    description: (p.generic_name_fr || '').trim() || null,
+    labels: (p.labels_tags || []).filter((l) => /organic|bio|vegan|gluten-free|no-gluten/.test(l)).map((l) => l.replace(/^[a-z]{2}:/, '')),
+    origin: [p.origins, p.manufacturing_places].filter(Boolean).join(', ') || null,
     popularity: p.unique_scans_n || 0,
     source: 'off',
   }
