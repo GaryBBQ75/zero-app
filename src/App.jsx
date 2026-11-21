@@ -5,6 +5,25 @@ import {
   fmt1, level, communityScore, starText,
 } from './data.js'
 
+const normTxt = (t) => (t || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, ' ').trim()
+// Retrouve une fiche existante (sans code-barres) correspondant au produit scanné : même marque, nom proche.
+function findSame(products, scanned) {
+  const b = normTxt(scanned.brand)
+  const words = new Set(normTxt(scanned.name).split(' ').filter((w) => w.length > 1))
+  if (!b || !words.size) return null
+  let best = null
+  for (const p of products) {
+    if (p.barcode) continue
+    const pb = normTxt(p.brand)
+    if (!pb || !(pb.includes(b) || b.includes(pb))) continue
+    const pw = normTxt(p.name).split(' ').filter((w) => w.length > 1)
+    if (!pw.length) continue
+    const score = pw.filter((w) => words.has(w)).length / Math.min(pw.length, words.size)
+    if (score >= 0.6 && (!best || score > best.score)) best = { p, score }
+  }
+  return best ? best.p : null
+}
+
 const Scanner = lazy(() => import('./Scanner.jsx'))
 
 const load = (key, fallback) => {
@@ -64,9 +83,11 @@ export default function App() {
   const [scanError, setScanError] = useState('')
   const [ratings, setRatings] = useState(() => load('zero.ratings', {}))
   const [scanned, setScanned] = useState(() => load('zero.scanned', {}))
+  const [links, setLinks] = useState(() => load('zero.links', {}))
 
   useEffect(() => save('zero.ratings', ratings), [ratings])
   useEffect(() => save('zero.scanned', scanned), [scanned])
+  useEffect(() => save('zero.links', links), [links])
   useEffect(() => {
     if (!toast) return
     const t = setTimeout(() => setToast(''), 2600)
@@ -116,6 +137,7 @@ export default function App() {
 
   const onCode = useCallback(async (code) => {
     setScanError('')
+    if (links[code] && all[links[code]]) { setCurrentId(links[code]); return }
     const known = Object.values(all).find((p) => p.barcode === code)
     if (known) { setCurrentId(known.id); return }
     setScanBusy(true)
@@ -126,6 +148,12 @@ export default function App() {
         setScanError(`${p.name} contient ${fmt1(p.abv)} % d’alcool : il n’a pas sa place ici.`)
         return
       }
+      const existing = findSame(Object.values(all), p)
+      if (existing) {
+        setLinks((l) => ({ ...l, [code]: existing.id }))
+        setCurrentId(existing.id)
+        return
+      }
       setScanned((s) => ({ ...s, [p.id]: p }))
       setCurrentId(p.id)
     } catch {
@@ -133,7 +161,7 @@ export default function App() {
     } finally {
       setScanBusy(false)
     }
-  }, [all])
+  }, [all, links])
 
   const goTab = (t) => { setTab(t); setCurrentId(null); setScanError('') }
   const openRating = () => { setStars(0); setPicked([]); setRatingOpen(true) }

@@ -245,7 +245,7 @@ async function main() {
   const fin = finalize(merged.products)
   const { excluded } = fin
   const bc = applyBarcodes(fin.products, await readJson(resolve(ROOT, 'data/barcodes.json'), null))
-  const products = bc.products.map(({ rawTitle, ...p }) => p)
+  const products = bc.products.map((p) => { const { rawTitle: _rawTitle, ...rest } = p; return rest })
   const out = {
     generatedAt: new Date().toISOString(),
     sources: {
