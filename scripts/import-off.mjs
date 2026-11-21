@@ -50,13 +50,20 @@ async function fetchPage(tag, page) {
   url.searchParams.set('page_size', '100')
   url.searchParams.set('page', String(page))
   url.searchParams.set('sort_by', 'unique_scans_n')
-  for (let attempt = 1; attempt <= 3; attempt++) {
-    const res = await fetch(url, { headers: { 'User-Agent': UA } })
-    if (res.ok) return res.json()
-    if (res.status === 429 || res.status >= 500) { await sleep(15000 * attempt); continue }
-    throw new Error(`OFF ${res.status} sur ${tag} page ${page}`)
+  let last = ''
+  for (let attempt = 1; attempt <= 4; attempt++) {
+    try {
+      const res = await fetch(url, { headers: { 'User-Agent': UA }, signal: AbortSignal.timeout(60000) })
+      if (res.ok) return await res.json()
+      last = `HTTP ${res.status}`
+      if (res.status !== 429 && res.status < 500) break
+    } catch (e) {
+      last = e.name || 'erreur réseau'
+    }
+    await sleep(20000 * attempt)
   }
-  throw new Error(`OFF indisponible sur ${tag} page ${page}`)
+  console.warn(`  ${tag} page ${page} ignorée (${last})`)
+  return null
 }
 
 const num = (v) => (v === undefined || v === null || v === '' || Number.isNaN(Number(v)) ? null : Math.round(Number(v) * 10) / 10)
@@ -86,20 +93,24 @@ export function normalize(p, cat) {
 async function main() {
   const byCode = new Map()
   const stats = {}
+  let failures = 0
   for (const { tag, cat } of SOURCES) {
     stats[tag] = 0
     for (let page = 1; page <= MAX_PAGES; page++) {
       const data = await fetchPage(tag, page)
+      if (!data) { failures++; break }
       const products = data.products || []
       for (const raw of products) {
         const p = normalize(raw, cat)
         if (p && !byCode.has(p.barcode)) { byCode.set(p.barcode, p); stats[tag]++ }
       }
-      await sleep(7000) // OFF limite la recherche à environ 10 requêtes par minute
+      await sleep(10000) // OFF limite la recherche à environ 10 requêtes par minute
       if (products.length < 100) break
     }
     console.log(`${tag}: ${stats[tag]} produits retenus`)
   }
+  if (byCode.size === 0) throw new Error('Aucun produit récupéré : catalogue existant conservé.')
+  if (failures) console.warn(`${failures} catégorie(s) incomplète(s), relancer plus tard pour compléter.`)
   const products = [...byCode.values()].sort((a, b) => b.popularity - a.popularity)
   const out = {
     generatedAt: new Date().toISOString(),
