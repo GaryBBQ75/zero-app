@@ -83,3 +83,10 @@ export function communityScore(product, myRating) {
 }
 
 export const starText = (n) => '★'.repeat(n) + '☆'.repeat(5 - n)
+
+// Libellé affiché sur une boisson : le type précis plutôt que le nom de la rubrique
+// (un kombucha affiche « Kombucha », un kéfir « Kéfir »).
+export function typeLabel(p) {
+  if (p.cat === 'kombucha') return /k[ée]fir/i.test(`${p.brand || ''} ${p.name} ${p.style || ''}`) ? 'Kéfir' : 'Kombucha'
+  return CAT_LABEL[p.cat]
+}

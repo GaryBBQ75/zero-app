@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react'
-import { CAT_LABEL, DEMO_REVIEWS, fmt1, starText } from './data.js'
+import { typeLabel, DEMO_REVIEWS, fmt1, starText } from './data.js'
 import { CAT_COLOR, CatIcon, Photo, RowIcon, TONE } from './ui.jsx'
 
 const fr = (n, d = 1) => Number(n).toFixed(d).replace('.', ',')
@@ -78,7 +78,7 @@ export default function Product({ p, rating, onBack, onRate, onOpen, similar }) 
 
       <div className="pv-body">
         <div className="pv-id">
-          <span className="chip-cat" style={{ background: c.bg, color: c.fg }}><CatIcon cat={p.cat} size={16} />{CAT_LABEL[p.cat]}</span>
+          <span className="chip-cat" style={{ background: c.bg, color: c.fg }}><CatIcon cat={p.cat} size={16} />{typeLabel(p)}</span>
           <h1>{p.name}</h1>
           <p className="pv-brand">{p.brand}{p.country && <> · <RowIcon name="pays" size={15} color="#6B7280" /> {p.country}</>}</p>
           {(p.labels || []).length > 0 && (

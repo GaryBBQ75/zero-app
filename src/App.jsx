@@ -4,7 +4,7 @@ import { fetchByBarcode } from './off.js'
 import Product from './Product.jsx'
 import { CAT_COLOR, Photo } from './ui.jsx'
 import {
-  CATEGORIES, CAT_LABEL, RATING_TAGS, SEED, MAX_ABV,
+  CATEGORIES, typeLabel, RATING_TAGS, SEED, MAX_ABV,
   fmt1, level, communityScore, starText,
 } from './data.js'
 
@@ -221,7 +221,7 @@ export default function App() {
                   <Visual p={p} />
                   <span className="card-body">
                     <span className="card-name">{p.name}</span>
-                    <span className="card-sub">{p.brand} · {CAT_LABEL[p.cat]}</span>
+                    <span className="card-sub">{p.brand} · {typeLabel(p)}</span>
                     <span className="card-meta">
                       <AbvPill abv={p.abv} />
                       {(p.labels || []).includes('bio') && <span className="pill pill-bio">Bio</span>}
