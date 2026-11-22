@@ -68,7 +68,7 @@ export const TONE = {
 // Si l'image ne charge pas, on affiche le picto de la catégorie.
 export function Photo({ p, size, alt = '', lazy = false }) {
   const [failed, setFailed] = useState(false)
-  const src = p.thumb ? `${import.meta.env.BASE_URL}${p.thumb}` : p.image
+  const src = p.thumb ? (p.thumb.startsWith("data:") ? p.thumb : `${import.meta.env.BASE_URL}${p.thumb}`) : p.image
   if (!src || failed) return <CatIcon cat={p.cat} size={size} />
   return <img src={src} alt={alt} loading={lazy ? 'lazy' : undefined} onError={() => setFailed(true)} />
 }
