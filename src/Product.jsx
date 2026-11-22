@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react'
 import { CAT_LABEL, DEMO_REVIEWS, fmt1, starText } from './data.js'
-import { CAT_COLOR, CatIcon, RowIcon, TONE } from './ui.jsx'
+import { CAT_COLOR, CatIcon, Photo, RowIcon, TONE } from './ui.jsx'
 
 const fr = (n, d = 1) => Number(n).toFixed(d).replace('.', ',')
 
@@ -72,7 +72,7 @@ export default function Product({ p, rating, onBack, onRate, onOpen, similar }) 
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7" /></svg>
         </button>
         <div className="pv-photo">
-          {p.image ? <img src={p.image} alt={`${p.brand} ${p.name}`} /> : <CatIcon cat={p.cat} size={72} />}
+          <Photo p={p} size={72} alt={`${p.brand} ${p.name}`} />
         </div>
       </div>
 
@@ -196,7 +196,7 @@ export default function Product({ p, rating, onBack, onRate, onOpen, similar }) 
               {similar.map((s) => (
                 <button key={s.id} type="button" className="psim" onClick={() => onOpen(s.id)}>
                   <span className="psim-img" style={{ background: (CAT_COLOR[s.cat] || CAT_COLOR.autre).bg }}>
-                    {s.image ? <img src={s.image} alt="" /> : <CatIcon cat={s.cat} size={32} />}
+                    <Photo p={s} size={32} lazy />
                   </span>
                   <strong>{s.name}</strong>
                   <small>{s.brand}</small>

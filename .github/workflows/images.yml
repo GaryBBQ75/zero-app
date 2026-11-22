@@ -1,0 +1,47 @@
+name: Miniatures des photos
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'public/data/products.json'
+      - 'scripts/fetch-images.mjs'
+      - '.github/workflows/images.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: images
+  cancel-in-progress: false
+
+jobs:
+  images:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Installation de sharp
+        run: npm install --no-save sharp
+      - name: Miniatures
+        run: node scripts/fetch-images.mjs
+      - name: Commit
+        run: |
+          mkdir -p /tmp/img && cp public/img/*.webp /tmp/img/ 2>/dev/null || true
+          git fetch origin main
+          git checkout -f -B main origin/main
+          cp /tmp/img/*.webp public/img/ 2>/dev/null || true
+          node scripts/merge-catalogue.mjs
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/img public/data/products.json
+          if git diff --cached --quiet; then
+            echo "Rien de nouveau"
+          else
+            git commit -m "Catalogue : miniatures des photos"
+            git push origin main
+          fi

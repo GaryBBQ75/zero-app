@@ -6,6 +6,8 @@
 // il complète la fiche OFF (région, style, source) au lieu de créer un doublon.
 
 import { mkdir, readFile, writeFile } from 'node:fs/promises'
+import { existsSync } from 'node:fs'
+import { thumbName } from './thumbs.mjs'
 import { dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
@@ -364,6 +366,9 @@ async function main() {
       .sort((a, b) => qtyRank(a.quantity) - qtyRank(b.quantity))
     rest.barcodes = [...new Set([rest.barcode, ...(rest.barcodes || [])].filter(Boolean))]
     delete rest.packaging
+    // Miniature hébergée par l'app (créée par scripts/fetch-images.mjs)
+    if (rest.image && existsSync(resolve(ROOT, 'public/img', thumbName(rest.image)))) rest.thumb = `img/${thumbName(rest.image)}`
+    else delete rest.thumb
     return rest
   })
   const out = {

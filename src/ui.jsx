@@ -1,3 +1,4 @@
+import { useState } from 'react'
 // Pictos et couleurs partagés : catégories et lignes de la fiche produit.
 
 export const CAT_COLOR = {
@@ -61,4 +62,13 @@ export const TONE = {
   mid: { dot: '#F59E0B', bg: '#FEF3C7', fg: '#92400E' },
   bad: { dot: '#DC2626', bg: '#FEE2E2', fg: '#991B1B' },
   none: { dot: '#9CA3AF', bg: '#F3F4F6', fg: '#4B5563' },
+}
+
+// Photo produit : la miniature hébergée par l'app si elle existe, sinon la photo d'origine.
+// Si l'image ne charge pas, on affiche le picto de la catégorie.
+export function Photo({ p, size, alt = '', lazy = false }) {
+  const [failed, setFailed] = useState(false)
+  const src = p.thumb ? `${import.meta.env.BASE_URL}${p.thumb}` : p.image
+  if (!src || failed) return <CatIcon cat={p.cat} size={size} />
+  return <img src={src} alt={alt} loading={lazy ? 'lazy' : undefined} onError={() => setFailed(true)} />
 }

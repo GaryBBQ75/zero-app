@@ -2,7 +2,7 @@ import { sameDrink } from './grouping.js'
 import { Suspense, lazy, useCallback, useEffect, useMemo, useState } from 'react'
 import { fetchByBarcode } from './off.js'
 import Product from './Product.jsx'
-import { CAT_COLOR, CatIcon } from './ui.jsx'
+import { CAT_COLOR, Photo } from './ui.jsx'
 import {
   CATEGORIES, CAT_LABEL, RATING_TAGS, SEED, MAX_ABV,
   fmt1, level, communityScore, starText,
@@ -41,8 +41,8 @@ const Icon = {
 function Visual({ p }) {
   const c = CAT_COLOR[p.cat] || CAT_COLOR.autre
   return (
-    <span className="visual" style={{ background: p.image ? '#fff' : c.bg }}>
-      {p.image ? <img src={p.image} alt="" loading="lazy" /> : <CatIcon cat={p.cat} size={28} />}
+    <span className="visual" style={{ background: p.thumb ? '#fff' : c.bg }}>
+      <Photo p={p} size={28} lazy />
     </span>
   )
 }
@@ -121,7 +121,7 @@ export default function App() {
     return Object.values(all)
       .filter((p) => p.id !== base.id && p.cat === base.cat && p.brand !== base.brand)
       .map(withScore)
-      .sort((a, b) => (b.score ?? -1) - (a.score ?? -1) || (b.image ? 1 : 0) - (a.image ? 1 : 0) || (b.popularity ?? 0) - (a.popularity ?? 0))
+      .sort((a, b) => (b.score ?? -1) - (a.score ?? -1) || (b.thumb || b.image ? 1 : 0) - (a.thumb || a.image ? 1 : 0) || (b.popularity ?? 0) - (a.popularity ?? 0))
       .slice(0, 8)
   }, [currentId, all, withScore])
   const logged = Object.entries(ratings)
