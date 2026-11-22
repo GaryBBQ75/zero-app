@@ -50,3 +50,28 @@ export async function saveRating(userId, product, { stars, tags = [], comment = 
     return pb.collection('ratings').update(existing.id, body)
   }
 }
+
+// Réduit une photo avant l'envoi (1 200 px de côté au plus, JPEG) : rapide même en 4G
+export async function shrinkPhoto(file, max = 1200) {
+  try {
+    const bmp = await createImageBitmap(file)
+    const k = Math.min(1, max / Math.max(bmp.width, bmp.height))
+    const c = document.createElement('canvas')
+    c.width = Math.round(bmp.width * k)
+    c.height = Math.round(bmp.height * k)
+    c.getContext('2d').drawImage(bmp, 0, 0, c.width, c.height)
+    const blob = await new Promise((r) => c.toBlob(r, 'image/jpeg', 0.82))
+    return blob ? new File([blob], 'photo.jpg', { type: 'image/jpeg' }) : file
+  } catch {
+    return file
+  }
+}
+
+// Propose une boisson absente du catalogue (validée ensuite par l'équipe zéro)
+export async function submitDrink(userId, { barcode, brand, name, cat, abv, photo }) {
+  const data = { user: userId, barcode: barcode || '', brand, name, cat, status: 'nouveau' }
+  if (abv != null) data.abv = abv
+  if (photo) data.photo = await shrinkPhoto(photo)
+  return pb.collection('submissions').create(data)
+}
+export const submissionPhotoUrl = (rec) => (rec.photo ? pb.files.getURL(rec, rec.photo, { thumb: '400x400' }) : null)

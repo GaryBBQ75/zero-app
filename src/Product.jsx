@@ -79,6 +79,7 @@ export default function Product({ p, rating, onBack, onRate, onOpen, similar }) 
       <div className="pv-body">
         <div className="pv-id">
           <span className="chip-cat" style={{ background: c.bg, color: c.fg }}><CatIcon cat={p.cat} size={16} />{typeLabel(p)}</span>
+          {p.pending && <span className="chip-pending">Proposée par toi · en vérification</span>}
           <h1>{p.name}</h1>
           <p className="pv-brand">{p.brand}{p.country && <> · <RowIcon name="pays" size={15} color="#6B7280" /> {p.country}</>}</p>
           {(p.labels || []).length > 0 && (

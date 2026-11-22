@@ -3,7 +3,8 @@ import { Suspense, lazy, useCallback, useEffect, useMemo, useRef, useState } fro
 import { fetchByBarcode } from './off.js'
 import Product from './Product.jsx'
 import Discover from './Discover.jsx'
-import { authProviders, avatarUrl, currentUser, fetchMyRatings, fetchScores, onAuthChange, saveRating, signIn, signOut } from './backend.js'
+import AddDrink from './AddDrink.jsx'
+import { authProviders, avatarUrl, currentUser, fetchMyRatings, fetchScores, onAuthChange, saveRating, signIn, signOut, submitDrink, submissionPhotoUrl } from './backend.js'
 import { CAT_COLOR, Photo } from './ui.jsx'
 import {
   CATEGORIES, typeLabel, RATING_TAGS, SEED, MAX_ABV,
@@ -105,6 +106,8 @@ export default function App() {
   const [toast, setToast] = useState('')
   const [scanBusy, setScanBusy] = useState(false)
   const [scanError, setScanError] = useState('')
+  const [adding, setAdding] = useState(null) // { barcode, name } quand la fiche d'ajout est ouverte
+  const [unknownCode, setUnknownCode] = useState('')
   const [ratings, setRatings] = useState(() => load('zero.ratings', {}))
   const [scanned, setScanned] = useState(() => load('zero.scanned', {}))
   const [links, setLinks] = useState(() => load('zero.links', {}))
@@ -238,13 +241,14 @@ export default function App() {
 
   const onCode = useCallback(async (code) => {
     setScanError('')
+    setUnknownCode('')
     if (links[code] && all[links[code]]) { setCurrentId(links[code]); return }
     const known = Object.values(all).find((p) => p.barcode === code || (p.barcodes || []).includes(code))
     if (known) { setCurrentId(known.id); return }
     setScanBusy(true)
     try {
       const p = await fetchByBarcode(code)
-      if (!p) { setScanError('Produit inconnu. Il pourra être ajouté par la communauté.'); return }
+      if (!p) { setUnknownCode(code); return }
       if (p.abv != null && p.abv > MAX_ABV) {
         setScanError(`${p.name} contient ${fmt1(p.abv)} % d’alcool : il n’a pas sa place ici.`)
         return
@@ -264,7 +268,29 @@ export default function App() {
     }
   }, [all, links])
 
-  const goTab = (t) => { setTab(t); setCurrentId(null); setScanError('') }
+  const goTab = (t) => { setTab(t); setCurrentId(null); setScanError(''); setUnknownCode('') }
+
+  // Boisson proposée : elle rejoint tout de suite le téléphone (et peut être notée), la base la garde pour validation
+  const addDrink = async (fields) => {
+    const rec = await submitDrink(user.id, fields)
+    const p = {
+      id: `sub-${rec.id}`, source: 'community', brand: fields.brand, name: fields.name, cat: fields.cat,
+      abv: fields.abv, barcode: fields.barcode || null, barcodes: fields.barcode ? [fields.barcode] : [],
+      image: submissionPhotoUrl(rec), formats: [], tags: [], pending: true,
+    }
+    setScanned((s) => ({ ...s, [p.id]: p }))
+    if (fields.barcode) setLinks((l) => ({ ...l, [fields.barcode]: p.id }))
+    setAdding(null)
+    setUnknownCode('')
+    setCurrentId(p.id)
+    setToast('Merci ! Ta boisson est proposée. Tu peux déjà la noter.')
+  }
+  const openTwin = (p, code) => {
+    if (code) setLinks((l) => ({ ...l, [code]: p.id }))
+    setAdding(null)
+    setUnknownCode('')
+    setCurrentId(p.id)
+  }
   const openRating = () => { setStars(0); setPicked([]); setRatingOpen(true) }
   const togglePick = (t) => setPicked((p) => (p.includes(t) ? p.filter((x) => x !== t) : [...p, t]))
   const submit = () => {
@@ -360,7 +386,13 @@ export default function App() {
               {list.length > shown && (
                 <div ref={sentinelRef} className="more-loader" aria-hidden="true"><span /><span /><span /></div>
               )}
-              {list.length === 0 && <div className="empty">Aucune boisson ne correspond. Scanne-la pour l&rsquo;ajouter !</div>}
+              {list.length === 0 && <div className="empty">Aucune boisson ne correspond.</div>}
+              {browsing && list.length <= shown && (
+                <button type="button" className="add-cta" onClick={() => setAdding({ name: q.trim() })}>
+                  <strong>Tu ne trouves pas ta boisson ?</strong>
+                  <small>Ajoute-la en 30 secondes</small>
+                </button>
+              )}
             </div>
             <p className="credit">
               {isDemo
@@ -373,6 +405,13 @@ export default function App() {
         {tab === 'scan' && (
           <Suspense fallback={<div className="scan"><p className="scan-info">Ouverture de la caméra…</p></div>}>
             <Scanner onCode={onCode} busy={scanBusy} error={scanError} />
+            {unknownCode && (
+              <div className="unknown">
+                <strong>On ne connaît pas encore cette boisson</strong>
+                <small>Code {unknownCode}. Ajoute-la en 30 secondes, toute la communauté en profitera.</small>
+                <button type="button" className="btn-primary" onClick={() => setAdding({ barcode: unknownCode })}>Ajouter cette boisson</button>
+              </div>
+            )}
           </Suspense>
         )}
 
@@ -457,6 +496,10 @@ export default function App() {
             <button type="button" className="btn-primary" disabled={!stars} onClick={submit}>Publier ma note</button>
           </div>
         </div>
+      )}
+
+      {adding && (
+        <AddDrink initial={adding} products={Object.values(all)} user={user} providers={providers} onConnect={connect} onSubmit={addDrink} onOpen={openTwin} onClose={() => setAdding(null)} />
       )}
 
       {toast && <div className="toast" role="status">{toast}</div>}
