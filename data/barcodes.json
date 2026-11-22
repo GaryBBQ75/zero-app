@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-22T00:31:08.058Z",
+ "generatedAt": "2026-11-22T01:21:10.239Z",
  "shops": [
   {
    "shop": "Sanzalc",
@@ -12066,6 +12066,21 @@
    "image": "https://cdn.shopify.com/s/files/1/0921/7664/6468/files/hysope-tonic-water-concombre-gueule-de-joie.png?v=1755174944",
    "price": 2.1,
    "url": "https://www.gueuledejoie.com/products/hysope-tonic-concombre"
+  },
+  {
+   "shop": "Gueule de Joie",
+   "title": "Fraise Framboise Bio - Mona Craft",
+   "vendor": "Gueule de Joie",
+   "type": "Soft alternatif",
+   "tags": [
+    "axmtxpre",
+    "importwoo"
+   ],
+   "barcode": null,
+   "description": "Mona Fraise & Framboise, un soda bio peu sucré au goût franc de fruits rouges. Élaboré en France sans additif, conservateur ni arôme artificiel, il valorise simplicité et authenticité. À savourer frais, symbole d’un savoir-faire artisanal sincère.",
+   "image": "https://cdn.shopify.com/s/files/1/0921/7664/6468/files/mona-soda-fraise-framboise-gueule-de-joie.png?v=1755174939",
+   "price": 2.5,
+   "url": "https://www.gueuledejoie.com/products/mona-craft-fraise-framboise-bio"
   },
   {
    "shop": "Gueule de Joie",
