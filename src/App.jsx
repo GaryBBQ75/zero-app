@@ -116,6 +116,18 @@ export default function App() {
   const scored = useMemo(() => Object.values(all).map(withScore), [all, withScore])
   const browsing = cat !== 'all' || only00 || q.trim() !== ''
   const mainRef = useRef(null)
+  // Défilement infini : 40 boissons de plus dès qu'on approche du bas de la liste
+  const sentinelRef = useRef(null)
+  const hasMore = list.length > shown
+  useEffect(() => {
+    const el = sentinelRef.current
+    if (!el || !hasMore) return
+    const io = new IntersectionObserver((entries) => {
+      if (entries.some((e) => e.isIntersecting)) setShown((n) => n + 40)
+    }, { root: mainRef.current, rootMargin: '600px 0px' })
+    io.observe(el)
+    return () => io.disconnect()
+  }, [hasMore, shown, tab])
   const toTop = () => { if (mainRef.current) mainRef.current.scrollTop = 0 }
   const pickCat = (id) => { setCat(id); setShown(40); toTop() }
   const resetBrowse = () => { setCat('all'); setOnly00(false); setQ(''); setShown(40); toTop() }
@@ -250,7 +262,7 @@ export default function App() {
                 </button>
               ))}
               {list.length > shown && (
-                <button type="button" className="more" onClick={() => setShown((n) => n + 40)}>Voir plus de boissons</button>
+                <div ref={sentinelRef} className="more-loader" aria-hidden="true"><span /><span /><span /></div>
               )}
               {list.length === 0 && <div className="empty">Aucune boisson ne correspond. Scanne-la pour l&rsquo;ajouter !</div>}
             </div>
