@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-22T00:13:22.159Z",
+ "generatedAt": "2026-11-22T00:14:06.054Z",
  "sources": {
   "openFoodFacts": {
    "count": 1024,
@@ -16,7 +16,7 @@
    "fused": 40
   }
  },
- "count": 1452,
+ "count": 1451,
  "products": [
   {
    "id": "off-3770037280016",
@@ -10230,12 +10230,17 @@
    "quantity": "500 ml",
    "image": "https://images.openfoodfacts.org/images/products/406/660/019/2510/front_en.19.400.jpg",
    "ingredients": "Water, wheat, malted barley, carbon dioxide, yeast, hops.",
-   "description": null,
+   "description": "Paulaner 0,0 % Citron est une bière allemande légère et désaltérante aux saveurs d’agrumes. Citron, citron vert et orange accompagnent une délicate trame houblonnée dans une bouche fraîche et acidulée. Une bière 0,0 % idéale pour les journées ensoleillées.",
    "labels": [],
    "origin": "Germany, Alemania",
    "popularity": 2,
    "source": "off",
    "formats": [
+    {
+     "quantity": "33 cl",
+     "container": null,
+     "barcode": null
+    },
     {
      "quantity": "50 cl",
      "container": null,
@@ -10245,7 +10250,14 @@
    "barcodes": [
     "4066600192510"
    ],
-   "country": "Allemagne"
+   "price": "1,85 €",
+   "country": "Allemagne",
+   "shopUrls": {
+    "Gueule de Joie": "https://www.gueuledejoie.com/products/paulaner-sans-alcool-citron-0-0-33-cl"
+   },
+   "retailers": [
+    "Gueule de Joie"
+   ]
   },
   {
    "id": "off-3760039241283",
@@ -19497,13 +19509,13 @@
   {
    "id": "off-4066600145264",
    "barcode": "4066600145264",
-   "name": "Biere blanche au citron",
+   "name": "Blanche de blé au citron",
    "brand": "Paulaner",
    "cat": "biere",
-   "abv": null,
+   "abv": 0,
    "sugar": 6.1,
    "kcal": 32,
-   "quantity": null,
+   "quantity": "33 cl",
    "image": "https://images.openfoodfacts.org/images/products/406/660/014/5264/front_fr.4.400.jpg",
    "ingredients": null,
    "description": null,
@@ -19513,6 +19525,11 @@
    "source": "off",
    "formats": [
     {
+     "quantity": "33 cl",
+     "container": null,
+     "barcode": null
+    },
+    {
      "quantity": null,
      "container": null,
      "barcode": "4066600145264"
@@ -19521,7 +19538,13 @@
    "barcodes": [
     "4066600145264"
    ],
-   "country": null
+   "country": null,
+   "price": null,
+   "region": null,
+   "style": null,
+   "retailers": [
+    "Gueule de Joie"
+   ]
   },
   {
    "id": "off-7330591000817",
@@ -46485,42 +46508,6 @@
    "country": null,
    "shopUrls": {
     "Gueule de Joie": "https://www.gueuledejoie.com/products/divin-biere-des-vendanges-blonde-chenin-blanc-0-5-33-cl"
-   }
-  },
-  {
-   "id": "cur-paulaner-blanche-ble-au-citron",
-   "barcode": null,
-   "name": "Blanche de blé au citron",
-   "brand": "Paulaner",
-   "cat": "biere",
-   "abv": 0,
-   "sugar": null,
-   "kcal": null,
-   "quantity": "33 cl",
-   "price": "1,85 €",
-   "image": "https://cdn.shopify.com/s/files/1/0921/7664/6468/files/paulaner-biere-sans-alcool-citron.png?v=1790286150",
-   "popularity": 0,
-   "style": null,
-   "region": null,
-   "note": null,
-   "sourceUrl": "https://www.gueuledejoie.com",
-   "retailers": [
-    "Gueule de Joie"
-   ],
-   "source": "curated",
-   "formats": [
-    {
-     "quantity": "33 cl",
-     "container": null,
-     "barcode": null
-    }
-   ],
-   "barcodes": [],
-   "description": "Paulaner 0,0 % Citron est une bière allemande légère et désaltérante aux saveurs d’agrumes. Citron, citron vert et orange accompagnent une délicate trame houblonnée dans une bouche fraîche et acidulée. Une bière 0,0 % idéale pour les journées ensoleillées.",
-   "labels": [],
-   "country": null,
-   "shopUrls": {
-    "Gueule de Joie": "https://www.gueuledejoie.com/products/paulaner-sans-alcool-citron-0-0-33-cl"
    }
   },
   {
