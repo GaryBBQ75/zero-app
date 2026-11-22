@@ -20,12 +20,8 @@ const readJson = async (path, fallback) => {
   try { return JSON.parse(await readFile(path, 'utf8')) } catch { return fallback }
 }
 
-export const norm = (s) => (s || '')
-  .toLowerCase()
-  .normalize('NFD').replace(/[̀-ͯ]/g, '')
-  .replace(/\b(sans alcool|alcohol free|non alcoolisee?|0[,.]0 ?%?|0 ?%|biere|brasserie|domaine|la|le|les|de|du|des)\b/g, ' ')
-  .replace(/[^a-z0-9]+/g, ' ')
-  .trim()
+export { norm } from '../src/grouping.js'
+import { norm, canonName, splitBrandLine, prettyName, nameQuality } from '../src/grouping.js'
 
 const slug = (s) => norm(s).replace(/ /g, '-').slice(0, 60)
 
@@ -201,48 +197,6 @@ const RX_EXCLUDE_EXTRA = /green tea|th[ée] vert menthe|\bmat[ée]\b(?! ?k)/i
 const RX_KEEP_SODA = /pr[ée]biotique|fibres|clean soda|kombucha|k[ée]fir/i
 
 // ---------- Regroupement : une fiche par liquide (marque + saveur), quels que soient le nom source et le format ----------
-const ABBR = { tw: 'twist', ttwist: 'twist', citr: 'citron', rhuba: 'rhubarbe', cranb: 'cranberry', ora: 'orange', mure: 'mure', myrtill: 'myrtille', citronvert: 'citron vert', blanche: 'blanc', peche: 'peche', agrumes: 'agrume', citrons: 'citron' }
-const FILLER = new Set(['au', 'aux', 'jus', 'de', 'du', 'des', 'd', 'et', 'la', 'le', 'les', 'l', 'a', 'notes', 'note', 'noté', 'note', 'avec', 'saveur', 'gout', 'men', 'blik', 'bio', 'can', 'x', 'sans', 'alcool', 'alkoholfrei', 'alcohol', 'free', 'zero', '0', '00', '0 0', 'nouvelle', 'recette'])
-const BEER_GENERIC = new Set(['biere', 'beer', 'blonde', 'lager', 'pils', 'pilsner', 'bier', 'cerveza', 'birra', 'premium', 'classique', 'classic'])
-const BRAND_LINES = { tourtel: ['twist'] }
-export function canonName(name, cat, brand) {
-  let toks = norm(name).replace(/[^a-z0-9 ]/g, ' ').split(/\s+/).filter(Boolean)
-  toks = toks.flatMap((t) => (ABBR[t] || t).split(' '))
-  toks = toks.filter((t) => !FILLER.has(t) && !/^\d+$/.test(t))
-  for (const w of norm(brand).split(/\s+/)) toks = toks.filter((t) => t !== w)
-  for (const w of BRAND_LINES[norm(brand)] || []) toks = toks.filter((t) => t !== w)
-  if (cat === 'biere' || cat === 'cidre') {
-    const rest = toks.filter((t) => !BEER_GENERIC.has(t) && t !== 'cidre' && t !== 'brut')
-    toks = cat === 'cidre' ? toks.filter((t) => t !== 'cidre') : rest
-  }
-  return [...new Set(toks)].sort().join(' ') || '_'
-}
-// Sépare « Tourtel Twist » en marque Tourtel + gamme Twist quand Tourtel existe déjà comme marque
-function splitBrandLine(brand, name, known) {
-  const words = brand.split(/\s+/)
-  if (words.length < 2) return [brand, name]
-  for (let i = words.length - 1; i > 0; i--) {
-    const head = words.slice(0, i).join(' ')
-    if (known.has(norm(head))) {
-      const line = words.slice(i).join(' ')
-      return [head, norm(name).includes(norm(line)) ? name : `${capFirst(line)} ${name}`]
-    }
-  }
-  return [brand, name]
-}
-const DISPLAY_ABBR = { TW: 'Twist', Ttwist: 'Twist', Citr: 'Citron', Rhuba: 'Rhubarbe', cranb: 'Cranberry', Cranb: 'Cranberry', ora: 'Orange', Myrtill: 'Myrtille', CitronVert: 'Citron vert', Peche: 'Pêche' }
-export function prettyName(n, brand, rawNames = []) {
-  let x = n
-  if (x.includes(',')) x = x.split(',').pop().trim()
-  x = x.replace(/[\u{1F300}-\u{1FAFF}\u{2600}-\u{27BF}]/gu, ' ').replace(/\b\d+\s*x\s*\d+([.,]\d+)?\b/gi, ' ').replace(/\b(MEN|blik)\b/gi, ' ').replace(/^\d+\s+(?=[A-Za-zÀ-ÿ])/, '')
-  x = x.split(/\s+/).map((w) => DISPLAY_ABBR[w] || w).join(' ')
-  if (brand) x = x.replace(new RegExp(`\\b${brand.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'gi'), ' ')
-  x = x.replace(/\s+/g, ' ').trim()
-  if (/^(lager|bi[èe]re|blonde|bi[èe]re blonde|pils|beer)$/i.test(x) && rawNames.some((r) => /0[.,]0|\b00\b/.test(r))) x = '0.0'
-  return capFirst(x) || n
-}
-const nameQuality = (n) => (/[\u{1F300}-\u{1FAFF}]/u.test(n) ? -5 : 0) + (/\d/.test(n) ? -3 : 0) + (norm(n).split(' ').some((t) => ABBR[t] && ABBR[t] !== t) ? -4 : 0) + (/^bi[èe]re\b/i.test(n) ? -1 : 0) - n.length / 40
-
 export function finalize(products) {
   const kept = []
   const seen = new Map()

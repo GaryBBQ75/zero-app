@@ -1,3 +1,4 @@
+import { sameDrink } from './grouping.js'
 import { Suspense, lazy, useCallback, useEffect, useMemo, useState } from 'react'
 import { fetchByBarcode } from './off.js'
 import Product from './Product.jsx'
@@ -7,23 +8,12 @@ import {
   fmt1, level, communityScore, starText,
 } from './data.js'
 
-const normTxt = (t) => (t || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, ' ').trim()
 // Retrouve une fiche existante (sans code-barres) correspondant au produit scanné : même marque, nom proche.
+// Une boisson scannée qui existe déjà sous un autre format est rattachée à sa fiche
+// (mêmes règles que le catalogue : src/grouping.js).
 function findSame(products, scanned) {
-  const b = normTxt(scanned.brand)
-  const words = new Set(normTxt(scanned.name).split(' ').filter((w) => w.length > 1))
-  if (!b || !words.size) return null
-  let best = null
-  for (const p of products) {
-    if (p.barcode) continue
-    const pb = normTxt(p.brand)
-    if (!pb || !(pb.includes(b) || b.includes(pb))) continue
-    const pw = normTxt(p.name).split(' ').filter((w) => w.length > 1)
-    if (!pw.length) continue
-    const score = pw.filter((w) => words.has(w)).length / Math.min(pw.length, words.size)
-    if (score >= 0.6 && (!best || score > best.score)) best = { p, score }
-  }
-  return best ? best.p : null
+  if (!scanned.brand || !scanned.name) return null
+  return products.find((p) => p.id !== scanned.id && sameDrink(p, scanned)) || null
 }
 
 const Scanner = lazy(() => import('./Scanner.jsx'))

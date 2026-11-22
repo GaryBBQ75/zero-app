@@ -106,3 +106,12 @@ L'app lit cette vue pour afficher la note sur 10 et le nombre d'avis. Tant qu'un
 2. Installer PocketBase sur Coolify (service en un clic), avec un domaine du type `api.zero.mondomaine.fr`.
 3. Créer les collections ci-dessus dans l'admin PocketBase.
 4. Brancher l'app : connexion, envoi des notes, lecture de `product_scores`. Les notes déjà stockées sur le téléphone sont envoyées à la première connexion.
+
+## Règle de regroupement (automatique)
+
+Une fiche = une boisson : même marque et même saveur. La taille et le contenant (canette, bouteille, pack, fût) sont des **formats** de la fiche, et chaque format garde son code-barres. Les notes et commentaires sont communs à tous les formats. Les saveurs différentes restent des fiches séparées.
+
+La règle est codée une seule fois dans `src/grouping.js` (`canonName`, `sameDrink`) et utilisée partout :
+- par le pipeline du catalogue (`scripts/merge-catalogue.mjs`), à chaque import Open Food Facts, ajout curé ou passage des cavistes ;
+- par l'app, quand un code-barres inconnu est scanné : s'il correspond à une boisson existante, il est rattaché à sa fiche au lieu d'en créer une nouvelle ;
+- plus tard, par le formulaire « Ajouter une boisson » (PocketBase) : avant de créer une fiche, on cherche une fiche existante avec `sameDrink` et on ajoute seulement un format.

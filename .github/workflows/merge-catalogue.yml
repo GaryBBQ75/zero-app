@@ -8,6 +8,7 @@ on:
       - 'data/curated-products.json'
       - 'scripts/merge-catalogue.mjs'
       - 'data/barcodes.json'
+      - 'src/grouping.js'
 
 permissions:
   contents: write
