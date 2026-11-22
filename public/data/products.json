@@ -1,9 +1,9 @@
 {
- "generatedAt": "2026-11-22T00:31:11.430Z",
+ "generatedAt": "2026-11-22T00:34:17.288Z",
  "sources": {
   "openFoodFacts": {
    "count": 1024,
-   "importedAt": "2026-11-21T23:42:53.017Z",
+   "importedAt": "2026-11-22T00:34:12.786Z",
    "license": "ODbL 1.0"
   },
   "curated": {
@@ -145,17 +145,17 @@
    "formats": [
     {
      "quantity": "27,5 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "3080216043807"
     },
     {
      "quantity": "33 cl",
-     "container": null,
+     "container": "Canette",
      "barcode": "3080216052649"
     },
     {
      "quantity": "4 × 33 cl",
-     "container": null,
+     "container": "Canette",
      "barcode": "3080216043937"
     },
     {
@@ -200,18 +200,23 @@
    "formats": [
     {
      "quantity": "25 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "3080216055428"
     },
     {
      "quantity": "6 × 25 cl",
-     "container": "Bouteille en verre",
+     "container": "Brique",
      "barcode": "3080216055442"
     },
     {
      "quantity": "33 cl",
-     "container": "Canette",
+     "container": "Bouteille en verre",
      "barcode": "3080216055756"
+    },
+    {
+     "quantity": "33 cl",
+     "container": "Canette",
+     "barcode": "3080216052908"
     },
     {
      "quantity": "1,5 L",
@@ -379,7 +384,7 @@
    "formats": [
     {
      "quantity": "27,5 cl",
-     "container": null,
+     "container": "Bouteille",
      "barcode": "3080216050751"
     }
    ],
@@ -439,7 +444,7 @@
    "formats": [
     {
      "quantity": "27,5 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "3080216049250"
     },
     {
@@ -478,7 +483,7 @@
    "formats": [
     {
      "quantity": "27,5 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "3080216048543"
     },
     {
@@ -575,7 +580,7 @@
    "formats": [
     {
      "quantity": "33 cl",
-     "container": null,
+     "container": "Brique",
      "barcode": "5410228292241"
     }
    ],
@@ -674,7 +679,7 @@
    "formats": [
     {
      "quantity": "27,5 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "3080216054797"
     }
    ],
@@ -750,7 +755,7 @@
    "formats": [
     {
      "quantity": "70 cl",
-     "container": null,
+     "container": "Bouteille plastique",
      "barcode": "9350271000164"
     }
    ],
@@ -785,7 +790,7 @@
     },
     {
      "quantity": "27,5 cl",
-     "container": null,
+     "container": "Bouteille",
      "barcode": "3080216054834"
     },
     {
@@ -831,12 +836,12 @@
    "formats": [
     {
      "quantity": "6 × 25 cl",
-     "container": null,
+     "container": "Brique",
      "barcode": "3080216048185"
     },
     {
      "quantity": "25 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "7310070002914"
     },
     {
@@ -876,7 +881,7 @@
    "formats": [
     {
      "quantity": "25 cl",
-     "container": null,
+     "container": "Bouteille",
      "barcode": "3080216056036"
     },
     {
@@ -950,7 +955,7 @@
    "formats": [
     {
      "quantity": "33 cl",
-     "container": null,
+     "container": "Bouteille",
      "barcode": "8008440214065"
     }
    ],
@@ -1019,12 +1024,12 @@
    "formats": [
     {
      "quantity": "27,5 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "3080216043845"
     },
     {
      "quantity": "33 cl",
-     "container": null,
+     "container": "Canette",
      "barcode": "3080216043968"
     },
     {
@@ -1156,7 +1161,7 @@
    "formats": [
     {
      "quantity": "33 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "3119783021502"
     },
     {
@@ -1195,7 +1200,7 @@
    "formats": [
     {
      "quantity": "27,5 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "3080216050225"
     },
     {
@@ -1314,7 +1319,7 @@
    "formats": [
     {
      "quantity": "25 cl",
-     "container": null,
+     "container": "Bouteille",
      "barcode": "3272460123941"
     },
     {
@@ -1362,7 +1367,7 @@
    "formats": [
     {
      "quantity": "50 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "3760269850217"
     }
    ],
@@ -1432,12 +1437,12 @@
    "formats": [
     {
      "quantity": "50 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "3760192490641"
     },
     {
      "quantity": "1 L",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "3760192497695"
     }
    ],
@@ -1476,7 +1481,7 @@
    "formats": [
     {
      "quantity": "1 L",
-     "container": null,
+     "container": "Canette",
      "barcode": "3760192497718"
     }
    ],
@@ -1506,7 +1511,7 @@
    "formats": [
     {
      "quantity": "6 × 25 cl",
-     "container": null,
+     "container": "Bouteille",
      "barcode": "5410228267171"
     },
     {
@@ -1516,12 +1521,12 @@
     },
     {
      "quantity": "33 cl",
-     "container": null,
+     "container": "Canette",
      "barcode": "5410228253624"
     },
     {
      "quantity": "6 × 33 cl",
-     "container": null,
+     "container": "Canette",
      "barcode": "5410228261063"
     }
    ],
@@ -1558,17 +1563,17 @@
    "formats": [
     {
      "quantity": "6 × 25 cl",
-     "container": null,
+     "container": "Brique",
      "barcode": "8712000050368"
     },
     {
      "quantity": "33 cl",
-     "container": null,
+     "container": "Canette",
      "barcode": "8712000050719"
     },
     {
      "quantity": "6 × 33 cl",
-     "container": null,
+     "container": "Canette",
      "barcode": "8712000050702"
     },
     {
@@ -1723,7 +1728,7 @@
    "formats": [
     {
      "quantity": "25 cl",
-     "container": null,
+     "container": "Bouteille",
      "barcode": "3080216053332"
     },
     {
@@ -1813,7 +1818,7 @@
     },
     {
      "quantity": "1 L",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "3465511201006"
     }
    ],
@@ -1853,7 +1858,7 @@
    "formats": [
     {
      "quantity": "33 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "4015533034770"
     },
     {
@@ -1892,7 +1897,7 @@
    "formats": [
     {
      "quantity": "33 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "4056489127321"
     },
     {
@@ -1931,12 +1936,12 @@
    "formats": [
     {
      "quantity": "27,5 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "3080216052397"
     },
     {
      "quantity": "6 × 27,5 cl",
-     "container": null,
+     "container": "Bouteille",
      "barcode": "3080216052403"
     }
    ],
@@ -1976,12 +1981,12 @@
    "formats": [
     {
      "quantity": "50 cl",
-     "container": null,
+     "container": "Canette",
      "barcode": "3760192490054"
     },
     {
      "quantity": "1 L",
-     "container": null,
+     "container": "Bouteille plastique",
      "barcode": "3760192497701"
     },
     {
@@ -2021,12 +2026,12 @@
    "formats": [
     {
      "quantity": "25 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "3119780272747"
     },
     {
      "quantity": "12 × 25 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "3119780273775"
     }
    ],
@@ -2095,7 +2100,7 @@
    "formats": [
     {
      "quantity": "6 × 27,5 cl",
-     "container": null,
+     "container": "Brique",
      "barcode": "3080216050768"
     }
    ],
@@ -2198,7 +2203,7 @@
    "formats": [
     {
      "quantity": "25 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "8437017153023"
     }
    ],
@@ -2232,7 +2237,7 @@
    "formats": [
     {
      "quantity": "25 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "3760010135518"
     }
    ],
@@ -2362,7 +2367,7 @@
    "formats": [
     {
      "quantity": "27,5 cl",
-     "container": null,
+     "container": "Bouteille",
      "barcode": "3080216053066"
     }
    ],
@@ -2396,7 +2401,7 @@
    "formats": [
     {
      "quantity": "50 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "3760269850385"
     }
    ],
@@ -2430,7 +2435,7 @@
    "formats": [
     {
      "quantity": "50 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "3760192497503"
     }
    ],
@@ -2733,7 +2738,7 @@
    "formats": [
     {
      "quantity": "25 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "8712000052331"
     }
    ],
@@ -2799,7 +2804,7 @@
    "formats": [
     {
      "quantity": "33 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "5741000002315"
     }
    ],
@@ -2829,7 +2834,7 @@
    "formats": [
     {
      "quantity": "33 cl",
-     "container": null,
+     "container": "Bouteille",
      "barcode": "0737297000085"
     }
    ],
@@ -2864,7 +2869,7 @@
    "formats": [
     {
      "quantity": "40 cl",
-     "container": null,
+     "container": "Bouteille plastique",
      "barcode": "5600787049213"
     }
    ],
@@ -2929,7 +2934,7 @@
    "formats": [
     {
      "quantity": "33 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "3244851006058"
     },
     {
@@ -3034,8 +3039,13 @@
    "formats": [
     {
      "quantity": null,
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "0851861006126"
+    },
+    {
+     "quantity": null,
+     "container": null,
+     "barcode": "0851861006096"
     }
    ],
    "barcodes": [
@@ -3138,7 +3148,7 @@
    "formats": [
     {
      "quantity": "27,5 cl",
-     "container": null,
+     "container": "Bouteille",
      "barcode": "3080216056326"
     },
     {
@@ -3315,7 +3325,7 @@
    "formats": [
     {
      "quantity": "50 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "3760192490146"
     }
    ],
@@ -3356,7 +3366,7 @@
     },
     {
      "quantity": "1 L",
-     "container": null,
+     "container": "Bouteille plastique",
      "barcode": "5600787049138"
     }
    ],
@@ -3554,12 +3564,12 @@
    "formats": [
     {
      "quantity": "25 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "5410228231325"
     },
     {
      "quantity": "33 cl",
-     "container": null,
+     "container": "Canette",
      "barcode": "5410228231394"
     },
     {
@@ -3596,7 +3606,7 @@
    "formats": [
     {
      "quantity": "33 cl",
-     "container": null,
+     "container": "Canette",
      "barcode": "8411327722018"
     }
    ],
@@ -3626,7 +3636,7 @@
    "formats": [
     {
      "quantity": "33 cl",
-     "container": "Bouteille",
+     "container": "Bouteille en verre",
      "barcode": "8714800003384"
     }
    ],
@@ -3725,7 +3735,7 @@
    "formats": [
     {
      "quantity": "33 cl",
-     "container": null,
+     "container": "Canette",
      "barcode": "3263855090078"
     }
    ],
@@ -3760,7 +3770,7 @@
    "formats": [
     {
      "quantity": "40 cl",
-     "container": null,
+     "container": "Bouteille plastique",
      "barcode": "5600787049022"
     }
    ],
@@ -3999,12 +4009,12 @@
    "formats": [
     {
      "quantity": "33 cl",
-     "container": null,
+     "container": "Brique",
      "barcode": "4056489005971"
     },
     {
      "quantity": "6 × 33 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "4056489036531"
     }
    ],
@@ -4038,17 +4048,17 @@
    "formats": [
     {
      "quantity": "25 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "3184520000409"
     },
     {
      "quantity": "33 cl",
-     "container": null,
+     "container": "Canette",
      "barcode": "3184520000393"
     },
     {
      "quantity": "6 × 33 cl",
-     "container": null,
+     "container": "Canette",
      "barcode": "3119780005390"
     },
     {
@@ -4089,7 +4099,7 @@
    "formats": [
     {
      "quantity": "33 cl",
-     "container": null,
+     "container": "Canette",
      "barcode": "5056025409392"
     }
    ],
@@ -4362,7 +4372,7 @@
    "formats": [
     {
      "quantity": "1 L",
-     "container": null,
+     "container": "Bouteille plastique",
      "barcode": "3760172000006"
     }
    ],
@@ -4496,7 +4506,7 @@
    "formats": [
     {
      "quantity": "50 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "4066600941910"
     }
    ],
@@ -4534,7 +4544,7 @@
    "formats": [
     {
      "quantity": "25 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "8714800039048"
     },
     {
@@ -4573,7 +4583,7 @@
    "formats": [
     {
      "quantity": "33 cl",
-     "container": null,
+     "container": "Canette",
      "barcode": "8411090419054"
     }
    ],
@@ -4603,7 +4613,7 @@
    "formats": [
     {
      "quantity": "33 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "8008440244000"
     }
    ],
@@ -4633,7 +4643,7 @@
    "formats": [
     {
      "quantity": "25 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "3244851000421"
     }
    ],
@@ -5273,7 +5283,7 @@
    "formats": [
     {
      "quantity": null,
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "4053400288833"
     }
    ],
@@ -5351,12 +5361,12 @@
    "formats": [
     {
      "quantity": "33 cl",
-     "container": null,
+     "container": "Bouteille",
      "barcode": "40534695"
     },
     {
      "quantity": "50 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "40534534"
     }
    ],
@@ -5456,7 +5466,7 @@
    "formats": [
     {
      "quantity": "33 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "3596710456123"
     }
    ],
@@ -5595,7 +5605,7 @@
    "formats": [
     {
      "quantity": "1 L",
-     "container": null,
+     "container": "Bouteille plastique",
      "barcode": "5600787049114"
     },
     {
@@ -5977,7 +5987,7 @@
    "formats": [
     {
      "quantity": "33 cl",
-     "container": null,
+     "container": "Canette",
      "barcode": "3560070708628"
     },
     {
@@ -6018,7 +6028,7 @@
    "formats": [
     {
      "quantity": "33 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "5415270100834"
     }
    ],
@@ -6082,7 +6092,7 @@
    "formats": [
     {
      "quantity": "33 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "3347439085312"
     }
    ],
@@ -6172,17 +6182,22 @@
    "formats": [
     {
      "quantity": "25 cl",
-     "container": null,
+     "container": "Bouteille",
      "barcode": "3080216054841"
     },
     {
      "quantity": "6 × 25 cl",
-     "container": null,
+     "container": "Bouteille",
      "barcode": "3080210004408"
     },
     {
+     "quantity": "25 cl",
+     "container": "Bouteille en verre",
+     "barcode": "2000000021240"
+    },
+    {
      "quantity": "33 cl",
-     "container": null,
+     "container": "Canette",
      "barcode": "3080210004972"
     },
     {
@@ -6251,12 +6266,12 @@
    "formats": [
     {
      "quantity": "25 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "3080216050447"
     },
     {
      "quantity": "33 cl",
-     "container": null,
+     "container": "Canette",
      "barcode": "3080216055893"
     }
    ],
@@ -6317,7 +6332,7 @@
    "formats": [
     {
      "quantity": "25 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "87316674"
     },
     {
@@ -6460,7 +6475,7 @@
    "formats": [
     {
      "quantity": "33 cl",
-     "container": null,
+     "container": "Bouteille plastique",
      "barcode": "3760251401076"
     }
    ],
@@ -6592,7 +6607,7 @@
    "formats": [
     {
      "quantity": "40 cl",
-     "container": null,
+     "container": "Bouteille plastique",
      "barcode": "5600787049008"
     }
    ],
@@ -6731,12 +6746,17 @@
    "formats": [
     {
      "quantity": "33 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "3770006064180"
     },
     {
+     "quantity": "33 cl",
+     "container": "Canette",
+     "barcode": "3770006064432"
+    },
+    {
      "quantity": "1 L",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "3770006064302"
     }
    ],
@@ -6886,7 +6906,7 @@
    "formats": [
     {
      "quantity": "50 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "3266191040028"
     }
    ],
@@ -6920,8 +6940,13 @@
    "formats": [
     {
      "quantity": "33 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "3770010589709"
+    },
+    {
+     "quantity": "33 cl",
+     "container": "Bouteille plastique",
+     "barcode": "3770010589600"
     }
    ],
    "barcodes": [
@@ -6995,7 +7020,7 @@
    "formats": [
     {
      "quantity": "50 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "3760192490740"
     }
    ],
@@ -7153,7 +7178,7 @@
    "formats": [
     {
      "quantity": "33 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "3564706585683"
     }
    ],
@@ -7196,8 +7221,13 @@
    "formats": [
     {
      "quantity": "25 cl",
-     "container": null,
+     "container": "Brique",
      "barcode": "3256220271622"
+    },
+    {
+     "quantity": "25 cl",
+     "container": "Bouteille en verre",
+     "barcode": "3256220271639"
     },
     {
      "quantity": "33 cl",
@@ -7492,7 +7522,7 @@
    "formats": [
     {
      "quantity": "75 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "3500610146879"
     }
    ],
@@ -7522,7 +7552,7 @@
    "formats": [
     {
      "quantity": "75 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "3175529649195"
     }
    ],
@@ -7552,7 +7582,7 @@
    "formats": [
     {
      "quantity": "75 cl",
-     "container": null,
+     "container": "Canette",
      "barcode": "1704314830009"
     }
    ],
@@ -7761,7 +7791,7 @@
    "formats": [
     {
      "quantity": "50 cl",
-     "container": null,
+     "container": "Bouteille plastique",
      "barcode": "90280443"
     }
    ],
@@ -7966,12 +7996,12 @@
    "formats": [
     {
      "quantity": "50 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "3266191040035"
     },
     {
      "quantity": "1 L",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "3266191040110"
     }
    ],
@@ -8074,7 +8104,7 @@
    "formats": [
     {
      "quantity": "75 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "90280153"
     }
    ],
@@ -8141,7 +8171,7 @@
    "formats": [
     {
      "quantity": "50 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "3760192490504"
     }
    ],
@@ -8180,12 +8210,12 @@
    "formats": [
     {
      "quantity": "25 cl",
-     "container": null,
+     "container": "Bouteille",
      "barcode": "3770010589075"
     },
     {
      "quantity": "75 cl",
-     "container": null,
+     "container": "Bouteille plastique",
      "barcode": "3770010589389"
     }
    ],
@@ -8249,7 +8279,7 @@
    "formats": [
     {
      "quantity": "50 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "4053400003504"
     }
    ],
@@ -8279,8 +8309,13 @@
    "formats": [
     {
      "quantity": "50 cl",
-     "container": null,
+     "container": "Bouteille",
      "barcode": "90288340"
+    },
+    {
+     "quantity": "50 cl",
+     "container": "Canette",
+     "barcode": "9028800602270"
     }
    ],
    "barcodes": [
@@ -8343,7 +8378,7 @@
    "formats": [
     {
      "quantity": "50 cl",
-     "container": null,
+     "container": "Canette",
      "barcode": "3271792742509"
     }
    ],
@@ -8425,7 +8460,7 @@
    "formats": [
     {
      "quantity": "33 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "4000856005958"
     }
    ],
@@ -8459,7 +8494,7 @@
    "formats": [
     {
      "quantity": "33 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "4012852001681"
     }
    ],
@@ -8579,7 +8614,7 @@
    "formats": [
     {
      "quantity": "50 cl",
-     "container": null,
+     "container": "Bouteille plastique",
      "barcode": "42142256"
     }
    ],
@@ -8674,7 +8709,7 @@
    "formats": [
     {
      "quantity": "33 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "3770017281088"
     }
    ],
@@ -8712,7 +8747,7 @@
    "formats": [
     {
      "quantity": "27,5 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "3080216059846"
     }
    ],
@@ -8802,7 +8837,7 @@
    "formats": [
     {
      "quantity": null,
-     "container": null,
+     "container": "Bouteille",
      "barcode": "6281034007171"
     }
    ],
@@ -8943,7 +8978,7 @@
     },
     {
      "quantity": null,
-     "container": null,
+     "container": "Bouteille plastique",
      "barcode": "0078000052404"
     }
    ],
@@ -9007,7 +9042,7 @@
    "formats": [
     {
      "quantity": "25 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "87316728"
     }
    ],
@@ -9037,12 +9072,12 @@
    "formats": [
     {
      "quantity": "6 × 33 cl",
-     "container": null,
+     "container": "Brique",
      "barcode": "3560071193034"
     },
     {
      "quantity": "33 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "3560071193096"
     }
    ],
@@ -9316,7 +9351,7 @@
    "formats": [
     {
      "quantity": "27,5 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "5060452360034"
     }
    ],
@@ -9348,8 +9383,13 @@
    "formats": [
     {
      "quantity": null,
-     "container": null,
+     "container": "Canette",
      "barcode": "5060593390433"
+    },
+    {
+     "quantity": null,
+     "container": null,
+     "barcode": "9340784003974"
     }
    ],
    "barcodes": [
@@ -9388,7 +9428,7 @@
    "formats": [
     {
      "quantity": "32,5 cl",
-     "container": null,
+     "container": "Bouteille",
      "barcode": "5407005240076"
     }
    ],
@@ -9424,7 +9464,7 @@
    "formats": [
     {
      "quantity": "33 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "3770006064098"
     },
     {
@@ -9434,7 +9474,7 @@
     },
     {
      "quantity": "1 L",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "3770006064265"
     }
    ],
@@ -9539,7 +9579,7 @@
    "formats": [
     {
      "quantity": "33 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "3770010589723"
     }
    ],
@@ -9610,7 +9650,7 @@
    "formats": [
     {
      "quantity": "41,4 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "0818762000011"
     }
    ],
@@ -9720,12 +9760,12 @@
    "formats": [
     {
      "quantity": "33 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "3770006064111"
     },
     {
      "quantity": "1 L",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "3770006064272"
     }
    ],
@@ -9762,7 +9802,7 @@
    "formats": [
     {
      "quantity": null,
-     "container": null,
+     "container": "Bouteille",
      "barcode": "3760192492355"
     }
    ],
@@ -9914,7 +9954,7 @@
    "formats": [
     {
      "quantity": "50 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "3760269850361"
     }
    ],
@@ -10184,7 +10224,7 @@
    "formats": [
     {
      "quantity": "33 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "4102430315504"
     },
     {
@@ -10401,7 +10441,7 @@
    "formats": [
     {
      "quantity": "33 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "4008287073522"
     }
    ],
@@ -10464,7 +10504,7 @@
    "formats": [
     {
      "quantity": "33 cl",
-     "container": null,
+     "container": "Canette",
      "barcode": "5410228243564"
     }
    ],
@@ -10498,7 +10538,7 @@
    "formats": [
     {
      "quantity": "33 cl",
-     "container": null,
+     "container": "Bouteille",
      "barcode": "4053400268545"
     }
    ],
@@ -10533,7 +10573,7 @@
     },
     {
      "quantity": "50 cl",
-     "container": null,
+     "container": "Canette",
      "barcode": "4066600192510"
     }
    ],
@@ -10602,7 +10642,7 @@
    "formats": [
     {
      "quantity": null,
-     "container": null,
+     "container": "Bouteille",
      "barcode": "3261570003649"
     }
    ],
@@ -10722,12 +10762,12 @@
    "formats": [
     {
      "quantity": "25 cl",
-     "container": null,
+     "container": "Canette",
      "barcode": "3080210007744"
     },
     {
      "quantity": "33 cl",
-     "container": null,
+     "container": "Canette",
      "barcode": "3080870004978"
     }
    ],
@@ -10791,7 +10831,7 @@
    "formats": [
     {
      "quantity": "6 × 25 cl",
-     "container": null,
+     "container": "Bouteille",
      "barcode": "3256225038299"
     },
     {
@@ -11080,7 +11120,7 @@
    "formats": [
     {
      "quantity": "6 × 25 cl",
-     "container": null,
+     "container": "Brique",
      "barcode": "3272460123903"
     }
    ],
@@ -11263,7 +11303,7 @@
    "formats": [
     {
      "quantity": "75 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "5415270100278"
     }
    ],
@@ -11603,12 +11643,17 @@
    "formats": [
     {
      "quantity": "33 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "3770006064067"
     },
     {
+     "quantity": "33 cl",
+     "container": "Canette",
+     "barcode": "3770006064425"
+    },
+    {
      "quantity": "1 L",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "3770006064319"
     }
    ],
@@ -11649,7 +11694,7 @@
    "formats": [
     {
      "quantity": null,
-     "container": null,
+     "container": "Bouteille",
      "barcode": "5600787049084"
     }
    ],
@@ -11683,7 +11728,7 @@
    "formats": [
     {
      "quantity": "50 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "3760192490030"
     }
    ],
@@ -11718,7 +11763,7 @@
    "formats": [
     {
      "quantity": "50 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "3266191040004"
     }
    ],
@@ -12021,7 +12066,7 @@
    "formats": [
     {
      "quantity": "33 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "3770010589730"
     }
    ],
@@ -12151,7 +12196,7 @@
    "formats": [
     {
      "quantity": "1 L",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "3266191040103"
     }
    ],
@@ -12318,7 +12363,7 @@
    "formats": [
     {
      "quantity": "50 cl",
-     "container": null,
+     "container": "Bouteille",
      "barcode": "3760192490412"
     }
    ],
@@ -12353,7 +12398,7 @@
    "formats": [
     {
      "quantity": "25 cl",
-     "container": null,
+     "container": "Bouteille",
      "barcode": "3770010589013"
     }
    ],
@@ -12479,7 +12524,7 @@
    "formats": [
     {
      "quantity": "32 cl",
-     "container": null,
+     "container": "Canette",
      "barcode": "5407005240052"
     }
    ],
@@ -12515,12 +12560,12 @@
    "formats": [
     {
      "quantity": "33 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "3770006064081"
     },
     {
      "quantity": "1 L",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "3770006064289"
     }
    ],
@@ -12661,7 +12706,7 @@
    "formats": [
     {
      "quantity": "33 cl",
-     "container": null,
+     "container": "Bouteille",
      "barcode": "3770006064388"
     }
    ],
@@ -12697,12 +12742,12 @@
    "formats": [
     {
      "quantity": "33 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "3770006064210"
     },
     {
      "quantity": "1 L",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "3770006064357"
     }
    ],
@@ -12772,7 +12817,7 @@
    "formats": [
     {
      "quantity": "33 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "4012852001650"
     }
    ],
@@ -12934,7 +12979,7 @@
    "formats": [
     {
      "quantity": "50 cl",
-     "container": null,
+     "container": "Canette",
      "barcode": "3330901200405"
     }
    ],
@@ -12964,7 +13009,7 @@
    "formats": [
     {
      "quantity": "33 cl",
-     "container": null,
+     "container": "Canette",
      "barcode": "3256223667705"
     },
     {
@@ -13219,7 +13264,7 @@
    "formats": [
     {
      "quantity": "33 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "56045567"
     }
    ],
@@ -13279,7 +13324,7 @@
    "formats": [
     {
      "quantity": "33 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "8725000156992"
     }
    ],
@@ -13309,7 +13354,7 @@
    "formats": [
     {
      "quantity": "33 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "40477435"
     }
    ],
@@ -13428,7 +13473,7 @@
    "formats": [
     {
      "quantity": "27,5 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "3080216053950"
     }
    ],
@@ -13462,7 +13507,7 @@
    "formats": [
     {
      "quantity": "33 cl",
-     "container": null,
+     "container": "Canette",
      "barcode": "3770004616916"
     }
    ],
@@ -13496,7 +13541,7 @@
    "formats": [
     {
      "quantity": "6 × 25 cl",
-     "container": null,
+     "container": "Bouteille",
      "barcode": "3256225042623"
     },
     {
@@ -13635,7 +13680,7 @@
    "formats": [
     {
      "quantity": "33 cl",
-     "container": null,
+     "container": "Canette",
      "barcode": "7610055102234"
     }
    ],
@@ -14145,7 +14190,7 @@
    "formats": [
     {
      "quantity": "25 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "3250390842095"
     }
    ],
@@ -14367,7 +14412,7 @@
    "formats": [
     {
      "quantity": "6 × 33 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "3596710456116"
     }
    ],
@@ -14397,7 +14442,7 @@
    "formats": [
     {
      "quantity": "33 cl",
-     "container": null,
+     "container": "Canette",
      "barcode": "4002631022563"
     }
    ],
@@ -14467,7 +14512,7 @@
    "formats": [
     {
      "quantity": "25 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "5410783031019"
     }
    ],
@@ -14571,7 +14616,7 @@
    "formats": [
     {
      "quantity": "50 cl",
-     "container": null,
+     "container": "Canette",
      "barcode": "8725000639457"
     }
    ],
@@ -14691,7 +14736,7 @@
    "formats": [
     {
      "quantity": "37,5 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "9311493000608"
     }
    ],
@@ -14751,7 +14796,7 @@
    "formats": [
     {
      "quantity": "33 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "3564706542204"
     }
    ],
@@ -14843,7 +14888,7 @@
    "formats": [
     {
      "quantity": null,
-     "container": null,
+     "container": "Bouteille",
      "barcode": "0627843436430"
     }
    ],
@@ -14873,7 +14918,7 @@
    "formats": [
     {
      "quantity": "35,5 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "7310070003430"
     }
    ],
@@ -14942,7 +14987,7 @@
    "formats": [
     {
      "quantity": "27,5 cl",
-     "container": null,
+     "container": "Bouteille",
      "barcode": "3080216053028"
     }
    ],
@@ -15032,7 +15077,7 @@
    "formats": [
     {
      "quantity": "33 cl",
-     "container": null,
+     "container": "Bouteille",
      "barcode": "4002103299271"
     }
    ],
@@ -15126,7 +15171,7 @@
    "formats": [
     {
      "quantity": "33 cl",
-     "container": null,
+     "container": "Bouteille",
      "barcode": "8997206580011"
     }
    ],
@@ -15156,7 +15201,7 @@
    "formats": [
     {
      "quantity": "50 cl",
-     "container": null,
+     "container": "Canette",
      "barcode": "9028800127827"
     }
    ],
@@ -15191,7 +15236,7 @@
    "formats": [
     {
      "quantity": "33 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "3770007513267"
     }
    ],
@@ -15317,7 +15362,7 @@
    "formats": [
     {
      "quantity": "75 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "4311602066872"
     }
    ],
@@ -15439,7 +15484,7 @@
    "formats": [
     {
      "quantity": "75 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "3249381004055"
     }
    ],
@@ -15505,7 +15550,7 @@
    "formats": [
     {
      "quantity": "74 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "3760251401281"
     }
    ],
@@ -15545,7 +15590,7 @@
    "formats": [
     {
      "quantity": "75 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "3760251402448"
     }
    ],
@@ -15575,7 +15620,7 @@
    "formats": [
     {
      "quantity": "5 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "7630040405317"
     }
    ],
@@ -15772,12 +15817,17 @@
    "formats": [
     {
      "quantity": "33 cl",
-     "container": null,
+     "container": "Canette",
      "barcode": "3770006064487"
     },
     {
+     "quantity": "33 cl",
+     "container": "Bouteille en verre",
+     "barcode": "3770006064463"
+    },
+    {
      "quantity": "1 L",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "3770006064470"
     }
    ],
@@ -16027,7 +16077,7 @@
    "formats": [
     {
      "quantity": null,
-     "container": null,
+     "container": "Bouteille plastique",
      "barcode": "0722430300160"
     }
    ],
@@ -16392,7 +16442,7 @@
    "formats": [
     {
      "quantity": "50 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "3760192490184"
     }
    ],
@@ -16552,7 +16602,7 @@
    "formats": [
     {
      "quantity": null,
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "9350271000034"
     }
    ],
@@ -16616,7 +16666,7 @@
    "formats": [
     {
      "quantity": "50 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "3266191040011"
     }
    ],
@@ -16747,7 +16797,7 @@
    "formats": [
     {
      "quantity": "25 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "3770012647018"
     }
    ],
@@ -16819,12 +16869,12 @@
    "formats": [
     {
      "quantity": "33 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "3770006064234"
     },
     {
      "quantity": "1 L",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "3770006064296"
     }
    ],
@@ -16863,7 +16913,7 @@
    "formats": [
     {
      "quantity": "37,5 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "3770015551022"
     }
    ],
@@ -16938,7 +16988,7 @@
    "formats": [
     {
      "quantity": "7,5 cl",
-     "container": null,
+     "container": "Canette",
      "barcode": "3760266660116"
     }
    ],
@@ -17006,7 +17056,7 @@
    "formats": [
     {
      "quantity": "50 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "3760269850194"
     }
    ],
@@ -17418,7 +17468,7 @@
    "formats": [
     {
      "quantity": "1 L",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "3760313531550"
     }
    ],
@@ -17940,7 +17990,7 @@
    "formats": [
     {
      "quantity": "33 cl",
-     "container": null,
+     "container": "Canette",
      "barcode": "4260742810985"
     }
    ],
@@ -18103,7 +18153,7 @@
    "formats": [
     {
      "quantity": "50 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "3760192490894"
     }
    ],
@@ -18139,7 +18189,7 @@
    "formats": [
     {
      "quantity": "33 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "3760266660048"
     }
    ],
@@ -18239,7 +18289,7 @@
    "formats": [
     {
      "quantity": "75 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "4026292002009"
     }
    ],
@@ -18537,7 +18587,7 @@
    "formats": [
     {
      "quantity": null,
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "9350271000492"
     }
    ],
@@ -18783,7 +18833,7 @@
    "formats": [
     {
      "quantity": "25 cl",
-     "container": null,
+     "container": "Bouteille",
      "barcode": "3770010589051"
     }
    ],
@@ -19114,7 +19164,7 @@
    "formats": [
     {
      "quantity": "33 cl",
-     "container": null,
+     "container": "Bouteille plastique",
      "barcode": "3770010589624"
     }
    ],
@@ -19379,7 +19429,7 @@
    "formats": [
     {
      "quantity": "33 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "3770006064326"
     }
    ],
@@ -19909,7 +19959,7 @@
    "formats": [
     {
      "quantity": "33 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "3760266660192"
     }
    ],
@@ -20065,7 +20115,7 @@
    "formats": [
     {
      "quantity": "6 × 25 cl",
-     "container": null,
+     "container": "Bouteille",
      "barcode": "3256225038305"
     }
    ],
@@ -20136,7 +20186,7 @@
    "formats": [
     {
      "quantity": "33 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "7330591000817"
     }
    ],
@@ -20166,7 +20216,7 @@
    "formats": [
     {
      "quantity": "33 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "8725000308384"
     }
    ],
@@ -20265,7 +20315,7 @@
    "formats": [
     {
      "quantity": "1 L",
-     "container": null,
+     "container": "Bouteille",
      "barcode": "7610334901046"
     }
    ],
@@ -20295,7 +20345,7 @@
    "formats": [
     {
      "quantity": "75 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "8410384036083"
     }
    ],
@@ -20777,7 +20827,7 @@
    "formats": [
     {
      "quantity": "50 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "3760192498395"
     }
    ],
@@ -21236,7 +21286,7 @@
    "formats": [
     {
      "quantity": null,
-     "container": null,
+     "container": "Bouteille plastique",
      "barcode": "5600787049503"
     }
    ],
@@ -22027,7 +22077,7 @@
    "formats": [
     {
      "quantity": "33 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "6000000000002"
     }
    ],
@@ -22093,7 +22143,7 @@
    "formats": [
     {
      "quantity": "50 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "3266191040127"
     }
    ],
@@ -22127,7 +22177,7 @@
    "formats": [
     {
      "quantity": "33 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "6000000000001"
     }
    ],
@@ -22197,7 +22247,7 @@
    "formats": [
     {
      "quantity": "33 cl",
-     "container": null,
+     "container": "Bouteille en verre",
      "barcode": "3760266660000"
     }
    ],
