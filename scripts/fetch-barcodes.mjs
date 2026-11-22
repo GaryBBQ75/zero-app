@@ -110,6 +110,12 @@ async function main() {
   }
   console.log(`Open Food Facts : ${off.length} codes trouvés sur ${missing.length} produits cherchés`)
 
+  // Garde les correspondances trouvées lors des passages précédents (la recherche OFF est parfois indisponible)
+  let previous = []
+  try { previous = JSON.parse(await readFile(OUT, 'utf8')).off || [] } catch { /* premier passage */ }
+  const seenIds = new Set(off.map((o) => o.id))
+  for (const o of previous) if (!seenIds.has(o.id)) off.push(o)
+  console.log(`Open Food Facts : ${off.length} correspondances (dont ${off.length - seenIds.size} conservées)`)
   await writeFile(OUT, JSON.stringify({ generatedAt: new Date().toISOString(), shops, off }, null, 1) + '\n')
 }
 

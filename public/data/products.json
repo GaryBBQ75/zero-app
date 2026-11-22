@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-22T00:34:17.288Z",
+ "generatedAt": "2026-11-22T01:02:30.417Z",
  "sources": {
   "openFoodFacts": {
    "count": 1024,
@@ -12,11 +12,11 @@
   },
   "excluded": 129,
   "barcodes": {
-   "assigned": 415,
-   "fused": 27
+   "assigned": 478,
+   "fused": 40
   }
  },
- "count": 1464,
+ "count": 1451,
  "products": [
   {
    "id": "off-3770037280016",
@@ -205,7 +205,7 @@
     },
     {
      "quantity": "6 × 25 cl",
-     "container": "Brique",
+     "container": "Bouteille en verre",
      "barcode": "3080216055442"
     },
     {
@@ -580,7 +580,7 @@
    "formats": [
     {
      "quantity": "33 cl",
-     "container": "Brique",
+     "container": "Bouteille en verre",
      "barcode": "5410228292241"
     }
    ],
@@ -836,7 +836,7 @@
    "formats": [
     {
      "quantity": "6 × 25 cl",
-     "container": "Brique",
+     "container": "Bouteille en verre",
      "barcode": "3080216048185"
     },
     {
@@ -1563,7 +1563,7 @@
    "formats": [
     {
      "quantity": "6 × 25 cl",
-     "container": "Brique",
+     "container": "Bouteille en verre",
      "barcode": "8712000050368"
     },
     {
@@ -1986,7 +1986,7 @@
     },
     {
      "quantity": "1 L",
-     "container": "Bouteille plastique",
+     "container": "Bouteille en verre",
      "barcode": "3760192497701"
     },
     {
@@ -2100,7 +2100,7 @@
    "formats": [
     {
      "quantity": "6 × 27,5 cl",
-     "container": "Brique",
+     "container": "Bouteille en verre",
      "barcode": "3080216050768"
     }
    ],
@@ -4009,7 +4009,7 @@
    "formats": [
     {
      "quantity": "33 cl",
-     "container": "Brique",
+     "container": "Bouteille en verre",
      "barcode": "4056489005971"
     },
     {
@@ -7221,13 +7221,8 @@
    "formats": [
     {
      "quantity": "25 cl",
-     "container": "Brique",
-     "barcode": "3256220271622"
-    },
-    {
-     "quantity": "25 cl",
      "container": "Bouteille en verre",
-     "barcode": "3256220271639"
+     "barcode": "3256220271622"
     },
     {
      "quantity": "33 cl",
@@ -9072,7 +9067,7 @@
    "formats": [
     {
      "quantity": "6 × 33 cl",
-     "container": "Brique",
+     "container": "Bouteille en verre",
      "barcode": "3560071193034"
     },
     {
@@ -11120,7 +11115,7 @@
    "formats": [
     {
      "quantity": "6 × 25 cl",
-     "container": "Brique",
+     "container": "Bouteille en verre",
      "barcode": "3272460123903"
     }
    ],
@@ -15561,7 +15556,11 @@
    "price": null,
    "region": "Béziers",
    "style": null,
-   "retailers": [],
+   "retailers": [
+    "Nicolas"
+   ],
+   "note": null,
+   "sourceUrl": "https://www.nicolas.com/fr/fr/sans-alcool/tous-les-produits.html",
    "thumb": "img/e59ab59a738e51.webp"
   },
   {
@@ -23161,7 +23160,7 @@
   },
   {
    "id": "cur-pierre-chavin-pierre-zero-signature-chardonnay",
-   "barcode": null,
+   "barcode": "3760200893495",
    "name": "Pierre Zéro Signature Chardonnay",
    "brand": "Pierre Chavin",
    "cat": "vin",
@@ -23179,7 +23178,9 @@
    "retailers": [],
    "source": "curated",
    "formats": [],
-   "barcodes": [],
+   "barcodes": [
+    "3760200893495"
+   ],
    "labels": [],
    "country": null
   },
@@ -23493,33 +23494,6 @@
     "Gueule de Joie": "https://www.gueuledejoie.com/products/french-bloom-cuvee-vintage-2022-effervescent-millesime-0-0"
    },
    "thumb": "img/3a2a1dbc4044fd.webp"
-  },
-  {
-   "id": "cur-jnpr-jnpr-n-2",
-   "barcode": null,
-   "name": "N°2",
-   "brand": "JNPR",
-   "cat": "spiritueux",
-   "abv": null,
-   "sugar": null,
-   "kcal": null,
-   "quantity": null,
-   "price": null,
-   "image": null,
-   "popularity": 0,
-   "style": "Épicé, poivré",
-   "region": null,
-   "note": null,
-   "sourceUrl": "https://www.lagrandeepicerie.com/fr/cave/sans-alcool",
-   "retailers": [],
-   "source": "curated",
-   "formats": [],
-   "barcodes": [],
-   "ingredients": null,
-   "description": null,
-   "origin": null,
-   "country": null,
-   "labels": []
   },
   {
    "id": "cur-citadelle-citadelle",
@@ -23949,7 +23923,7 @@
   },
   {
    "id": "cur-parallele-kefir-fruits",
-   "barcode": null,
+   "barcode": "3770014530017",
    "name": "Kéfir de fruits",
    "brand": "Brasserie Parallèle",
    "cat": "kombucha",
@@ -23967,7 +23941,9 @@
    "retailers": [],
    "source": "curated",
    "formats": [],
-   "barcodes": [],
+   "barcodes": [
+    "3770014530017"
+   ],
    "labels": [],
    "country": "France"
   },
@@ -24162,7 +24138,8 @@
     }
    ],
    "barcodes": [
-    "5000291025510"
+    "5000291025510",
+    "5000281015248"
    ],
    "ingredients": null,
    "description": "Quatre ingrédients à base de plantes sont parfaitement équilibrés dans ce Gin Tanqueray 0,0% sans alcool . Les notes délicates d'agrumes et de genièvre, soutenues par des notes botaniques complexes et agréables, font de ce substitut au Gin une excellente alternative sans alcool.\nTanqueray 0.0 vous permet de découvrir l'expérience ultime de Tanqueray, mais sans alcool et seulement 48 kCal / 6 Kj pour 100 ml !\nLe gin Tanqueray sans alcool 0.0 est idéal pour les amateurs de gin qui ne veulent pas boire d'alcool, mais qui veulent goûter les mêmes plantes naturelles que la boisson originale.\nPour fabriquer ce gin, on a utilisé une technique innovante qui permet d'obtenir le goût et l'arôme délicieux du genièvre avec le reste des plantes naturelles, pour obtenir un goût authentique mais sans alcool. Afin de satisfaire le palais de ceux qui sont habitués à la qualité de la marque Tanqueray, des années de recherche et d'efforts ont été consacrées à la mise au point d'une technologie unique qui capture l'essence de Tanqueray avec un profil élégant de genièvre.",
@@ -24401,7 +24378,7 @@
   },
   {
    "id": "cur-parallele-",
-   "barcode": null,
+   "barcode": "3770014530226",
    "name": "Blonde",
    "brand": "Brasserie Parallèle",
    "cat": "biere",
@@ -24427,7 +24404,9 @@
      "barcode": null
     }
    ],
-   "barcodes": [],
+   "barcodes": [
+    "3770014530226"
+   ],
    "ingredients": null,
    "description": null,
    "origin": null,
@@ -24526,7 +24505,7 @@
   },
   {
    "id": "cur-bonne-nouvelle-rouge",
-   "barcode": null,
+   "barcode": "3249381004017",
    "name": "Rouge",
    "brand": "Bonne Nouvelle",
    "cat": "vin",
@@ -24550,13 +24529,15 @@
      "barcode": null
     }
    ],
-   "barcodes": [],
+   "barcodes": [
+    "3249381004017"
+   ],
    "labels": [],
    "country": null
   },
   {
    "id": "cur-gratien-meyer-festillant-blanc",
-   "barcode": null,
+   "barcode": "3113590006851",
    "name": "Festillant blanc",
    "brand": "Gratien & Meyer",
    "cat": "vin",
@@ -24580,13 +24561,15 @@
      "barcode": null
     }
    ],
-   "barcodes": [],
+   "barcodes": [
+    "3113590006851"
+   ],
    "labels": [],
    "country": null
   },
   {
    "id": "cur-estandon-zero-sur-vin-rose",
-   "barcode": null,
+   "barcode": "52604249",
    "name": "Zéro sur Vin rosé",
    "brand": "Estandon",
    "cat": "vin",
@@ -24610,13 +24593,15 @@
      "barcode": null
     }
    ],
-   "barcodes": [],
+   "barcodes": [
+    "52604249"
+   ],
    "labels": [],
    "country": "France"
   },
   {
    "id": "cur-estandon-virgin-rose",
-   "barcode": null,
+   "barcode": "3269210250194",
    "name": "Virgin rosé",
    "brand": "Estandon",
    "cat": "vin",
@@ -24640,7 +24625,9 @@
      "barcode": null
     }
    ],
-   "barcodes": [],
+   "barcodes": [
+    "3269210250194"
+   ],
    "labels": [],
    "country": "France"
   },
@@ -25077,7 +25064,7 @@
   },
   {
    "id": "cur-ormes-cambras-merlot",
-   "barcode": null,
+   "barcode": "3211203420121",
    "name": "Merlot",
    "brand": "Les Ormes de Cambras",
    "cat": "vin",
@@ -25095,13 +25082,15 @@
    "retailers": [],
    "source": "curated",
    "formats": [],
-   "barcodes": [],
+   "barcodes": [
+    "3211203420121"
+   ],
    "labels": [],
    "country": null
   },
   {
    "id": "cur-ormes-cambras-sauvignon",
-   "barcode": null,
+   "barcode": "3211201063894",
    "name": "Sauvignon",
    "brand": "Les Ormes de Cambras",
    "cat": "vin",
@@ -25119,7 +25108,9 @@
    "retailers": [],
    "source": "curated",
    "formats": [],
-   "barcodes": [],
+   "barcodes": [
+    "3211201063894"
+   ],
    "labels": [],
    "country": null
   },
@@ -25525,7 +25516,7 @@
   },
   {
    "id": "cur-blancart-anise",
-   "barcode": null,
+   "barcode": "3138670144308",
    "name": "Anise",
    "brand": "Blancart",
    "cat": "aperitif",
@@ -25543,7 +25534,9 @@
    "retailers": [],
    "source": "curated",
    "formats": [],
-   "barcodes": [],
+   "barcodes": [
+    "3138670144308"
+   ],
    "labels": [],
    "country": null
   },
@@ -25660,7 +25653,7 @@
   },
   {
    "id": "cur-loic-raison-",
-   "barcode": null,
+   "barcode": "3256550098135",
    "name": "Cidre",
    "brand": "Loïc Raison",
    "cat": "cidre",
@@ -25678,7 +25671,9 @@
    "retailers": [],
    "source": "curated",
    "formats": [],
-   "barcodes": [],
+   "barcodes": [
+    "3256550098135"
+   ],
    "labels": [],
    "country": "France"
   },
@@ -25729,7 +25724,7 @@
   },
   {
    "id": "cur-cidrerie-kerne-cidre",
-   "barcode": null,
+   "barcode": "3467870010381",
    "name": "Cidre",
    "brand": "Cidrerie Kerné",
    "cat": "cidre",
@@ -25747,7 +25742,9 @@
    "retailers": [],
    "source": "curated",
    "formats": [],
-   "barcodes": [],
+   "barcodes": [
+    "3467870010381"
+   ],
    "labels": [],
    "country": "France"
   },
@@ -25801,7 +25798,7 @@
   },
   {
    "id": "cur-fournier-cidre",
-   "barcode": null,
+   "barcode": "3507291236318",
    "name": "Cidre",
    "brand": "Fournier",
    "cat": "cidre",
@@ -25819,7 +25816,9 @@
    "retailers": [],
    "source": "curated",
    "formats": [],
-   "barcodes": [],
+   "barcodes": [
+    "3507291236318"
+   ],
    "labels": [],
    "country": "France"
   },
@@ -25946,7 +25945,8 @@
     }
    ],
    "barcodes": [
-    "5056025421400"
+    "5056025421400",
+    "0842817101552"
    ],
    "description": "Sans alcool, mais pas fade pour autant. La bière Brewdog Punk AF sans alcool 0,5% tient ses promesses. Intense, riche en arômes, le tout sans une goutte d'alcool.\nBrassée avec huit houblons différents venus d'Europe, Nouvelle-Zélande et Amérique du Nord, c'est une bière savoureuse à déguster sans modération.\nUne bière 0%, unique en son genre. Les arômes juteux de fruits tropicaux se mêlent à la perfection aux notes d'herbe et de pin sur une base maltée robuste.\nUne bière n'a pas besoin d'alcool pour être une bière. La Punk AF en est la preuve. Avec la Punk AF, la bière sans alcool révèle son côté Punk.",
    "labels": [],
@@ -26152,30 +26152,6 @@
    "thumb": "img/9467d11da091e2.webp"
   },
   {
-   "id": "cur-trappe-nillis",
-   "barcode": null,
-   "name": "Nillis",
-   "brand": "La Trappe",
-   "cat": "biere",
-   "abv": null,
-   "sugar": null,
-   "kcal": null,
-   "quantity": null,
-   "price": null,
-   "image": null,
-   "popularity": 0,
-   "style": "Ambrée",
-   "region": "Pays-Bas",
-   "note": null,
-   "sourceUrl": "https://www.sanzalc.com/collections/les-10-meilleures-bieres-sans-alcool",
-   "retailers": [],
-   "source": "curated",
-   "formats": [],
-   "barcodes": [],
-   "labels": [],
-   "country": "France"
-  },
-  {
    "id": "cur-penrose-",
    "barcode": null,
    "name": "Bière",
@@ -26315,7 +26291,7 @@
   },
   {
    "id": "cur-bretagne-dremmwel-blonde-bio",
-   "barcode": null,
+   "barcode": "3760023350014",
    "name": "Dremmwel Blonde bio",
    "brand": "Brasserie de Bretagne",
    "cat": "biere",
@@ -26339,7 +26315,9 @@
      "barcode": null
     }
    ],
-   "barcodes": [],
+   "barcodes": [
+    "3760023350014"
+   ],
    "labels": [
     "bio"
    ],
@@ -26629,7 +26607,7 @@
   },
   {
    "id": "cur-lillet-lillet-blanc-0",
-   "barcode": null,
+   "barcode": "3057230000253",
    "name": "Blanc",
    "brand": "Lillet",
    "cat": "aperitif",
@@ -26647,7 +26625,9 @@
    "retailers": [],
    "source": "curated",
    "formats": [],
-   "barcodes": [],
+   "barcodes": [
+    "3057230000253"
+   ],
    "labels": [],
    "country": "France"
   },
@@ -26869,7 +26849,7 @@
   },
   {
    "id": "cur-bio-par-nature-kombucha-bio-aux-plantes",
-   "barcode": null,
+   "barcode": "3760211822668",
    "name": "Par Nature Kombucha aux plantes",
    "brand": "Bio",
    "cat": "kombucha",
@@ -26893,7 +26873,9 @@
      "barcode": null
     }
    ],
-   "barcodes": [],
+   "barcodes": [
+    "3760211822668"
+   ],
    "labels": [],
    "country": "France"
   },
@@ -27043,7 +27025,7 @@
   },
   {
    "id": "cur-l-atelier-ferment-kefir-citron",
-   "barcode": null,
+   "barcode": "3770013080005",
    "name": "Kéfir Citron",
    "brand": "L'Atelier du Ferment",
    "cat": "kombucha",
@@ -27061,7 +27043,9 @@
    "retailers": [],
    "source": "curated",
    "formats": [],
-   "barcodes": [],
+   "barcodes": [
+    "3770013080005"
+   ],
    "labels": [],
    "country": null
   },
@@ -27297,7 +27281,8 @@
     }
    ],
    "barcodes": [
-    "5411686701603"
+    "5411686701603",
+    "7411088700578"
    ],
    "description": "La Liefmans est une bière aromatisée de la brasserie belge Duvel Moorgat, elle-même propriétaire de la Brasserie Liefmans.\nVous aimez sa grande sœur la Liefmans Fruitesse ? Mais vous préférez une bière sans alcool ? C'est maintenant possible avec la Liefmans Fruitesse sans alcool .\nUne Liefmans sans concession, gorgée après gorgée. Laissez-vous entrainer par un subtil bouquet fruité aux notes de cerises, framboises, sureaux et fraises.",
    "labels": [],
@@ -27490,7 +27475,8 @@
    "note": null,
    "sourceUrl": "https://www.sanzalc.com",
    "retailers": [
-    "Sanzalc"
+    "Sanzalc",
+    "Gueule de Joie"
    ],
    "source": "curated",
    "formats": [
@@ -27608,8 +27594,8 @@
    "price": "3,50 €",
    "image": "https://cdn.shopify.com/s/files/1/0647/1404/7754/files/La-Trappe-Nillis-bi-re-ambr-e-sans-alcool-Sanzalc-cave-sans-alcool-pour-adultes-d-complex-s-7444.png?v=1711993246",
    "popularity": 0,
-   "style": null,
-   "region": null,
+   "style": "Ambrée",
+   "region": "Pays-Bas",
    "note": null,
    "sourceUrl": "https://www.sanzalc.com",
    "retailers": [
@@ -27628,7 +27614,7 @@
    ],
    "description": "Le coup de 🩷 de Sanzalc !\nVous êtes à la recherche d'une bière délicieuse et de qualité que vous pouvez déguster sans alcool ? Ne cherchez pas plus loin que la bière ambrée La Trappe Nillis sans alcool 0,0% ! Élaborée par les brasseurs experts de La Trappe, cette bière sans alcool offre toute la saveur et le plaisir d'une bière La Trappe traditionnelle, sans la gueule de bois.\nQu'est-ce qui fait de la Nillis ambrée sans alcool de La Trappe un breuvage aussi unique et excitant ? Voici quelques-unes des caractéristiques et des avantages qui la distinguent des autres bières :\nCouleur ambrée foncée : Cette bière coule d'une belle couleur ambrée foncée, avec une mousse épaisse et crémeuse de couleur blanc cassé qui est aussi belle que savoureuse.\nFruité et malté : Le profil de saveur de la bière ambrée sans alcool La Trappe Nillis est à la fois fruité et malté, avec un mélange complexe de saveurs qui gardera vos papilles gustatives en éveil, gorgée après gorgée.\nAmertume agréable : Bien qu'il s'agisse d'une bière sans alcool, la bière La Trappe Nillis ambrée sans alcool offre une amertume agréable qui équilibre les notes fruitées et maltées et procure une finale rafraîchissante.\nFinale douce et caramélisée : Enfin, cette bière se termine par une note de caramel légèrement sucrée qui laisse un sentiment de satisfaction et de désir d'une nouvelle gorgée.\nQue vous soyez à la recherche d'une bière sans alcool à déguster au déjeuner, d'un breuvage savoureux et complexe à savourer après le travail, ou d'un ajout unique et intéressant à votre collection de bières, la bière ambrée sans alcool La Trappe Nillis est le choix parfait. Alors, pourquoi attendre ?\nCommandez votre bouteille dès aujourd'hui et découvrez la délicieuse saveur de La Trappe sans alcool.\nVive le bon goût et la santé !",
    "labels": [],
-   "country": null,
+   "country": "France",
    "shopUrls": {
     "Sanzalc": "https://www.sanzalc.com/products/la-trappe-nillis-sans-alcool"
    },
@@ -27868,7 +27854,8 @@
     }
    ],
    "barcodes": [
-    "9354596006078"
+    "9354596006078",
+    "9354596000106"
    ],
    "description": "Lyre's White Cane spirit 0% sans alcool est un spiritueux sans alcool a été conçu pour capturer l’essence d’un rhum blanc légèrement vieilli avec des saveurs distinctes et contemporaines. Lyre's Les spiritueux ont leur propre distinction en tant que boisson non alcoolisée de qualité supérieure.\"\nProfil gustatif : Le chêne et la canne à sucre servent de base à la pâte d'amande, à l'orange et à la noix de coco, le tout complété par une finale légère et poivrée.",
    "labels": [
@@ -27947,7 +27934,8 @@
     }
    ],
    "barcodes": [
-    "5430000829595"
+    "5430000829595",
+    "5430000829137"
    ],
    "description": "Découvrez la bière Brussels Beer Project Pico Bello 0.3% sans alcool !\nCette Sour Hazy IPA aux arômes fruités et à l'acidité bienvenue offre une explosion de saveurs sans compromettre votre sobriété. Brassée avec amour et passion par les experts belges de Brussels Beer Project, elle ravira les amateurs de bières sans alcool authentiques.\nBrassée de manière 100% naturelle, avec un style contemporain, la Pico Bello n'a pas subi le processus industriel de désalcoolisation qui entraîne également la disparition de nombreux profils d'arômes. Il était hors de question d'abaisser le taux d'alcool d'une bière existante. Nous avons donc relevé le défi d'une bière artisanale sans alcool. La Pico Bello est une hazy zero IPA avec des arômes fruités, mais également une touche d'amertume et d'acidité qui se différencie des bières sans alcool sucrées produites par les brasseurs traditionnels.",
    "labels": [],
@@ -27994,7 +27982,8 @@
    ],
    "barcodes": [
     "5430001598032",
-    "5430001598018"
+    "5430001598018",
+    "0710535485264"
    ],
    "description": "La saveur originale : un délicieux mélange de gingembre, de citron, d'herbes et d'épices de première qualité.\nGimber Original 200ml sans alcool est un concentré de gingembre biologique avec du citron, des herbes et des épices. Il est 100% naturel, il contient 100% de saveur, 200% de kick et 0% d'alcool.\nIdéal pour étancher votre soif pendant les chaudes journées d'été ou pour vous réchauffer par temps froid. GIMBER N°1 Original vous aide à assurer un style de vie sain et contemporain de la manière que vous préférez.\nMélangez 20-30ml de GIMBER N°1 Original avec de l'eau fraîche et pétillante et garnissez avec une touche personnelle ou remplacez l'eau fraîche par de l'eau chaude, du moka ou des ingrédients de cocktail. Il y a forcément une recette GIMBER qui vous convient.\nCette teneur est idéale pour 8 portions.",
    "labels": [
@@ -28234,7 +28223,7 @@
    "price": "28,90 €",
    "image": "https://cdn.shopify.com/s/files/1/0647/1404/7754/files/JNPR1.png?v=1753257381",
    "popularity": 0,
-   "style": null,
+   "style": "Épicé, poivré",
    "region": null,
    "note": null,
    "sourceUrl": "https://www.sanzalc.com",
@@ -28285,7 +28274,8 @@
    "note": null,
    "sourceUrl": "https://www.sanzalc.com",
    "retailers": [
-    "Sanzalc"
+    "Sanzalc",
+    "Gueule de Joie"
    ],
    "source": "curated",
    "formats": [
@@ -28296,7 +28286,8 @@
     }
    ],
    "barcodes": [
-    "3770015725027"
+    "3770015725027",
+    "4124327724442"
    ],
    "description": "Découvrez le spiritueux sans alcool BTTR N°1 - 0,0% alc/vol pour varier les plaisirs sans frustration.\nL'aromatique : amer & intense .\nDes notes d'orange, de gentiane, de cannelle, et de rhubarbe. Sans alcool. Idéal pour réaliser des Negroni, Americano... sans alcool.\n1 bouteille = + de 15 cocktails\nLes plus JNPR :\n0,0% d'alcool\ndes quantités de recettes disponibles\nIdéal pour un cadeau\nGamme récompensée à l'international\n🏅Médaille d'or San Francisco World Spirits Competition à l'unanimité du jury 2022, pour BTTR N°1",
    "labels": [
@@ -28900,7 +28891,8 @@
     }
    ],
    "barcodes": [
-    "990016500116"
+    "990016500116",
+    "0186360052061"
    ],
    "description": "Sans alcool mais avec toute sa saveur, la Collective Arts Emerald Stout sans alcool 0,4% est un véritable coup de poing !\nPilier de notre collection de bières sans alcool, ce breuvage présente les notes et les sensations familières d'une stout classique. Les saveurs de malt magnifiquement équilibrées de chocolat riche, de caramel sucré et de notes de café torréfié laissent une finale douce avec juste ce qu'il faut d'amertume pour équilibrer la douceur.\nCroyez-nous, vous ne manquerez rien avec cette bière !",
    "labels": [],
@@ -29568,7 +29560,8 @@
     }
    ],
    "barcodes": [
-    "855352008064"
+    "855352008064",
+    "0855352008071"
    ],
    "description": "La bière Athletic Brewing Upside Dawn sans alcool 0,5% est comme son nom l'indique une bière blonde désalcoolisée à 0,5%.\nElle est rafraîchissante, équilibrée et légèrement corsée, idéale pour accompagner vos repas. Elle se compose de malt viennois de première qualité et de houblons anglais et américains traditionnels, et elle est notamment brassée pour éliminer le gluten.",
    "labels": [
@@ -30707,7 +30700,8 @@
    "note": null,
    "sourceUrl": "https://www.sanzalc.com",
    "retailers": [
-    "Sanzalc"
+    "Sanzalc",
+    "Gueule de Joie"
    ],
    "source": "curated",
    "formats": [
@@ -30724,7 +30718,8 @@
    ],
    "barcodes": [
     "3770011861026",
-    "3770011861170"
+    "3770011861170",
+    "3770011861347"
    ],
    "description": "Découvrez les vertus de la lavande, de la camomille et de la verveine à travers notre infusion Relaxante. Douce, apaisante et faible en calories, elle est parfaite pour vous accorder un moment de détente au travail ou tout simplement pour vous offrir une pause gourmande dans la journée !\nVous retrouverez la gourmandise et la rondeur de la cerise et du cassis, associée aux notes florales de la lavande, de la verveine et de la camomille !\n- Finement pétillante.\n- Faible en calories et en sucres\n- Naturelle (sans conservateurs ni arômes)\n- Fabrication artisanale faite en France, à partir de plantes françaises\n- Bouteille en verre recyclable\n- Produit pasteurisé",
    "labels": [
@@ -30862,7 +30857,8 @@
     }
    ],
    "barcodes": [
-    "5061078820032"
+    "5061078820032",
+    "0731093297298"
    ],
    "description": "Attendez-vous à des houblons tropicaux puissants, à une amertume affirmée mais ronde, et à une base extra-pâle, avec un corps duveteux.\nFacile à boire, la bière Mash Gang Chug sans alcool 0,5% plaît à tout le monde. Même les personnes qui n'aiment pas les bières sans alcool l'ont plébiscitée !",
    "labels": [
@@ -31026,7 +31022,8 @@
     }
    ],
    "barcodes": [
-    "727156521448"
+    "727156521448",
+    "0727156521448"
    ],
    "description": "⚠️ DDM 9/12/2025\nLa bière Mash Gang Cult sans alcool 0,5% ... NOUVELLE GAMME DE BASE !\nUne Pale Ale très moderne qui met en valeur le meilleur des houblons radicaux de l'hémisphère sud.\nBonbon, piquant, tropical.\nMash Gang utilise une forte dose de Superdelic® Nectaron® et de Nelson Sauvin pour obtenir des notes de fruits rouges, de bonbons, de sucettes glacées, de vin pétillant et de kool-style-aid.",
    "labels": [
@@ -31430,7 +31427,8 @@
     }
    ],
    "barcodes": [
-    "990016500109"
+    "990016500109",
+    "0186360050968"
    ],
    "description": "Cette Bière Collective Arts IPA sans alcool 0,4% a le goût de la vraie !\nNous avons brassé notre IPA sans alcool pour qu'elle soit fidèle à nos IPA primées - avec d'énormes quantités de houblons Citra, Simcoe et Mosaic savoureux qui donnent un caractère étonnant d'agrumes brillants, de fruits tropicaux juteux et de notes de pin frais. Parfaite pour toute célébration, concert ou simplement pour se détendre !",
    "labels": [],
@@ -31509,7 +31507,8 @@
     }
    ],
    "barcodes": [
-    "5411081010874"
+    "5411081010874",
+    "5411081006013"
    ],
    "description": "Avec la bière Kasteel Rouge sans alcool 0,0% , découvrez une expérience nouvelle et riche en saveurs pour toutes celles et ceux qui souhaitent déguster une bière spéciale fruitée sans alcool de qualité.\nLa Kasteel Rouge sans alcool 0,0% est brassée à partir de Kasteel Rouge originale avec de savoureuses cerises Oblacinska.\nLe lien avec la Kasteel Rouge originale est indéniable : une bière spéciale couleur rubis, avec une mousse généreuse et une palette aromatique reconnaissable entre toutes. Son odeur légèrement sucrée, avec des notes de fleur de sureau, annonce une bière spéciale rafraîchissante, brassée sans alcool et pleine de saveurs.",
    "labels": [],
@@ -31890,7 +31889,8 @@
     }
    ],
    "barcodes": [
-    "3082260000041"
+    "3082260000041",
+    "8542690033156"
    ],
    "description": "L'apéritif anisé Cristal 100 sans alcool , c’est la puissance de l’anisette, sans alcool et sans sucre.\nCette anisette, on la boit entre petits et grands, après la pétanque, Place de Lenche, les mercredis de juillet, à l’abri des platanes. Elle sent le Sud, la Méditerranée, le bonheur des moments partagés, les rigolades et la tapenade !\nSa bouteille est unique et tout le monde la reconnaît, elle fait partie du décor de tous les bars marseillais. Un après-midi d’été sans Cristal 100, c’est comme un 14 Juillet sans feu d’artifice, c’est triste !",
    "labels": [],
@@ -32258,7 +32258,8 @@
     }
    ],
    "barcodes": [
-    "5000281070742"
+    "5000281070742",
+    "5000299223017"
    ],
    "description": "Captain Morgan Spiced Gold 0.0% Alcohol Free Spirit est une alternative non alcoolisée à l'emblématique Captain Morgan Original Spiced Gold.\nSavourez les riches saveurs de la Jamaïque avec Captain Morgan Spiced Gold 0,0 %, un rhum sans alcool qui mélange parfaitement le caramel, la vanille et les épices brunes chaudes. Appréciez le goût authentique et la douceur de ce rhum légendaire, maintenant dans une variante sans alcool. Parfait pour préparer des cocktails ou à déguster pur à tout moment.\nLe Captain Morgan Spiced Gold 0,0 % est meilleur lorsqu'il est mélangé à du cola dans un verre avec des glaçons.",
    "labels": [],
@@ -33489,7 +33490,8 @@
     }
    ],
    "barcodes": [
-    "7503039965454"
+    "7503039965454",
+    "7503039965331"
    ],
    "description": "Spiritueux non alcoolisé élaboré à partir d’agave bleu\nAvec des notes de d’agave bleu grillé, de caramel doux et de bois grillé, Almave Ámbar est parfait pour siroter ou dans votre cocktail préféré.\nAlmave Ámbar est le choix parfait pour ceux qui apprécient la profondeur et la complexité.\nPortez un toast à toute occasion, ou mettez à profit vos compétences en mixologie sans compromis.\nLewis Hamilton, septuple champion du monde de F1, souhaitait développer un spiritueux sans alcool à base d’agave, en utilisant l’agave bleu mexicain de Jalisco. Il s’est associé au maître distillateur Iván Saldaña afin d’explorer de nouveaux territoires au-delà du degré d’alcool.",
    "labels": [],
@@ -34739,7 +34741,8 @@
     }
    ],
    "barcodes": [
-    "5411223008202"
+    "5411223008202",
+    "5411223010724"
    ],
    "description": "Tout nouveau : le goût emblématique de Lindemans Kriek, désormais sans alcool.\nLa bière Lindemans Kriek sans alcool 0,0% apporte la saveur fruitée, rafraîchissante et acidulée de la légendaire Kriek dans une version entièrement sans alcool. La brasserie Lindemans utilise les mêmes ingrédients, y compris la même quantité de cerises fraîchement pressées et d'arômes naturels, mais ils appliquent une technique de brassage avancée pour créer une alternative corsée sans alcool.\nUne innovation audacieuse, mais résolument fidèle à l’esprit Lindemans.\nQue vous vous détendiez sur une terrasse ou à la maison, Lindemans Kriek 0,0 % vous offre le meilleur des deux mondes : délicieusement rafraîchissante et totalement sans alcool.\nLe saviez-vous ? Lindemans est la première brasserie de lambic à commercialiser une Kriek 0,0 % sans alcool !",
    "labels": [],
@@ -34942,7 +34945,8 @@
     }
    ],
    "barcodes": [
-    "5430004389200"
+    "5430004389200",
+    "5430000829038"
    ],
    "description": "DELTA ZERO - GRANDE SAVEUR IPA, ZÉRO COMPROMIS !\nDites bonjour à la bière Brussels Beer Project Delta Zero 0.3% sans alcool , la nouvelle légende de notre équipe All-Star ! Nous avons pris notre emblématique Delta IPA et lui avons donné un coup de jeune : même personnalité audacieuse, seulement 0,3 % ABV. Parfait lorsque vous voulez toute la saveur, sans le buzz.\nQu'est-ce que l'ABV ? ABV signifie Alcohol By Volume (alcool par volume), qui mesure le pourcentage d'alcool dans une boisson. Avec seulement 0,3 % ABV, Delta Zero offre toute la saveur d'une IPA avec pratiquement aucun alcool, idéale pour les moments plus légers !\nDelta Zero est votre compagnon idéal pour des moments comme la Tournée Minérale , le Dry January ou chaque fois que vous avez envie de rester léger sans sacrifier le goût. Grâce à un peu de magie avec la levure LA-01, cette bière reste faible en alcool mais pleine de caractère. Une touche de malts de blé et de seigle lui donne un corps onctueux, tandis qu'un duo de houblonnage à sec de Citra et Mosaic Cryo rehausse la saveur avec des notes d'agrumes, de chewing-gum, de pin et de litchi.\nC'est votre IPA de référence quel que soit le moment où vous vous trouvez : réunions matinales, rafraîchissements en milieu de randonnée ou rires en fin de soirée. Fraîche, amusante et pleine de vie !\nQue vous atteigniez vos objectifs de janvier sans alcool ou que vous profitiez de la Tournée Minérale , Delta Zero3 est là pour vous rafraîchir, sans excuse. Prenez une bouteille ou prenez-la à la pression et goûtez la différence ! 🎉",
    "labels": [],
@@ -35606,7 +35610,8 @@
     }
    ],
    "barcodes": [
-    "8005713350048"
+    "8005713350048",
+    "0195414156846"
    ],
    "description": "Pallini Limoncello Limonzero est une délicieuse liqueur sans alcool d'Italie, pleine de saveurs de citron. Avec son arôme doux et frais et sa couleur jaune éclatante, ce limoncello vous plonge immédiatement dans une ambiance estivale.\nParfait en apéritif ou en boisson de dessert !",
    "labels": [],
@@ -35884,7 +35889,8 @@
     }
    ],
    "barcodes": [
-    "5410228335184"
+    "5410228335184",
+    "3760210690145"
    ],
    "description": "Coup de 🩷 Sanzalc\nAvec sa bière Triple Karmeliet sans alcool 0,4%, AB-InBev tape un grand coup sur le zinc en commercialisant une version sans alcool de la Triple Karmeliet, titrant plus exactement 0,4 % d’alc.vol., alors que la recette originelle titre 8,4°. Comme quoi le respect des traditions les plus établies n’est plus de mise chez le premier groupe brassicole mondial.\nCette version sans alcool rafraîchissante vous offre le goût unique de la Tripel Karmeliet, velouté et délicat, porté par l'équilibre raffiné des trois grains : l'orge, l'avoine et le froment.\nMais comment un tel « miracle » a pu être obtenu ? Tout en utilisant les mêmes ingrédients que la recette créée en 1679 par la brasserie Bosteels, soit de l’orge, du blé et de l’avoine ainsi qu’un mélange d’épices, le procédé utilisé repose sur une levure dite « intelligente » développée au Global Innovation & Technology de Louvain. Elle fermenterait uniquement les sucres simples (glucose et fructose) mais pas les plus complexes (maltose et maltotriose) entraînant « une production minimale d’alcool, tout en permettant une fermentation complète et un développement aromatique riche » toujours selon le communiqué du groupe.",
    "labels": [
@@ -36210,7 +36216,8 @@
     }
    ],
    "barcodes": [
-    "5411223008226"
+    "5411223008226",
+    "5411223014050"
    ],
    "description": "Dorée, énergique, rafraîchissante et légère, la Bière Lindemans Pecheresse sans alcool 0,0% offre la saveur sirupeuse des pêches mûries au soleil avec une touche subtile d'acidité. Notre Pecheresse sans alcool réussit un parfait équilibre entre douceur fruitée et légère acidité, donnant lieu à une expérience particulièrement rafraîchissante. Des techniques de brassage innovantes ont permis d'obtenir une bière ayant 100 % de goût pour 0,0 % d'alcool - un plaisir raffiné à savourer à tout moment.\nLe secret de nos brasseurs\nNous utilisons des pêches juteuses, cueillies à la main, et des arômes naturels pour produire chaque lot de Pecheresse 0,0% – exactement comme pour la Pecheresse originale. Grâce à notre processus de brassage innovant, vous pouvez profiter de tout ce plaisir fruité dans une bière à la pêche complètement sans alcool. À la brasserie Lindemans, nous ne transigeons jamais sur le goût.",
    "labels": [],
@@ -37525,7 +37532,8 @@
     }
    ],
    "barcodes": [
-    "5411081012533"
+    "5411081012533",
+    "54110081000523"
    ],
    "description": "La bière Kasteel Donker sans alcool 0,0% prouve que le sans alcool se marie parfaitement avec le caractère complexe d’une quadruple.\nLe lien avec la Kasteel Donker originale est indéniable : une bière brun foncé coiffée d’une mousse beige qui adhère joliment au verre, et des arômes de caramel et de sirop de sucre candi qui révèlent son caractère sucré.\nLes notes torréfiées créent un profil gustatif riche et généreux, avec une finale légèrement amère et épicée.",
    "labels": [],
@@ -38113,7 +38121,8 @@
     }
    ],
    "barcodes": [
-    "3163934474013"
+    "3163934474013",
+    "5000329002353"
    ],
    "description": "Découvrez Beefeater 0.0% , le gin sans alcool qui capture l'essence du légendaire Beefeater London Dry Gin.\nAvec 0,0 % d'alcool et 100 % de plaisir, cette boisson offre une saveur intense et authentique.\nDominé par des notes de genièvre, Beefeater 0.0 révèle les agrumes caractéristiques d'orange et de citron qui font la signature de la marque. Chaque gorgée délivre une personnalité acidulée et audacieuse, fidèle à l'esprit londonien de Beefeater.\nSeul gin premium international encore distillé à Londres et alcool le plus primé au monde dans sa catégorie, Beefeater incarne tout l'esprit londonien. Encore aujourd'hui, il reste fidèle à la recette originale mise au point par James Borough en 1863, qui prévoit notamment de faire macérer 9 ingrédients rigoureusement sélectionnés et parfaitement équilibrés pendant 24 heures.\nParfait pour tous les moments où vous souhaitez profiter de saveurs naturelles complexes sans compromis sur le goût. Inspiré par des générations d'expertise en gin, Beefeater 0.0 combine l'attitude et la personnalité d'une véritable boisson londonienne.\nÀ savourer sans modération.\nCheers !",
    "labels": [],
@@ -38479,7 +38488,8 @@
     }
    ],
    "barcodes": [
-    "8720153282772"
+    "8720153282772",
+    "8718868583314"
    ],
    "description": "vandeStreek brasse la IPA sans alcool la plus primée au monde : la Playground IPA ! Elle regorge de saveurs grâce à leur technique de brassage spéciale. La Playground est brassée comme n’importe quelle autre bière et bénéficie d’un temps de repos suffisant en cuve pour développer toute sa saveur. Cela permet à la Playground d’offrir une véritable expérience gustative.\nVoici l’IPA sans alcool la plus primée au monde : la « Playground » ! À l’origine, il s’agissait d’une édition spéciale unique issue d’une série innovante de bières. Alors que leur famille s’agrandissait, Sander et Ronald se sont notamment demandé pourquoi personne n’utilisait de houblon américain dans les bières à faible teneur en alcool.\nC’est pourquoi nous sommes partis à la recherche des meilleurs ingrédients et des meilleures techniques de brassage, tout en nous inspirant de nos collègues allemands. Nous avons mis au point une recette entièrement nouvelle, avec une levure unique qui transforme à peine les sucres en alcool, des malts spéciaux qui apportent du corps, associés aux houblons américains les plus savoureux.\nLe goût de notre IPA sans alcool Playground regorge de notes de pêche et d’agrumes frais. C’est une bière au corps ample qui offre une sensation en bouche ronde et légèrement amère. Playground symbolise ce que la brasserie représente pour nous : un terrain de jeu.\nDans notre brasserie, nous jouons tous les jours avec les ingrédients, les machines, entre nous et, surtout, avec les chariots élévateurs !",
    "labels": [
@@ -39744,7 +39754,7 @@
   },
   {
    "id": "cur-opia-chardonnay-effervescent-biologique",
-   "barcode": null,
+   "barcode": "3663852004687",
    "name": "Chardonnay effervescent biologique",
    "brand": "Opia",
    "cat": "vin",
@@ -39764,7 +39774,9 @@
    ],
    "source": "curated",
    "formats": [],
-   "barcodes": [],
+   "barcodes": [
+    "3663852004687"
+   ],
    "description": "ÔPIA Chardonnay, effervescent biologique sans alcool, dévoile de délicates bulles à la fois fines et persistantes. Le nez possède des arômes croquants de fleurs blanches, de pomme verte et de poire blanche qui mêlent à d’agréables notes citronnées et beurrées. la bouche présente une mousse crémeuse et caressante, révélant des saveurs d’agrumes, d’une fraîcheur incomparable.\nUne boisson effervescente à base de jus de raisin biologique non fermenté, sélectionnée pour le banquet du Prix Nobel 2017 à Stockholm.",
    "labels": [
     "bio"
@@ -40158,7 +40170,7 @@
   },
   {
    "id": "cur-unaju-cassis-menthe",
-   "barcode": null,
+   "barcode": "8142008059450",
    "name": "Cassis Menthe",
    "brand": "Unaju",
    "cat": "soft",
@@ -40178,7 +40190,9 @@
    ],
    "source": "curated",
    "formats": [],
-   "barcodes": [],
+   "barcodes": [
+    "8142008059450"
+   ],
    "description": "Des bulles fines pour une boisson subtile et peu sucré. La fraîcheur de la menthe équilibrée par la douceur du cassis ! Découvrez une infusion de menthe poivrée BIO récoltée dans le Maine-et-Loire, purée de cassis BIO, sucre naturel issu de fruits BIO, jus de citron BIO, CO2… c’est tout ! Aucun colorant ni conservateur.",
    "labels": [
     "bio"
@@ -40191,7 +40205,7 @@
   },
   {
    "id": "cur-unaju-framboise-marjolaine",
-   "barcode": null,
+   "barcode": "3770008059832",
    "name": "Framboise Marjolaine",
    "brand": "Unaju",
    "cat": "soft",
@@ -40211,7 +40225,9 @@
    ],
    "source": "curated",
    "formats": [],
-   "barcodes": [],
+   "barcodes": [
+    "3770008059832"
+   ],
    "description": "Des bulles fines pour une boisson subtile et peu sucré. L’acidulé de la framboise adouci par la légèreté de la Marjolaine ! Découvrez une infusion de marjolaine BIO (eau, marjolaine BIO), purée de framboise BIO, sucre biologique issu de fruits, CO2… C’est tout ! Aucun colorant ni conservateur.",
    "labels": [
     "bio"
@@ -40769,36 +40785,6 @@
    "thumb": "img/d5a6faf4b2cb26.webp"
   },
   {
-   "id": "cur-jnpr-bttr-n-1-orange-amere",
-   "barcode": null,
-   "name": "Bttr n°1 Orange amère",
-   "brand": "JNPR",
-   "cat": "aperitif",
-   "abv": null,
-   "sugar": null,
-   "kcal": null,
-   "quantity": null,
-   "price": "29,00 €",
-   "image": "https://cdn.shopify.com/s/files/1/0921/7664/6468/files/jnpr-bttr-bitter-sans-alcool-gueule-de-joie.png?v=1755173951",
-   "popularity": 0,
-   "style": null,
-   "region": null,
-   "note": null,
-   "sourceUrl": "https://www.gueuledejoie.com",
-   "retailers": [
-    "Gueule de Joie"
-   ],
-   "source": "curated",
-   "formats": [],
-   "barcodes": [],
-   "description": "BTTR N°1 associe orange douce et amère, citron, gentiane, rhubarbe, réglisse et cannelle. Élaboré avec le mixologue Flavio Angiolillo, il recrée l’esprit des grands apéritifs italiens – Spritz, Negroni, Americano – mais en version saine et sans alcool.",
-   "labels": [],
-   "country": "Italie",
-   "shopUrls": {
-    "Gueule de Joie": "https://www.gueuledejoie.com/products/jnpr-bttr-n1-orange-amere-gentiane-epices"
-   }
-  },
-  {
    "id": "cur-force-majeure-blonde-belge",
    "barcode": null,
    "name": "Blonde belge",
@@ -40902,36 +40888,6 @@
     "Gueule de Joie": "https://www.gueuledejoie.com/products/force-majeure-triple"
    },
    "thumb": "img/a74a8d724a5cd5.webp"
-  },
-  {
-   "id": "cur-lyre-s-dark-cane-spirit",
-   "barcode": null,
-   "name": "Dark Cane Spirit",
-   "brand": "Lyre's",
-   "cat": "spiritueux",
-   "abv": null,
-   "sugar": null,
-   "kcal": null,
-   "quantity": null,
-   "price": "25,90 €",
-   "image": "https://cdn.shopify.com/s/files/1/0921/7664/6468/files/lyre-s-dark-cane-spirit-spiritueux-sans-alcool.png?v=1757618038",
-   "popularity": 0,
-   "style": null,
-   "region": null,
-   "note": null,
-   "sourceUrl": "https://www.gueuledejoie.com",
-   "retailers": [
-    "Gueule de Joie"
-   ],
-   "source": "curated",
-   "formats": [],
-   "barcodes": [],
-   "description": "Dark Cane Spirit s’inspire des rhums ambrés. Notes de caramel, vanille et fruits secs dominent, avec une bouche ample et boisée. Un spiritueux sans alcool audacieux pour cocktails exotiques et créations épicées.",
-   "labels": [],
-   "country": null,
-   "shopUrls": {
-    "Gueule de Joie": "https://www.gueuledejoie.com/products/lyres-dark-cane-spirit"
-   }
   },
   {
    "id": "cur-lyre-s-dry-london-spirit",
@@ -41128,14 +41084,14 @@
   },
   {
    "id": "cur-filles-l-ouest-schorle-rhubarbe-pimpante",
-   "barcode": null,
+   "barcode": "3770010975045",
    "name": "Le Schorle Rhubarbe Pimpante",
    "brand": "Les filles de l'Ouest",
    "cat": "soft",
    "abv": null,
    "sugar": null,
    "kcal": null,
-   "quantity": null,
+   "quantity": "33 cl",
    "price": "3,50 €",
    "image": "https://cdn.shopify.com/s/files/1/0921/7664/6468/files/les-filles-de-l-ouest-schorle-rhubarbe-pimpante_e6115f5b-0ef3-4d92-a378-373ba4f285f9.png?v=1755162538",
    "popularity": 0,
@@ -41147,8 +41103,16 @@
     "Gueule de Joie"
    ],
    "source": "curated",
-   "formats": [],
-   "barcodes": [],
+   "formats": [
+    {
+     "quantity": "33 cl",
+     "container": null,
+     "barcode": null
+    }
+   ],
+   "barcodes": [
+    "3770010975045"
+   ],
    "description": "Un schorle original au jus de rhubarbe bio. Acidulé et pétillant, il surprend par son profil gourmand et désaltérant. Il conjugue authenticité et modernité dans une boisson artisanale élégante et singulière.",
    "labels": [
     "bio"
@@ -41161,7 +41125,7 @@
   },
   {
    "id": "cur-filles-l-ouest-schorle-pomme-piquante",
-   "barcode": null,
+   "barcode": "3770010975007",
    "name": "Le Schorle Pomme Piquante",
    "brand": "Les filles de l'Ouest",
    "cat": "soft",
@@ -41181,7 +41145,9 @@
    ],
    "source": "curated",
    "formats": [],
-   "barcodes": [],
+   "barcodes": [
+    "3770010975007"
+   ],
    "description": "Un schorle bio pétillant à la pomme, franc et désaltérant. Croquant et acidulé, il allie légèreté et naturel. Sans sucres ajoutés, il séduit par son profil simple et frais, fidèle à l’esprit des boissons artisanales bio.",
    "labels": [
     "bio"
@@ -41191,70 +41157,6 @@
     "Gueule de Joie": "https://www.gueuledejoie.com/products/les-filles-de-louest-le-schorle-pomme-piquante"
    },
    "thumb": "img/565b3bdc61ee7a.webp"
-  },
-  {
-   "id": "cur-filles-l-ouest-schorle-cassis-truculent",
-   "barcode": null,
-   "name": "Le Schorle Cassis Truculent",
-   "brand": "Les filles de l'Ouest",
-   "cat": "soft",
-   "abv": null,
-   "sugar": null,
-   "kcal": null,
-   "quantity": null,
-   "price": "3,50 €",
-   "image": "https://cdn.shopify.com/s/files/1/0921/7664/6468/files/les-filles-de-l-ouest-schorle-cassis-truculent_162c3d32-1d46-4527-9c6d-62a4f699339e.png?v=1755162529",
-   "popularity": 0,
-   "style": null,
-   "region": null,
-   "note": null,
-   "sourceUrl": "https://www.gueuledejoie.com",
-   "retailers": [
-    "Gueule de Joie"
-   ],
-   "source": "curated",
-   "formats": [],
-   "barcodes": [],
-   "description": "Un schorle bio pétillant au cassis, franc et désaltérant. Sans sucres ajoutés ni conservateurs, il allie intensité fruitée, fraîcheur vive et légèreté. Une boisson naturelle et joyeuse qui réinvente la dégustation autour du cassis.",
-   "labels": [
-    "bio"
-   ],
-   "country": null,
-   "shopUrls": {
-    "Gueule de Joie": "https://www.gueuledejoie.com/products/les-filles-de-louest-le-schorle-cassis-truculent"
-   }
-  },
-  {
-   "id": "cur-filles-l-ouest-schorle-citron-gingembre-fringant",
-   "barcode": null,
-   "name": "Le Schorle Citron Gingembre Fringant",
-   "brand": "Les filles de l'Ouest",
-   "cat": "soft",
-   "abv": null,
-   "sugar": null,
-   "kcal": null,
-   "quantity": null,
-   "price": "3,50 €",
-   "image": "https://cdn.shopify.com/s/files/1/0921/7664/6468/files/les-filles-de-l-ouest-schorle-citron-fringuant.png?v=1755162850",
-   "popularity": 0,
-   "style": null,
-   "region": null,
-   "note": null,
-   "sourceUrl": "https://www.gueuledejoie.com",
-   "retailers": [
-    "Gueule de Joie"
-   ],
-   "source": "curated",
-   "formats": [],
-   "barcodes": [],
-   "description": "Citron et gingembre s’unissent dans ce Schorle bio pétillant. Sans sucres ajoutés, il révèle vivacité, fraîcheur et piquant délicat. Une boisson pétillante et énergique, parfaite pour réveiller les papilles et booster la convivialité.",
-   "labels": [
-    "bio"
-   ],
-   "country": null,
-   "shopUrls": {
-    "Gueule de Joie": "https://www.gueuledejoie.com/products/les-filles-de-louest-le-schorle-citron-gingembre-fringant"
-   }
   },
   {
    "id": "cur-ish-spirits-daiquiri",
@@ -41286,36 +41188,6 @@
     "Gueule de Joie": "https://www.gueuledejoie.com/products/ish-spirits-daiquiri"
    },
    "thumb": "img/17003c3915a83a.webp"
-  },
-  {
-   "id": "cur-brulo-sabro-galaxy-ddh-ipa",
-   "barcode": null,
-   "name": "Sabro Galaxy DDH IPA",
-   "brand": "Brulo",
-   "cat": "biere",
-   "abv": null,
-   "sugar": null,
-   "kcal": null,
-   "quantity": null,
-   "price": "3,10 €",
-   "image": "https://cdn.shopify.com/s/files/1/0921/7664/6468/files/brulo-biere-sans-alcool-sabro-galaxy-ddh-ipa.png?v=1755174954",
-   "popularity": 0,
-   "style": null,
-   "region": null,
-   "note": null,
-   "sourceUrl": "https://www.gueuledejoie.com",
-   "retailers": [
-    "Gueule de Joie"
-   ],
-   "source": "curated",
-   "formats": [],
-   "barcodes": [],
-   "description": "Une IPA brillante, fruitée et tropicale. Sabro et Galaxy offrent des arômes de pastèque, noix de coco, fruit de la passion et agrumes. Solaire, exotique, audacieuse — une escapade paradisiaque en canette.",
-   "labels": [],
-   "country": null,
-   "shopUrls": {
-    "Gueule de Joie": "https://www.gueuledejoie.com/products/brulo-sabro-galaxy-ddh-ipa"
-   }
   },
   {
    "id": "cur-osco-l-original-aperitif-bio",
@@ -41385,7 +41257,7 @@
   },
   {
    "id": "cur-ish-spirits-spritz",
-   "barcode": null,
+   "barcode": "5715008001014",
    "name": "Spritz",
    "brand": "ISH Spirits",
    "cat": "aperitif",
@@ -41411,7 +41283,9 @@
      "barcode": null
     }
    ],
-   "barcodes": [],
+   "barcodes": [
+    "5715008001014"
+   ],
    "description": "ISH Spritz, cocktail sans alcool primé, marie l’amertume de la gentiane française et du quassia à la fraîcheur des agrumes italiens. Avec une pointe épicée de piment, il offre une expérience pétillante et équilibrée, pour un apéritif sans alcool tout en finesse.",
    "labels": [],
    "country": "Italie",
@@ -41672,7 +41546,7 @@
   },
   {
    "id": "cur-unaju-mandarine-romarin",
-   "barcode": null,
+   "barcode": "3770008059863",
    "name": "Mandarine Romarin",
    "brand": "Unaju",
    "cat": "soft",
@@ -41692,7 +41566,9 @@
    ],
    "source": "curated",
    "formats": [],
-   "barcodes": [],
+   "barcodes": [
+    "3770008059863"
+   ],
    "description": "Des bulles fines pour une boisson subtile et peu sucrée. L’acidulé de la Mandarine équilibré par la puissance du Romarin ! Découvrez une infusion de Romarin BIO récolté en France, purée de Mandarine BIO, sucre biologique issus de fruits, CO2… C’est tout ! Aucun colorant ni conservateur.",
    "labels": [
     "bio"
@@ -42273,7 +42149,7 @@
   },
   {
    "id": "cur-koko-kombucha-original",
-   "barcode": null,
+   "barcode": "5060100600246",
    "name": "Original",
    "brand": "Koko",
    "cat": "kombucha",
@@ -42293,7 +42169,9 @@
    ],
    "source": "curated",
    "formats": [],
-   "barcodes": [],
+   "barcodes": [
+    "5060100600246"
+   ],
    "description": "Un kombucha pur, fermenté avec justesse, au profil sec, acidulé et complexe. Inspiré des traditions, il livre la signature brute du thé fermenté : précis, vif, sans fioritures, parfait pour les puristes du goût juste.",
    "labels": [],
    "country": null,
@@ -43107,7 +42985,7 @@
   },
   {
    "id": "cur-gimber-s-1-sweet-lilly",
-   "barcode": null,
+   "barcode": "5430003091067",
    "name": "S°1 Sweet Lilly",
    "brand": "Gimber",
    "cat": "aperitif",
@@ -43127,7 +43005,9 @@
    ],
    "source": "curated",
    "formats": [],
-   "barcodes": [],
+   "barcodes": [
+    "5430003091067"
+   ],
    "description": "Gimber N°3 Sweet Lilly est un concentré bio fusionné avec gingembre, fruit de la passion, ananas et curcuma, sans alcool. Il offre une attaque exotique, riche et ensoleillée, à diluer pour un moment vibrant sans concessions.",
    "labels": [
     "bio"
@@ -43140,7 +43020,7 @@
   },
   {
    "id": "cur-spunky-framboise-et-peche-vigne",
-   "barcode": null,
+   "barcode": "3760055364713",
    "name": "Framboise et Pêche de vigne",
    "brand": "Spunky",
    "cat": "soft",
@@ -43160,7 +43040,9 @@
    ],
    "source": "curated",
    "formats": [],
-   "barcodes": [],
+   "barcodes": [
+    "3760055364713"
+   ],
    "description": "Un pétillant bio gourmand et léger, où la framboise acidulée enlace la douceur charnue de la pêche de vigne. Une boisson désaltérante et complice, parfaite pour les beaux jours.",
    "labels": [
     "bio"
@@ -43742,38 +43624,6 @@
    "thumb": "img/533fa5b187a357.webp"
   },
   {
-   "id": "cur-symples-infusion-petillante-relaxante",
-   "barcode": null,
-   "name": "Infusion pétillante Relaxante",
-   "brand": "Symples",
-   "cat": "soft",
-   "abv": null,
-   "sugar": null,
-   "kcal": null,
-   "quantity": null,
-   "price": "2,90 €",
-   "image": "https://cdn.shopify.com/s/files/1/0921/7664/6468/files/symples-relaxante-infusion-gueule-de-joie.png?v=1755160646",
-   "popularity": 0,
-   "style": null,
-   "region": null,
-   "note": null,
-   "sourceUrl": "https://www.gueuledejoie.com",
-   "retailers": [
-    "Gueule de Joie"
-   ],
-   "source": "curated",
-   "formats": [],
-   "barcodes": [],
-   "description": "Découvrez l’infusion pétillante Relaxante, alliant lavande, camomille et verveine. Douce et faible en calories, elle offre une pause gourmande et apaisante. Composée de fruits rouges comme la cerise et le cassis, cette boisson est entièrement fabriquée en France à partir d’ingrédients biologiques. Elle est peu sucrée, sans additifs, et se déguste fraîche ou en cocktail, idéale pour se détendre.",
-   "labels": [
-    "bio"
-   ],
-   "country": null,
-   "shopUrls": {
-    "Gueule de Joie": "https://www.gueuledejoie.com/products/symples-infusion-petillante-relaxante"
-   }
-  },
-  {
    "id": "cur-symples-infusion-petillante-detoxifiante",
    "barcode": null,
    "name": "Infusion pétillante Détoxifiante",
@@ -44112,7 +43962,7 @@
   },
   {
    "id": "cur-ambijus-real-fantasy",
-   "barcode": null,
+   "barcode": "7090062630003",
    "name": "Real Fantasy",
    "brand": "Ambijus",
    "cat": "vin",
@@ -44132,7 +43982,9 @@
    ],
    "source": "curated",
    "formats": [],
-   "barcodes": [],
+   "barcodes": [
+    "7090062630003"
+   ],
    "description": "Un rouge sans alcool à la structure tannique, intense et forestière. Baies nordiques, thé fermenté, chêne toasté et poivre noir forment une boisson puissante, complexe et raffinée, idéale pour accompagner viandes rouges, plats mijotés ou fromages affinés.",
    "labels": [],
    "country": null,
@@ -44267,7 +44119,7 @@
   },
   {
    "id": "cur-oddbird-blanc-blancs",
-   "barcode": null,
+   "barcode": "7350067732226",
    "name": "Blanc de Blancs",
    "brand": "Oddbird",
    "cat": "vin",
@@ -44287,7 +44139,9 @@
    ],
    "source": "curated",
    "formats": [],
-   "barcodes": [],
+   "barcodes": [
+    "7350067732226"
+   ],
    "description": "Ce mousseux sec et contemporain de la région Languedoc-Roussillon en France est un Blanc de Blancs issu d’un mélange subtil de Chardonnay et de Colombard. Il présente des arômes de pommes Granny Smith, de miel et de citron vert, alliant jeunesse et élégance avec complexité et bulles délicates. Après un vieillissement de 12 mois, le vin est désalcoolisé sans additifs chimiques, colorants ou arômes synthétiques.",
    "labels": [],
    "country": "France",
@@ -44428,11 +44282,11 @@
   },
   {
    "id": "cur-oddbird-spumante-rose",
-   "barcode": null,
+   "barcode": "7350067732271",
    "name": "Spumante Rosé",
    "brand": "Oddbird",
    "cat": "vin",
-   "abv": null,
+   "abv": 0,
    "sugar": null,
    "kcal": null,
    "quantity": null,
@@ -44448,7 +44302,9 @@
    ],
    "source": "curated",
    "formats": [],
-   "barcodes": [],
+   "barcodes": [
+    "7350067732271"
+   ],
    "description": "Rosé pétillant fruité et doux de la province italienne de Trévise, située dans la région de Vénétie. Outre le cépage Glera, ce vin désalcoolisé est mélangé avec du Pinot Noir, qui contribue également à sa couleur. Ce mélange crée au nez des tons frais de poire blanche, de fraise, de pamplemousse et de framboise. Le rosé Spumante est élevé pendant 12 mois avant d’être délicatement libéré de l’alcool.",
    "labels": [],
    "country": "Italie",
@@ -44456,36 +44312,6 @@
     "Gueule de Joie": "https://www.gueuledejoie.com/products/oddbird-spumante-rose"
    },
    "thumb": "img/5cfbc967fa3687.webp"
-  },
-  {
-   "id": "cur-oddbird-spumante-blanc",
-   "barcode": null,
-   "name": "Spumante Blanc",
-   "brand": "Oddbird",
-   "cat": "vin",
-   "abv": 0,
-   "sugar": null,
-   "kcal": null,
-   "quantity": null,
-   "price": "14,50 €",
-   "image": "https://cdn.shopify.com/s/files/1/0921/7664/6468/files/oddbird-spumante-vin-blanc-effervescent-sans-alcool-gueule-de-joie.png?v=1755160625",
-   "popularity": 0,
-   "style": null,
-   "region": null,
-   "note": null,
-   "sourceUrl": "https://www.gueuledejoie.com",
-   "retailers": [
-    "Gueule de Joie"
-   ],
-   "source": "curated",
-   "formats": [],
-   "barcodes": [],
-   "description": "Le premier et unique mousseux suédois sans alcool, le Spumante, provient de la région italienne de Trévise en Vénétie. Élaboré selon les méthodes traditionnelles du Prosecco avec des bulles plus grosses et 100 % Glera, il offre des saveurs de poire, pomme verte et pamplemousse. Après 12 mois de vieillissement, le vin est désalcoolisé naturellement, sans additifs chimiques.",
-   "labels": [],
-   "country": "Italie",
-   "shopUrls": {
-    "Gueule de Joie": "https://www.gueuledejoie.com/products/oddbird-spumante-blanc"
-   }
   },
   {
    "id": "cur-oddbird-edition-gsm-grenache-syrah-mourvedre",
@@ -44675,36 +44501,6 @@
     "Gueule de Joie": "https://www.gueuledejoie.com/products/uiltje-bird-of-prey"
    },
    "thumb": "img/6013b08bfa9907.webp"
-  },
-  {
-   "id": "cur-to-l-implosion-lager",
-   "barcode": null,
-   "name": "Implosion Lager",
-   "brand": "To Øl",
-   "cat": "biere",
-   "abv": 0.5,
-   "sugar": null,
-   "kcal": null,
-   "quantity": null,
-   "price": "2,95 €",
-   "image": "https://cdn.shopify.com/s/files/1/0921/7664/6468/files/tool-implosion-biere-lager-sans-alcool-gueule-de-joie.png?v=1755160681",
-   "popularity": 0,
-   "style": null,
-   "region": null,
-   "note": null,
-   "sourceUrl": "https://www.gueuledejoie.com",
-   "retailers": [
-    "Gueule de Joie"
-   ],
-   "source": "curated",
-   "formats": [],
-   "barcodes": [],
-   "description": "Une lager danoise sans alcool (0,5 %) brassée avec Tradition et Spalter Select. Blonde, claire et désaltérante, elle allie fraîcheur florale, douceur maltée et finale nette. Une lager artisanale, sobre et élégante, qui célèbre l’essence du style classique.",
-   "labels": [],
-   "country": "Danemark",
-   "shopUrls": {
-    "Gueule de Joie": "https://www.gueuledejoie.com/products/to-ol-implosion-lager"
-   }
   },
   {
    "id": "cur-broother-dry-ipa",
@@ -45376,7 +45172,7 @@
   },
   {
    "id": "cur-tete-haute-cool-down-ipa",
-   "barcode": null,
+   "barcode": "3770012285616",
    "name": "Cool Down IPA",
    "brand": "Tête Haute",
    "cat": "biere",
@@ -45396,7 +45192,9 @@
    ],
    "source": "curated",
    "formats": [],
-   "barcodes": [],
+   "barcodes": [
+    "3770012285616"
+   ],
    "description": "Cool Down, une IPA sans alcool (0,5%) de la Brasserie Tête Haute, offre une expérience rafraîchissante aux notes d’agrumes et de céréales. Idéale après le sport ou pour des moments de détente, cette bière blonde pale se distingue par sa robe cuivrée et son amertume modérée.",
    "labels": [],
    "country": null,
@@ -45715,7 +45513,7 @@
   },
   {
    "id": "cur-meteor-ipa",
-   "barcode": null,
+   "barcode": "3156141726563",
    "name": "IPA",
    "brand": "Meteor",
    "cat": "biere",
@@ -45735,7 +45533,9 @@
    ],
    "source": "curated",
    "formats": [],
-   "barcodes": [],
+   "barcodes": [
+    "3156141726563"
+   ],
    "description": "Brasserie Meteor, fondée en 1640, crée des bières sans alcool pleines de caractère. Sa Meteor IPA, brassée avec les houblons SIMCOE et TEOREM, dévoile un bouquet d’arômes fruités et exotiques, fidèle à l’esprit IPA de la brasserie.",
    "labels": [],
    "country": null,
@@ -46605,7 +46405,7 @@
   },
   {
    "id": "cur-trip-mindful-blend-orange-sanguine-romarin",
-   "barcode": null,
+   "barcode": "5060884851575",
    "name": "Mindful Blend Orange Sanguine/Romarin",
    "brand": "Trip",
    "cat": "soft",
@@ -46631,7 +46431,9 @@
      "barcode": null
     }
    ],
-   "barcodes": [],
+   "barcodes": [
+    "5060884851575"
+   ],
    "description": "Une boisson pétillante fonctionnelle à l’orange sanguine et au romarin, enrichie en magnésium et crinière de lion. Acidulée, fraîche et subtilement herbacée, elle se savoure bien fraîche, le matin pour démarrer ou après le travail pour relâcher la pression.",
    "labels": [],
    "country": null,
@@ -47118,38 +46920,6 @@
     "Gueule de Joie": "https://www.gueuledejoie.com/products/sapinca-organic-herb-elixir-49-5-cl"
    },
    "thumb": "img/e2d9feb86b1719.webp"
-  },
-  {
-   "id": "cur-filles-l-ouest-schorle-pomelo-corse",
-   "barcode": null,
-   "name": "Schorle Le Pomélo Corsé",
-   "brand": "Les filles de l'Ouest",
-   "cat": "soft",
-   "abv": null,
-   "sugar": null,
-   "kcal": null,
-   "quantity": "33 cl",
-   "price": null,
-   "image": null,
-   "popularity": 0,
-   "style": null,
-   "region": null,
-   "note": null,
-   "sourceUrl": "https://www.gueuledejoie.com",
-   "retailers": [
-    "Gueule de Joie"
-   ],
-   "source": "curated",
-   "formats": [
-    {
-     "quantity": "33 cl",
-     "container": null,
-     "barcode": null
-    }
-   ],
-   "barcodes": [],
-   "labels": [],
-   "country": null
   },
   {
    "id": "cur-chavin-zero-vin-desalcoolise-petillant-rose",
@@ -47698,7 +47468,7 @@
   },
   {
    "id": "cur-karmeliet-tripel",
-   "barcode": null,
+   "barcode": "5410693100553",
    "name": "Tripel",
    "brand": "Karmeliet",
    "cat": "biere",
@@ -47724,7 +47494,9 @@
      "barcode": null
     }
    ],
-   "barcodes": [],
+   "barcodes": [
+    "5410693100553"
+   ],
    "description": "Tripel Karmeliet sans alcool reprend l’élégance de l’une des triples belges les plus emblématiques. Notes fruitées, céréales délicates et épices douces s’expriment dans une bouche ample et équilibrée. Une bière sans alcool raffinée, fidèle à l’esprit de la recette originale.",
    "labels": [],
    "country": null,
@@ -47927,36 +47699,6 @@
     "Gueule de Joie": "https://www.gueuledejoie.com/products/kolonne-null-verdejo-2026"
    },
    "thumb": "img/2674e379b45c73.webp"
-  },
-  {
-   "id": "cur-to-l-implosion-pink-sour",
-   "barcode": null,
-   "name": "Implosion Pink Sour",
-   "brand": "To Øl",
-   "cat": "biere",
-   "abv": null,
-   "sugar": null,
-   "kcal": null,
-   "quantity": null,
-   "price": "2,95 €",
-   "image": "https://cdn.shopify.com/s/files/1/0921/7664/6468/files/implosion-pink-sour-to-Ol.png?v=1782381551",
-   "popularity": 0,
-   "style": null,
-   "region": null,
-   "note": null,
-   "sourceUrl": "https://www.gueuledejoie.com",
-   "retailers": [
-    "Gueule de Joie"
-   ],
-   "source": "curated",
-   "formats": [],
-   "barcodes": [],
-   "description": "Implosion Pink Sour est une bière sans alcool qui bouscule les codes avec son alliance de litchi et d’hibiscus. Florale, acidulée et intensément rafraîchissante, elle dévoile une robe rose éclatante et une personnalité aussi originale que gourmande.",
-   "labels": [],
-   "country": null,
-   "shopUrls": {
-    "Gueule de Joie": "https://www.gueuledejoie.com/products/implosion-pink-sour-0-5"
-   }
   },
   {
    "id": "cur-divin-vendanges-ipa-sauvignon-blanc",
@@ -48193,7 +47935,7 @@
   },
   {
    "id": "cur-st-bernardus-tripel",
-   "barcode": null,
+   "barcode": "54079038",
    "name": "Tripel",
    "brand": "St Bernardus",
    "cat": "biere",
@@ -48219,7 +47961,9 @@
      "barcode": null
     }
    ],
-   "barcodes": [],
+   "barcodes": [
+    "54079038"
+   ],
    "description": "St Bernardus Tripel 0,0 % : la première bière sans alcool de la brasserie de Watou, une tripel blonde belge dorée à la mousse onctueuse. Fruitée et florale, elle marie douceur et légère amertume pour une dégustation ronde, généreuse et conviviale.",
    "labels": [],
    "country": null,
@@ -50307,38 +50051,6 @@
    "country": null
   },
   {
-   "id": "cur-petit-beret-petit-beret-orange-spritz",
-   "barcode": null,
-   "name": "Petit Béret Orange Spritz",
-   "brand": "Le Petit Béret",
-   "cat": "aperitif",
-   "abv": 0,
-   "sugar": null,
-   "kcal": null,
-   "quantity": "74 cl",
-   "price": null,
-   "image": null,
-   "popularity": 0,
-   "style": null,
-   "region": null,
-   "note": null,
-   "sourceUrl": "https://www.nicolas.com/fr/fr/sans-alcool/tous-les-produits.html",
-   "retailers": [
-    "Nicolas"
-   ],
-   "source": "curated",
-   "formats": [
-    {
-     "quantity": "74 cl",
-     "container": null,
-     "barcode": null
-    }
-   ],
-   "barcodes": [],
-   "labels": [],
-   "country": null
-  },
-  {
    "id": "cur-nasdrow-scarlet-co-cocktail-petillant",
    "barcode": null,
    "name": "Scarlet & Co cocktail pétillant",
@@ -50692,7 +50404,7 @@
   },
   {
    "id": "cur-seedlip-gin-grove-42",
-   "barcode": null,
+   "barcode": "5000989963919",
    "name": "Gin Grove 42",
    "brand": "Seedlip",
    "cat": "spiritueux",
@@ -50718,13 +50430,15 @@
      "barcode": null
     }
    ],
-   "barcodes": [],
+   "barcodes": [
+    "5000989963919"
+   ],
    "labels": [],
    "country": null
   },
   {
    "id": "cur-seedlip-spice-gin-94",
-   "barcode": null,
+   "barcode": "5060448760008",
    "name": "Spice Gin 94",
    "brand": "Seedlip",
    "cat": "spiritueux",
@@ -50750,13 +50464,15 @@
      "barcode": null
     }
    ],
-   "barcodes": [],
+   "barcodes": [
+    "5060448760008"
+   ],
    "labels": [],
    "country": null
   },
   {
    "id": "cur-seedlip-gin-garden-108",
-   "barcode": null,
+   "barcode": "5060448760213",
    "name": "Gin Garden 108",
    "brand": "Seedlip",
    "cat": "spiritueux",
@@ -50782,7 +50498,9 @@
      "barcode": null
     }
    ],
-   "barcodes": [],
+   "barcodes": [
+    "5060448760213"
+   ],
    "labels": [],
    "country": null
   },

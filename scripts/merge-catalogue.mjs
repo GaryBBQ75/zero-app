@@ -163,10 +163,11 @@ export function detectContainer(text) {
   const t = ` ${(text || '').toLowerCase()} `
   if (/\b(can|cans|canette|canettes|boîte|boite|bte|slim|aluminium)\b/.test(t)) return 'Canette'
   if (/\b(f[uû]t|keg)\b/.test(t)) return 'Fût'
-  if (/\b(brique|tetra|carton)\b/.test(t)) return 'Brique'
-  if (/\b(pet|plastique|plastic)\b|plastic-bottle/.test(t)) return 'Bouteille plastique'
+  // Le carton d'un pack (étui) n'est pas le contenant : on regarde d'abord la bouteille
   if (/glass|verre|\bvp\b|\bvr\b|glass-bottle/.test(t)) return 'Bouteille en verre'
+  if (/\b(pet|plastique|plastic)\b|plastic-bottle/.test(t)) return 'Bouteille plastique'
   if (/\b(bouteille|btl|bottle|magnum|demi-bouteille)\b/.test(t)) return 'Bouteille'
+  if (/\b(brique|tetra|tetra-?pak)\b/.test(t)) return 'Brique'
   return null
 }
 const fmtKey = (f) => `${f.quantity || ''}|${f.container || ''}`
