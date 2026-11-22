@@ -3,6 +3,7 @@ import { Suspense, lazy, useCallback, useEffect, useMemo, useRef, useState } fro
 import { fetchByBarcode } from './off.js'
 import Product from './Product.jsx'
 import Discover from './Discover.jsx'
+import { authProviders, avatarUrl, currentUser, fetchMyRatings, fetchScores, onAuthChange, saveRating, signIn, signOut } from './backend.js'
 import { CAT_COLOR, Photo } from './ui.jsx'
 import {
   CATEGORIES, typeLabel, RATING_TAGS, SEED, MAX_ABV,
@@ -54,6 +55,44 @@ function AbvPill({ abv }) {
   return <span className={zero ? 'pill pill-zero' : 'pill pill-low'}>{fmt1(abv)} %</span>
 }
 
+const PROVIDER_ICON = {
+  google: <svg width="18" height="18" viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="m6.3 14.7 6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg>,
+  facebook: <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="#1877F2" d="M24 12a12 12 0 1 0-13.9 11.9v-8.4H7.1V12h3V9.4c0-3 1.8-4.7 4.5-4.7 1.3 0 2.7.2 2.7.2v2.9h-1.5c-1.5 0-2 .9-2 1.9V12h3.4l-.5 3.5h-2.9v8.4A12 12 0 0 0 24 12z"/></svg>,
+}
+
+function Account({ user, providers, busy, onConnect, onSignOut }) {
+  if (user) {
+    const img = avatarUrl(user)
+    return (
+      <div className="account on">
+        <span className="account-avatar">{img ? <img src={img} alt="" /> : (user.name || user.email || '?').slice(0, 1).toUpperCase()}</span>
+        <span className="account-text">
+          <strong>{user.name || user.email}</strong>
+          <small>Tes notes sont sauvegardées et comptent dans les scores.</small>
+        </span>
+        <button type="button" className="account-out" onClick={onSignOut}>Se déconnecter</button>
+      </div>
+    )
+  }
+  return (
+    <div className="account">
+      <strong>Garde tes notes et partage-les</strong>
+      <small>Un compte en un geste : tes dégustations sont sauvegardées et aident la communauté à trouver les meilleures boissons.</small>
+      {providers.length > 0 ? (
+        <div className="account-btns">
+          {providers.map((p) => (
+            <button key={p.name} type="button" className="btn-oauth" disabled={busy} onClick={() => onConnect(p.name)}>
+              {PROVIDER_ICON[p.name]}Continuer avec {p.label}
+            </button>
+          ))}
+        </div>
+      ) : (
+        <small className="account-soon">La connexion arrive très bientôt.</small>
+      )}
+    </div>
+  )
+}
+
 export default function App() {
   const [tab, setTab] = useState('home')
   const [cat, setCat] = useState('all')
@@ -71,6 +110,52 @@ export default function App() {
   const [links, setLinks] = useState(() => load('zero.links', {}))
 
   useEffect(() => save('zero.ratings', ratings), [ratings])
+
+  // Compte et notes partagées (base PocketBase)
+  const [user, setUser] = useState(() => currentUser())
+  const [providers, setProviders] = useState([])
+  const [scores, setScores] = useState({})
+  const [signingIn, setSigningIn] = useState(false)
+  const refreshScores = useCallback(() => { fetchScores().then(setScores).catch(() => {}) }, [])
+  useEffect(() => {
+    authProviders().then(setProviders)
+    refreshScores()
+    return onAuthChange(setUser)
+  }, [refreshScores])
+
+  // À la connexion : on récupère les notes en ligne et on envoie celles faites sur ce téléphone
+  const userId = user?.id
+  useEffect(() => {
+    if (!userId) return
+    let stop = false
+    ;(async () => {
+      try {
+        const remote = await fetchMyRatings(userId)
+        const local = load('zero.ratings', {})
+        const merged = { ...remote }
+        for (const [id, r] of Object.entries(local)) {
+          const online = remote[id]
+          if (online && online.date >= (r.date || 0)) continue
+          const rec = await saveRating(userId, id, r, online?.recordId)
+          merged[id] = { ...r, recordId: rec.id }
+        }
+        if (!stop) { setRatings(merged); refreshScores() }
+      } catch { /* hors ligne : on réessaiera à la prochaine connexion */ }
+    })()
+    return () => { stop = true }
+  }, [userId, refreshScores])
+
+  const connect = async (provider) => {
+    setSigningIn(true)
+    try {
+      await signIn(provider)
+      setToast('Bienvenue ! Tes notes sont maintenant sauvegardées.')
+    } catch {
+      setToast('Connexion annulée.')
+    } finally {
+      setSigningIn(false)
+    }
+  }
   useEffect(() => save('zero.scanned', scanned), [scanned])
   useEffect(() => save('zero.links', links), [links])
   useEffect(() => {
@@ -99,9 +184,10 @@ export default function App() {
   const isDemo = catalogue.length === 0
 
   const withScore = useCallback((p) => {
-    const { score, count } = communityScore(p, ratings[p.id])
+    const mine = ratings[p.id]
+    const { score, count } = communityScore(p, mine, scores[p.id], !!(user && mine?.recordId))
     return { ...p, score, count, lvl: level(score) }
-  }, [ratings])
+  }, [ratings, scores, user])
 
   const list = useMemo(() => {
     const needle = q.trim().toLowerCase()
@@ -183,9 +269,19 @@ export default function App() {
   const togglePick = (t) => setPicked((p) => (p.includes(t) ? p.filter((x) => x !== t) : [...p, t]))
   const submit = () => {
     if (!stars || !current) return
-    setRatings((r) => ({ ...r, [current.id]: { stars, tags: picked, date: Date.now() } }))
+    const id = current.id
+    const rating = { stars, tags: picked, date: Date.now() }
+    const prev = ratings[id]
+    setRatings((r) => ({ ...r, [id]: { ...rating, recordId: prev?.recordId } }))
     setRatingOpen(false)
-    setToast('Merci ! Ta note est ajoutée à ton carnet.')
+    if (user) {
+      setToast('Merci ! Ta note compte dans le score de la communauté.')
+      saveRating(user.id, id, rating, prev?.recordId)
+        .then((rec) => { setRatings((r) => ({ ...r, [id]: { ...r[id], recordId: rec.id } })); refreshScores() })
+        .catch(() => setToast('Note gardée sur ton téléphone, envoi à la prochaine connexion.'))
+    } else {
+      setToast('Merci ! Ta note est dans ton carnet.')
+    }
   }
 
   const badges = [
@@ -283,6 +379,7 @@ export default function App() {
         {tab === 'carnet' && (
           <section className="page">
             <h1 className="h1">Mon carnet</h1>
+            <Account user={user} providers={providers} busy={signingIn} onConnect={connect} onSignOut={signOut} />
             <div className="recap">
               <span>Ce mois-ci</span>
               <strong>{monthCount}</strong>

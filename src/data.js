@@ -72,10 +72,12 @@ export function level(score) {
 }
 
 // Note communautaire sur 10 : base de démo + notes locales (1 à 5 étoiles -> x2).
-export function communityScore(product, myRating) {
-  let total = (product.baseScore ?? 0) * (product.baseCount ?? 0)
-  let count = product.baseCount ?? 0
-  if (myRating) {
+// Score communautaire sur 10. `server` = { average (1 à 5), count } venu de la base ;
+// `mineCounted` indique que ma note y est déjà comptée (connecté et synchronisé).
+export function communityScore(product, myRating, server, mineCounted = false) {
+  let total = server ? server.average * 2 * server.count : (product.baseScore ?? 0) * (product.baseCount ?? 0)
+  let count = server ? server.count : (product.baseCount ?? 0)
+  if (myRating && !mineCounted) {
     total += myRating.stars * 2
     count += 1
   }
