@@ -36,5 +36,5 @@ jobs:
             echo "Catalogue inchangé"
           else
             git commit -m "Catalogue : fusion des produits curés"
-            git push || (git fetch origin main && git checkout -B main origin/main && node scripts/merge-catalogue.mjs && git add public/data/products.json && git commit -m "Catalogue : fusion" && git push origin main)
+            git push || (git fetch origin main && git checkout -f -B main origin/main && node scripts/merge-catalogue.mjs && git add public/data/products.json && git commit -m "Catalogue : fusion" && git push origin main)
           fi

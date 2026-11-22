@@ -32,7 +32,7 @@ jobs:
         run: |
           cp data/off-products.json /tmp/generated.json
           git fetch origin main
-          git checkout -B main origin/main
+          git checkout -f -B main origin/main
           cp /tmp/generated.json data/off-products.json
           node scripts/merge-catalogue.mjs
           git config user.name "github-actions[bot]"
