@@ -1,7 +1,8 @@
 import { sameDrink } from './grouping.js'
-import { Suspense, lazy, useCallback, useEffect, useMemo, useState } from 'react'
+import { Suspense, lazy, useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { fetchByBarcode } from './off.js'
 import Product from './Product.jsx'
+import Discover from './Discover.jsx'
 import { CAT_COLOR, Photo } from './ui.jsx'
 import {
   CATEGORIES, typeLabel, RATING_TAGS, SEED, MAX_ABV,
@@ -27,7 +28,7 @@ const save = (key, value) => {
 
 const Icon = {
   search: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7" /><path d="M20 20l-3.5-3.5" /></svg>,
-  home: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z" /></svg>,
+  compass: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M15.5 8.5l-2 5-5 2 2-5z" /></svg>,
   scan: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true"><path d="M4 8V5a1 1 0 0 1 1-1h3M16 4h3a1 1 0 0 1 1 1v3M20 16v3a1 1 0 0 1-1 1h-3M8 20H5a1 1 0 0 1-1-1v-3" /><path d="M8 9v6M11 9v6M14 9v6M17 9v6" /></svg>,
   book: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3z" /><path d="M9 9h6M9 13h4" /></svg>,
   back: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7" /></svg>,
@@ -112,6 +113,13 @@ export default function App() {
       .sort((a, b) => (b.score ?? -1) - (a.score ?? -1) || (b.popularity ?? 0) - (a.popularity ?? 0))
   }, [all, cat, only00, q, withScore])
 
+  const scored = useMemo(() => Object.values(all).map(withScore), [all, withScore])
+  const browsing = cat !== 'all' || only00 || q.trim() !== ''
+  const mainRef = useRef(null)
+  const toTop = () => { if (mainRef.current) mainRef.current.scrollTop = 0 }
+  const pickCat = (id) => { setCat(id); setShown(40); toTop() }
+  const resetBrowse = () => { setCat('all'); setOnly00(false); setQ(''); setShown(40); toTop() }
+
   const current = currentId && all[currentId]
     ? { ...withScore(all[currentId]), demo: isDemo && all[currentId].source !== 'off' }
     : null
@@ -184,35 +192,39 @@ export default function App() {
 
   return (
     <div className="app">
-      <main className="main">
+      <main className="main" ref={mainRef}>
         {tab === 'home' && (
           <section className="page">
             <header className="top">
               <div className="logo">zéro<span>.</span></div>
+              <span className="top-sub">Le guide du sans alcool</span>
             </header>
-            <div>
-              <h1 className="h1">Qu&rsquo;est-ce qu&rsquo;on boit ce soir ?</h1>
-              <p className="lead">Les boissons sans alcool, notées par ceux qui les boivent.</p>
-            </div>
             <div className="search">
               {Icon.search}
               <label htmlFor="q" className="sr">Rechercher une boisson</label>
               <input id="q" type="search" placeholder="Une bière, un vin, une marque…" value={q} onChange={(e) => { setQ(e.target.value); setShown(40) }} />
             </div>
-            <div className="chips">
-              {CATEGORIES.map((c) => (
-                <button key={c.id} type="button" className={cat === c.id ? 'chip on' : 'chip'} aria-pressed={cat === c.id} onClick={() => { setCat(c.id); setShown(40) }}>{c.label}</button>
-              ))}
-            </div>
-            <button type="button" className="toggle" aria-pressed={only00} onClick={() => { setOnly00((v) => !v); setShown(40) }}>
-              <span>
-                <strong>Uniquement « vrai 0,0 % »</strong>
-                <small>Sans alcool peut aller jusqu&rsquo;à 1,2 % en France</small>
-              </span>
-              <span className={only00 ? 'switch on' : 'switch'}><span /></span>
-            </button>
+            {browsing ? (
+              <>
+                <button type="button" className="back-link" onClick={resetBrowse}>{Icon.back}Découvrir</button>
+                <div className="chips">
+                  {CATEGORIES.map((c) => (
+                    <button key={c.id} type="button" className={cat === c.id ? 'chip on' : 'chip'} aria-pressed={cat === c.id} onClick={() => pickCat(c.id)}>{c.label}</button>
+                  ))}
+                </div>
+                <button type="button" className="toggle" aria-pressed={only00} onClick={() => { setOnly00((v) => !v); setShown(40) }}>
+                  <span>
+                    <strong>Uniquement « vrai 0,0 % »</strong>
+                    <small>Sans alcool peut aller jusqu&rsquo;à 1,2 % en France</small>
+                  </span>
+                  <span className={only00 ? 'switch on' : 'switch'}><span /></span>
+                </button>
+              </>
+            ) : (
+              <Discover products={scored} onOpen={setCurrentId} onCat={pickCat} onOnly00={() => { setOnly00(true); setShown(40); toTop() }} />
+            )}
             <div className="section-head">
-              <h2>{isDemo ? 'Le top de la communauté' : 'Les boissons sans alcool'}</h2>
+              <h2>{browsing ? (cat !== 'all' ? CATEGORIES.find((c) => c.id === cat)?.label : only00 ? 'Vrais 0,0 %' : 'Résultats') : 'Tout le catalogue'}</h2>
               <span>{list.length} boisson{list.length > 1 ? 's' : ''}</span>
             </div>
             <div className="list">
@@ -293,10 +305,16 @@ export default function App() {
         )}
       </main>
 
-      <nav className="tabbar">
-        <button type="button" className={tab === 'home' ? 'tab on' : 'tab'} onClick={() => goTab('home')}>{Icon.home}Découvrir</button>
-        <button type="button" className="tab-scan" aria-label="Scanner une boisson" onClick={() => goTab('scan')}>{Icon.scan}</button>
-        <button type="button" className={tab === 'carnet' ? 'tab on' : 'tab'} onClick={() => goTab('carnet')}>{Icon.book}Mon carnet</button>
+      <nav className="tabbar" aria-label="Navigation principale">
+        <button type="button" className={tab === 'home' ? 'tab on' : 'tab'} aria-current={tab === 'home' ? 'page' : undefined} onClick={() => { if (tab === 'home') resetBrowse(); goTab('home') }}>
+          <span className="tab-ico">{Icon.compass}</span>Découvrir
+        </button>
+        <button type="button" className={tab === 'scan' ? 'tab-scan on' : 'tab-scan'} aria-current={tab === 'scan' ? 'page' : undefined} onClick={() => goTab('scan')}>
+          <span className="tab-scan-ico">{Icon.scan}</span>Scanner
+        </button>
+        <button type="button" className={tab === 'carnet' ? 'tab on' : 'tab'} aria-current={tab === 'carnet' ? 'page' : undefined} onClick={() => goTab('carnet')}>
+          <span className="tab-ico">{Icon.book}</span>Mon carnet
+        </button>
       </nav>
 
       {current && (
