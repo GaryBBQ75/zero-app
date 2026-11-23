@@ -1,18 +1,18 @@
 {
- "generatedAt": "2026-11-22T01:21:13.883Z",
+ "generatedAt": "2026-11-23T14:59:27.518Z",
  "sources": {
   "openFoodFacts": {
    "count": 1024,
-   "importedAt": "2026-11-22T00:34:12.786Z",
+   "importedAt": "2026-11-23T14:59:24.193Z",
    "license": "ODbL 1.0"
   },
   "curated": {
-   "added": 860,
-   "enriched": 116
+   "added": 859,
+   "enriched": 117
   },
-  "excluded": 129,
+  "excluded": 128,
   "barcodes": {
-   "assigned": 478,
+   "assigned": 477,
    "fused": 40
   }
  },
@@ -190,7 +190,7 @@
    "sugar": 0,
    "kcal": 15,
    "quantity": "250 ml",
-   "image": "https://images.openfoodfacts.org/images/products/308/021/605/5428/front_fr.183.400.jpg",
+   "image": "https://images.openfoodfacts.org/images/products/308/021/605/5428/front_fr.187.400.jpg",
    "ingredients": "Eau, malt d’orge, aromes naturels, extrait de houblon",
    "description": "Bière blonde aromatisée sans alcool",
    "labels": [],
@@ -248,8 +248,7 @@
    "country": "France",
    "price": null,
    "region": null,
-   "style": null,
-   "thumb": "img/3ee6e787d5b918.webp"
+   "style": null
   },
   {
    "id": "off-3770037280047",
@@ -374,7 +373,7 @@
    "sugar": 5.3,
    "kcal": 32,
    "quantity": "275 ml",
-   "image": "https://images.openfoodfacts.org/images/products/308/021/605/0751/front_fr.158.400.jpg",
+   "image": "https://images.openfoodfacts.org/images/products/308/021/605/0751/front_fr.161.400.jpg",
    "ingredients": "Eau, sucre, malt d'orge, jus citron vert à base de conc, (1%), dioxyde de carbone, jus citron à base jus conc,(0,4 %), arômes naturels de citron vert et de menthe , autres arômes naturels, Acide citrique (E330), extrait concentré de citron, stabilisant : gomme d'acacia, extrait de houblon",
    "description": "Sans alcool",
    "labels": [],
@@ -391,8 +390,7 @@
    "barcodes": [
     "3080216050751"
    ],
-   "country": null,
-   "thumb": "img/1f9e62d540291c.webp"
+   "country": null
   },
   {
    "id": "off-3770037280009",
@@ -2090,7 +2088,7 @@
    "sugar": 5.3,
    "kcal": 32,
    "quantity": "6 x 27,5 cl",
-   "image": "https://images.openfoodfacts.org/images/products/308/021/605/0768/front_fr.208.400.jpg",
+   "image": "https://images.openfoodfacts.org/images/products/308/021/605/0768/front_fr.215.400.jpg",
    "ingredients": "Eau, sucre, malt d'orge, jus citron vert à base de conc. (1%), dioxyde de carbone, jus citron à base jus conc.(0,4 %), arômes naturels de citron vert et de menthe , autres arômes naturels, Acide citrique (E330), extrait concentré de citron, stabilisant : gomme d'acacia, extrait de houblon",
    "description": "Sans alcool",
    "labels": [],
@@ -2107,8 +2105,7 @@
    "barcodes": [
     "3080216050768"
    ],
-   "country": null,
-   "thumb": "img/990d0fa96c0f2d.webp"
+   "country": null
   },
   {
    "id": "off-3760192495301",
@@ -3954,6 +3951,42 @@
    ],
    "country": null,
    "thumb": "img/1e9b9618f9b925.webp"
+  },
+  {
+   "id": "off-3156140738277",
+   "barcode": "3156140738277",
+   "name": "IPA Bière India Pale Ale",
+   "brand": "Meteor",
+   "cat": "biere",
+   "abv": 0,
+   "sugar": null,
+   "kcal": null,
+   "quantity": "6 x 25 cl",
+   "image": "https://images.openfoodfacts.org/images/products/315/614/073/8277/front_en.3.400.jpg",
+   "ingredients": null,
+   "description": null,
+   "labels": [],
+   "origin": null,
+   "popularity": 8,
+   "source": "off",
+   "region": null,
+   "style": null,
+   "price": null,
+   "note": null,
+   "retailers": [
+    "Gueule de Joie"
+   ],
+   "formats": [
+    {
+     "quantity": "6 × 25 cl",
+     "container": null,
+     "barcode": "3156140738277"
+    }
+   ],
+   "barcodes": [
+    "3156140738277"
+   ],
+   "country": null
   },
   {
    "id": "off-3760010135525",
@@ -8352,6 +8385,35 @@
    ],
    "country": null,
    "thumb": "img/8099d1e8eb9382.webp"
+  },
+  {
+   "id": "off-3080216063676",
+   "barcode": "3080216063676",
+   "name": "Twist au jus d'abricot",
+   "brand": "Tourtel",
+   "cat": "biere",
+   "abv": null,
+   "sugar": 4.8,
+   "kcal": 28,
+   "quantity": "6 x 27,5 cl",
+   "image": "https://images.openfoodfacts.org/images/products/308/021/606/3676/front_fr.3.400.jpg",
+   "ingredients": "Eau, Sucre, jus d'abricot à base de jus concentré (3,5%), malt d'orge, C02, acidifiant: acide citrique, stabilisant gomme d'acacia, arôme naturel, extrait de houblon.",
+   "description": null,
+   "labels": [],
+   "origin": null,
+   "popularity": 3,
+   "source": "off",
+   "formats": [
+    {
+     "quantity": "6 × 27,5 cl",
+     "container": null,
+     "barcode": "3080216063676"
+    }
+   ],
+   "barcodes": [
+    "3080216063676"
+   ],
+   "country": null
   },
   {
    "id": "off-3271792742509",
@@ -15240,42 +15302,6 @@
    ],
    "country": "France",
    "thumb": "img/ee990ff35012c7.webp"
-  },
-  {
-   "id": "off-3760251403391",
-   "barcode": "3760251403391",
-   "name": "Biere IPA",
-   "brand": "Le Petit Béret",
-   "cat": "biere",
-   "abv": null,
-   "sugar": 4.2,
-   "kcal": 24,
-   "quantity": null,
-   "image": "https://images.openfoodfacts.org/images/products/376/025/140/3391/front_fr.3.400.jpg",
-   "ingredients": null,
-   "description": null,
-   "labels": [
-    "organic",
-    "eu-organic",
-    "vegan",
-    "be-bio-01",
-    "ab-agriculture-biologique"
-   ],
-   "origin": null,
-   "popularity": 1,
-   "source": "off",
-   "formats": [
-    {
-     "quantity": null,
-     "container": null,
-     "barcode": "3760251403391"
-    }
-   ],
-   "barcodes": [
-    "3760251403391"
-   ],
-   "country": null,
-   "thumb": "img/c8bb3fc6ff083d.webp"
   },
   {
    "id": "off-3250393007682",
@@ -45510,39 +45536,6 @@
     "Gueule de Joie": "https://www.gueuledejoie.com/products/liefmans-biere-a-la-peche-0-0"
    },
    "thumb": "img/48d9ff413290c9.webp"
-  },
-  {
-   "id": "cur-meteor-ipa",
-   "barcode": "3156141726563",
-   "name": "IPA",
-   "brand": "Meteor",
-   "cat": "biere",
-   "abv": 0,
-   "sugar": null,
-   "kcal": null,
-   "quantity": null,
-   "price": "2,50 €",
-   "image": "https://cdn.shopify.com/s/files/1/0921/7664/6468/files/meteor-ipa-biere-sans-alcool-gueule-de-joie_6bf1e8e9-b9cd-4ab4-80ef-8164073363d0.png?v=1756452712",
-   "popularity": 0,
-   "style": null,
-   "region": null,
-   "note": null,
-   "sourceUrl": "https://www.gueuledejoie.com",
-   "retailers": [
-    "Gueule de Joie"
-   ],
-   "source": "curated",
-   "formats": [],
-   "barcodes": [
-    "3156141726563"
-   ],
-   "description": "Brasserie Meteor, fondée en 1640, crée des bières sans alcool pleines de caractère. Sa Meteor IPA, brassée avec les houblons SIMCOE et TEOREM, dévoile un bouquet d’arômes fruités et exotiques, fidèle à l’esprit IPA de la brasserie.",
-   "labels": [],
-   "country": null,
-   "shopUrls": {
-    "Gueule de Joie": "https://www.gueuledejoie.com/products/meteor-ipa-0-0"
-   },
-   "thumb": "img/444afa9101ff76.webp"
   },
   {
    "id": "cur-super-8-rouge",
